@@ -1,0 +1,5 @@
+All icons used in this website are derived from Font Awesome. I did not design or create any of them.
+
+I have adjusted their color and size from the originals.
+
+https://fontawesome.com/license

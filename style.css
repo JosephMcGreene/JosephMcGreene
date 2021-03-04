@@ -1,0 +1,261 @@
+/* 
+  Table of Contents
+
+  1. :root, Variable Declarations, General Styles
+  2. Navbar Styling
+    2a. Navbar Hover Pseudo Classes, all screens
+  3. Hex  Code
+  4. Media Queries (inc. Hover Pseudo Classes for speciic screen sizes)
+*/
+
+/* =============== 1. :root, Variable Declarations, General Styles =============== */
+
+/* https://www.fontsquirrel.com/fonts/Juice?filter%5Bclassifications%5D%5B0%5D=display&filter%5Bdownload%5D=local&filter%5Blicense%5D%5B0%5D=web&filter%5Btags%5D%5B0%5D=contemporary */
+@font-face {
+  font-family: 'juice_regularregular';
+  src: url('fonts/JUICE_Regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'juice_boldbold';
+  src: url('fonts/JUICE_Bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'juice_bold_italicregular';
+  src: url('fonts/JUICE_Bold_Italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+
+  --text-color: rgb(245, 239, 226); /* originally: #ececec */
+  --text-hover: aqua;
+  --bg-primary: #1a1a27; /* originally: #23232e */
+  --bg-secondary: black; /* originally: #141418 */
+  --bg-body-light: rgb(35,35,45);
+  --transition-speed: 400ms;
+  --font-main: 'juice_boldbold';
+}
+
+body {
+  background: linear-gradient( var(--bg-primary), var(--bg-body-light));
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: var(--font-main);
+}
+  body::-webkit-scrollbar {
+    width: 1rem;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--bg-body-light);
+  }
+  body::-webkit-scrollbar-thumb {
+    background: var(--bg-secondary);
+  }
+
+h1 {
+  font-size: 2.75rem;
+  color: var(--text-color);
+} /* more h1 styles in media queries */
+
+main {
+  color: var(--text-color);
+}
+
+figure {
+  z-index: 0;
+  display: block;
+  max-width: 465px;
+  background-color: rgba(0,0,0,0.25);
+  margin: 10px auto;
+  padding: 25px;
+  clip-path: polygon(10% 0, 90% 0, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0 75%, 0 25%);
+}
+  figcaption {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  figure audio {
+    display: block;
+    margin: 0 auto;
+  }
+
+article {
+  margin: 0 2vw;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  text-shadow: 0 2px 3px var(--bg-secondary);
+}
+
+a {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  font-size: 1.3rem;
+}
+  a:active {
+    color: var(--text-hover);
+  }
+
+address {
+  font-style: normal;
+  display: inline;
+  overflow-wrap: break-word;
+}
+
+
+/* =============== 2. Navbar Styling =============== */
+
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary);
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgb(25,25,25);
+
+  transition: width 200ms ease;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .nav-item {
+    width: 100%;
+  }
+  .nav-link {
+    color: var(--text-color);
+    height: 5rem; /* 80px */
+    text-decoration: none;
+    transition: background-color var(--transition-speed) ease; /* See "Hover Pseudo Classes" Section */
+
+    display: flex;
+    align-items: center;
+  }
+    .link-text {
+      display: none;
+      margin-left: 1rem;
+    }
+    .nav-link svg {
+      width: 2rem;
+      margin: 0 1.5rem;
+    }
+
+svg {
+  transition: var(--transition-speed); /* See "Hover Pseudo Classes" Section */
+}
+
+
+/* =============== 2a. Navbar Hover Pseudo Classes, all screens =============== */
+
+.nav-link:hover {
+  background-color: var(--bg-secondary);
+}
+
+.nav-link:hover .link-text,
+.nav-link:hover svg {
+  color: var(--text-hover);
+}
+
+
+/* ========== 3. Hex Code ========== */
+
+.header-hex {
+  width: 350px;
+  height: 350px;
+  background-color: var(--bg-secondary);
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+}
+
+.hex {
+  background-color: var(--bg-secondary);
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+}
+
+
+/* =============== 4. Media Queries (inc. Hover Pseudo Classes for speciic screen sizes) =============== */
+
+/* Small Screens */
+@media only screen and (max-width: 600px) {
+
+  .navbar {
+    top: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+    .navbar-nav {
+      flex-direction: row;
+    }
+      .nav-link {
+        justify-content: center;
+      }
+
+  main {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .header-hex {
+    display: none;
+  }
+  h1 {
+    margin-top: 5rem;
+    margin-bottom: 0;
+    padding-top: 1.75rem;
+    text-align: center;
+  }
+}
+
+/* Large Screens */
+@media only screen and (min-width: 600px) {
+
+  .navbar {
+    bottom: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+  .navbar:hover {
+    width: 16rem;
+  }
+  .navbar:hover .link-text {
+    display: block;
+  }
+  main {
+    margin-left: 5rem;
+    padding-left: 1.75rem;
+  }
+  header {
+    position: relative; /* Used to absolutely position .header-hex and page header text */
+    height: 325px;
+  }
+    .header-hex {
+      z-index: -10;
+      position: relative;
+      top: -3rem;
+      left: -1rem;
+    }
+    h1 {
+      margin-left: 5rem;
+      padding-left: 1.75rem;
+      position: relative;
+      top: -14rem;
+    }
+}
