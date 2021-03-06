@@ -5,7 +5,8 @@
   2. Navbar Styling
     2a. Navbar Hover Pseudo Classes, all screens
   3. Hex  Code
-  4. Media Queries (inc. Hover Pseudo Classes for speciic screen sizes)
+  4. Audio Player Styles
+  5. Media Queries (inc. Hover Pseudo Classes for speciic screen sizes)
 */
 
 /* =============== 1. :root, Variable Declarations, General Styles =============== */
@@ -118,6 +119,8 @@ address {
   overflow-wrap: break-word;
 }
 
+/* ===== End General Styles ===== */
+
 
 /* =============== 2. Navbar Styling =============== */
 
@@ -164,6 +167,8 @@ svg {
   transition: var(--transition-speed); /* See "Hover Pseudo Classes" Section */
 }
 
+/* ===== End Navbar Styles ===== */
+
 
 /* =============== 2a. Navbar Hover Pseudo Classes, all screens =============== */
 
@@ -175,6 +180,8 @@ svg {
 .nav-link:hover svg {
   color: var(--text-hover);
 }
+
+/* ===== End Hover Pseudos ===== */
 
 
 /* ========== 3. Hex Code ========== */
@@ -191,8 +198,53 @@ svg {
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
 }
 
+/* ===== End Hex Code Styles ===== */
 
-/* =============== 4. Media Queries (inc. Hover Pseudo Classes for speciic screen sizes) =============== */
+
+/* =============== 4. Audio Player Styles =============== */
+
+.mejs__container {
+  clip-path: polygon(4.5% 0, 95.5% 0, 100% 33%, 100% 67%, 95.5% 100%, 4.5% 100%, 0 67%, 0 33%);
+}
+
+.mejs__controls:not([style*='display: none']) {
+  background: black;
+}
+
+.mejs__controls {
+color: rgb(245, 239, 226);
+}
+
+.mejs__time-total {
+  clip-path: polygon(3% 0, 97% 0, 100% 26%, 100% 74%, 97% 100%, 3% 100%, 0 74%, 0 26%);
+}
+
+.mejs__time-current,
+.mejs__time-handle-content {
+  background: rgb(245, 239, 226);
+}
+
+.mejs__time-hovered {
+  background: rgba(245, 239, 226, 0.5);
+  z-index: 10;
+}
+
+.mejs__time-handle,
+.mejs__time-handle-content {
+  background: #1a1a27;
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+}
+
+.mejs__horizontal-volume-total {
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 0 50%);
+}
+
+/* ===== End Audio Styles ===== */
+
+
+/* =============== 5. Media Queries (inc. Hover Pseudo Classes for speciic screen sizes) =============== */
 
 /* Small Screens */
 @media only screen and (max-width: 600px) {
@@ -259,3 +311,5 @@ svg {
       top: -14rem;
     }
 }
+
+/* ===== End Media Queries ===== */
