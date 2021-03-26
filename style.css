@@ -1,32 +1,42 @@
 /* 
-  Table of Contents
+  =============== Table of Contents ===============
 
   1. :root, Variable Declarations, General Styles
   2. Navbar Styling
     2a. Navbar Hover Pseudo Classes, all screens
-  3. Hex  Code
-  4. Audio Player Styles
-  5. Media Queries (inc. Hover Pseudo Classes for speciic screen sizes)
+  3. Canvas Styles
+  4. Hex Code
+  5. MediaElement Audio Player Styles
+  6. Media Queries (inc. Hover Pseudo Classes for speciic screen sizes)
 */
+
 
 /* =============== 1. :root, Variable Declarations, General Styles =============== */
 
 /* https://www.fontsquirrel.com/fonts/Juice?filter%5Bclassifications%5D%5B0%5D=display&filter%5Bdownload%5D=local&filter%5Blicense%5D%5B0%5D=web&filter%5Btags%5D%5B0%5D=contemporary */
 @font-face {
   font-family: 'juice_regularregular';
-  src: url('fonts/JUICE_Regular-webfont.woff') format('woff');
+  src: url('./fonts/JUICE_Regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'juice_boldbold';
-  src: url('fonts/JUICE_Bold-webfont.woff') format('woff');
+  src: url('./fonts/JUICE_Bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'juice_bold_italicregular';
-  src: url('fonts/JUICE_Bold_Italic-webfont.woff') format('woff');
+  src: url('./fonts/JUICE_Bold_Italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* https://www.fontsquirrel.com/fonts/abel?q%5Bterm%5D=abel&q%5Bsearch_check%5D=Y */
+@font-face {
+  font-family: 'abelregular';
+  src: url('./fonts/abel-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,10 +55,11 @@
   --bg-body-light: rgb(35,35,45);
   --transition-speed: 400ms;
   --font-main: 'juice_boldbold';
+  --font-secondary: 'abelregular';
 }
 
 body {
-  background: linear-gradient( var(--bg-primary), var(--bg-body-light));
+  background: var(--bg-primary);
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -64,19 +75,50 @@ body {
     background: var(--bg-secondary);
   }
 
+header {
+  /* margin-top: 7rem; */
+}
+
 h1 {
-  font-size: 2.75rem;
+  font-size: 3rem;
   color: var(--text-color);
-} /* more h1 styles in media queries */
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h2,
+h3 {
+  color: var(--text-color);
+  display: block;
+  text-align: center;
+}
 
 main {
   color: var(--text-color);
 }
 
+.fig-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+hr {
+  max-width: 35vw;
+  margin: 2rem auto;
+}
+
 figure {
   z-index: 0;
-  display: block;
-  max-width: 465px;
+  display: inline-block;
+  max-width: 475px;
   background-color: rgba(0,0,0,0.25);
   margin: 10px auto;
   padding: 25px;
@@ -85,29 +127,36 @@ figure {
   figcaption {
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 10px;
     display: block;
     text-align: center;
-    padding-bottom: 10px;
   }
   figure audio {
     display: block;
     margin: 0 auto;
   }
 
-article {
-  margin: 0 2vw;
+article,
+figure {
+  margin: 5px 1vw;
+  font-family: var(--font-secondary);
+  font-weight: 600;
 }
 
 p {
-  font-size: 1.25rem;
+  margin: auto 4vw;
+  text-align: justify;
+}
+
+p,
+figcaption {
+  font-size: 1.5rem;
   line-height: 2rem;
   text-shadow: 0 2px 3px var(--bg-secondary);
 }
 
 a {
-  font-family: var(--font-main);
   color: var(--text-color);
-  font-size: 1.3rem;
 }
   a:active {
     color: var(--text-hover);
@@ -126,11 +175,17 @@ address {
 
 .navbar {
   position: fixed;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-body-light);
+  top: 0;
+  width: 100vw;
+  height: 5rem;
   z-index: 1000;
-  box-shadow: 0 1px 3px rgb(25,25,25);
 
-  transition: width 200ms ease;
+  /* ------------------------------------------- */
+  opacity: 0;
+  /* ------------------------------------------- */
+
+  transition: height 200ms ease;
 }
 
 .navbar-nav {
@@ -139,32 +194,36 @@ address {
   padding: 0;
 
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
 }
   .nav-item {
     width: 100%;
   }
+  .nav-item-home {
+    
+  }
   .nav-link {
+    padding: 1.5rem 0;
     color: var(--text-color);
-    height: 5rem; /* 80px */
     text-decoration: none;
-    transition: background-color var(--transition-speed) ease; /* See "Hover Pseudo Classes" Section */
+    transition: height var(--transition-speed) ease; /* See "Hover Pseudo Classes" Section */
 
     display: flex;
+    flex-direction: column;
     align-items: center;
   }
     .link-text {
+      margin-top: 1.1rem;
       display: none;
-      margin-left: 1rem;
+      font-size: 1.5rem;
+      font-family: var(--font-main);
     }
     .nav-link svg {
-      width: 2rem;
-      margin: 0 1.5rem;
+      width: 2.25rem;
     }
 
 svg {
-  transition: var(--transition-speed); /* See "Hover Pseudo Classes" Section */
+  transition-duration: var(--transition-speed);
 }
 
 /* ===== End Navbar Styles ===== */
@@ -172,8 +231,17 @@ svg {
 
 /* =============== 2a. Navbar Hover Pseudo Classes, all screens =============== */
 
+.navbar:hover,
+.nav-item a:hover {
+  height: 8.1rem;
+}
+
 .nav-link:hover {
   background-color: var(--bg-secondary);
+}
+
+.navbar:hover .link-text {
+  display: block;
 }
 
 .nav-link:hover .link-text,
@@ -184,7 +252,16 @@ svg {
 /* ===== End Hover Pseudos ===== */
 
 
-/* ========== 3. Hex Code ========== */
+/* ========== 3. Canvas Styles ========== */
+
+canvas {
+  background: white;
+}
+
+/* ===== End Canvas ===== */
+
+
+/* ========== 4. Hex Code Styles ========== */
 
 .header-hex {
   width: 350px;
@@ -201,7 +278,7 @@ svg {
 /* ===== End Hex Code Styles ===== */
 
 
-/* =============== 4. Audio Player Styles =============== */
+/* =============== 5. MediaElement Audio Player Styles =============== */
 
 .mejs__container {
   clip-path: polygon(4.5% 0, 95.5% 0, 100% 33%, 100% 67%, 95.5% 100%, 4.5% 100%, 0 67%, 0 33%);
@@ -244,22 +321,22 @@ color: rgb(245, 239, 226);
 /* ===== End Audio Styles ===== */
 
 
-/* =============== 5. Media Queries (inc. Hover Pseudo Classes for speciic screen sizes) =============== */
+/* =============== 6. Media Queries (inc. Hover Pseudo Classes for speciic screen sizes) =============== */
 
 /* Small Screens */
 @media only screen and (max-width: 600px) {
 
-  .navbar {
+  /* .navbar {
     top: 0;
     width: 100vw;
     height: 5rem;
-  }
-    .navbar-nav {
+  } */
+    /* .navbar-nav {
       flex-direction: row;
     }
       .nav-link {
         justify-content: center;
-      }
+      } */
 
   main {
     margin-top: 5rem;
@@ -279,37 +356,10 @@ color: rgb(245, 239, 226);
 /* Large Screens */
 @media only screen and (min-width: 600px) {
 
-  .navbar {
-    bottom: 0;
-    width: 5rem;
-    height: 100vh;
+  p {
+    max-width: 70vw;
+    margin: auto;
   }
-  .navbar:hover {
-    width: 16rem;
-  }
-  .navbar:hover .link-text {
-    display: block;
-  }
-  main {
-    margin-left: 5rem;
-    padding-left: 1.75rem;
-  }
-  header {
-    position: relative; /* Used to absolutely position .header-hex and page header text */
-    height: 325px;
-  }
-    .header-hex {
-      z-index: -10;
-      position: relative;
-      top: -3rem;
-      left: -1rem;
-    }
-    h1 {
-      margin-left: 5rem;
-      padding-left: 1.75rem;
-      position: relative;
-      top: -14rem;
-    }
 }
 
 /* ===== End Media Queries ===== */

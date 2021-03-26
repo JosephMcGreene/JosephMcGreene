@@ -1,0 +1,186 @@
+/* 
+  =============== Table of Contents ===============
+
+  1. General Styles
+  2. Canvas Styles
+  3. Hex Code
+*/
+@import 'variables';
+@import 'navbar';
+@import 'mediaelement';
+@import 'media-queries';
+
+/* =============== 1. General Styles =============== */
+
+/* https://www.fontsquirrel.com/fonts/Juice?filter%5Bclassifications%5D%5B0%5D=display&filter%5Bdownload%5D=local&filter%5Blicense%5D%5B0%5D=web&filter%5Btags%5D%5B0%5D=contemporary */
+@font-face {
+  font-family: 'juice_regularregular';
+  src: url('../fonts/JUICE_Regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'juice_boldbold';
+  src: url('../fonts/JUICE_Bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'juice_bold_italicregular';
+  src: url('../fonts/JUICE_Bold_Italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* https://www.fontsquirrel.com/fonts/abel?q%5Bterm%5D=abel&q%5Bsearch_check%5D=Y */
+@font-face {
+  font-family: 'abelregular';
+  src: url('../fonts/abel-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background: $primaryBG;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: $mainFont;
+}
+  body::-webkit-scrollbar {
+    width: 1rem;
+  }
+  body::-webkit-scrollbar-track {
+    background: $bodyBGLight;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: $secondaryBG;
+  }
+
+h1 {
+  margin-top: 6rem;
+  font-size: 3rem;
+  color: $textColor;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h2,
+h3 {
+  color: $textColor;
+  display: block;
+  text-align: center;
+}
+
+main {
+  color: $textColor;
+}
+
+hr {
+  max-width: 35vw;
+  margin: 2rem auto;
+}
+
+.fig-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  figure {
+    z-index: 0;
+    display: inline-block;
+    max-width: 475px;
+    background-color: rgba(0,0,0,0.25);
+    margin: 10px auto;
+    padding: 25px;
+    clip-path: polygon(10% 0, 90% 0, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0 75%, 0 25%);
+
+    figcaption {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      display: block;
+      text-align: center;
+    }
+
+    audio {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+article,
+figure {
+  font-family: $secondaryFont;
+  font-weight: 600;
+}
+
+p {
+  margin: auto 3vw;
+  text-align: justify;
+}
+
+p,
+figcaption {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-shadow: 0 2px 3px $secondaryBG;
+}
+
+a {
+  color: $textColor;
+
+  &:active {
+    color: $textColor;
+  }
+}
+
+address {
+  font-style: normal;
+  display: inline;
+  overflow-wrap: break-word;
+}
+
+/* ===== End General Styles ===== */
+
+
+/* ========== 2. Canvas Styles ========== */
+
+canvas {
+  background: white;
+}
+
+/* ===== End Canvas Styles ===== */
+
+
+/* ========== 3. Hex Code Styles ========== */
+
+// .header-hex {
+//   width: 350px;
+//   height: 350px;
+//   background-color: $secondaryBG;
+//   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+// }
+
+.hex {
+  background-color: $secondaryBG;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+}
+
+/* ===== End Hex Code Styles ===== */

@@ -1,0 +1,37 @@
+.mejs__container {
+  clip-path: polygon(4.5% 0, 95.5% 0, 100% 33%, 100% 67%, 95.5% 100%, 4.5% 100%, 0 67%, 0 33%);
+}
+
+.mejs__controls:not([style*='display: none']) {
+  background: black;
+}
+
+.mejs__controls {
+color: $textColor;
+}
+
+.mejs__time-total {
+  clip-path: polygon(3% 0, 97% 0, 100% 26%, 100% 74%, 97% 100%, 3% 100%, 0 74%, 0 26%);
+}
+
+.mejs__time-current,
+.mejs__time-handle-content {
+  background: $textColor;
+}
+
+.mejs__time-hovered {
+  background: rgba(245, 239, 226, 0.5);
+  z-index: 10;
+}
+
+.mejs__time-handle,
+.mejs__time-handle-content {
+  background: $primaryBG;
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+}
+
+.mejs__horizontal-volume-total {
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 0 50%);
+}

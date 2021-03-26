@@ -1,0 +1,69 @@
+nav {
+  position: fixed;
+  background-color: $bodyBGLight;
+  top: 0;
+  width: 100vw;
+  height: 5rem;
+  z-index: 1000;
+  transition: height 200ms ease;
+
+  &:hover {
+    height: 8.1rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+    display: flex;
+    flex-direction: row;
+
+    li {
+      width: 100%;
+
+      a {
+        padding: 1.5rem 0;
+        color: $textColor;
+        text-decoration: none;
+        transition: height $transitionSpeed ease; /* See "Hover Pseudo Classes" Section */
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover {
+          height: 8.1rem;
+          background: $secondaryBG;
+        }
+        &:active {
+          color: $textColor;
+        }
+
+        svg {
+          width: 2.25rem;
+        }
+
+        span {
+          margin-top: 1.1rem;
+          display: none;
+          font-size: 1.5rem;
+          font-family: var(--font-main);
+        }
+      }
+    }
+  }
+}
+
+svg {
+  transition-duration: $transitionSpeed;
+}
+
+nav:hover span {
+  display: block;
+}
+
+.nav-link:hover span,
+.nav-link:hover svg {
+  color: $textHover;
+}
