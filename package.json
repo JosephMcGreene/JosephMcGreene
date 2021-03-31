@@ -3,14 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.32.8"
-  },
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JosephMcGreene/JosephMcGreene/issues"
   },
-  "homepage": "https://github.com/JosephMcGreene/JosephMcGreene#readme"
+  "homepage": "https://github.com/JosephMcGreene/JosephMcGreene#readme",
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
 }

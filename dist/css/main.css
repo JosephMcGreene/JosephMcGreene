@@ -1,5 +1,276 @@
+/* https://www.fontsquirrel.com/fonts/Juice?filter%5Bclassifications%5D%5B0%5D=display&filter%5Bdownload%5D=local&filter%5Blicense%5D%5B0%5D=web&filter%5Btags%5D%5B0%5D=contemporary */
+@font-face {
+  font-family: "juice_boldbold";
+  src: url("../../src/fonts/JUICE_Bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* https://www.fontsquirrel.com/fonts/abel?q%5Bterm%5D=abel&q%5Bsearch_check%5D=Y */
+@font-face {
+  font-family: "abelregular";
+  src: url("../../src/fonts/abel-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.navbar {
+  position: fixed;
+  background-color: #23232d;
+  top: 0;
+  width: 100vw;
+  height: 5rem;
+  z-index: 1000;
+  transition: height 200ms ease;
+}
+.navbar:hover {
+  height: 8.1rem;
+}
+.navbar:hover .link-text {
+  display: block;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item {
+  width: 100%;
+}
+.nav-item a:hover {
+  height: 8.1rem;
+}
+
+.nav-link {
+  padding: 1.5rem 0;
+  color: #f5efe2;
+  text-decoration: none;
+  transition: height 400ms ease;
+  /* See "Hover Pseudo Classes" Section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-link svg {
+  width: 2.25rem;
+}
+.nav-link:hover {
+  background-color: black;
+}
+.nav-link:hover .link-text,
+.nav-link:hover svg {
+  color: aqua;
+}
+
+.link-text {
+  margin-top: 1.1rem;
+  display: none;
+  font-size: 1.5rem;
+  font-family: "juice_boldbold";
+}
+
+svg {
+  transition-duration: 400ms;
+}
+
+.mejs__container {
+  clip-path: polygon(4.5% 0, 95.5% 0, 100% 33%, 100% 67%, 95.5% 100%, 4.5% 100%, 0 67%, 0 33%);
+}
+
+.mejs__controls:not([style*="display: none"]) {
+  background: black;
+}
+
+.mejs__controls {
+  color: #f5efe2;
+}
+
+.mejs__time-total {
+  clip-path: polygon(3% 0, 97% 0, 100% 26%, 100% 74%, 97% 100%, 3% 100%, 0 74%, 0 26%);
+}
+
+.mejs__time-current,
+.mejs__time-handle-content {
+  background: #f5efe2;
+}
+
+.mejs__time-hovered {
+  background: rgba(245, 239, 226, 0.5);
+  z-index: 10;
+}
+
+.mejs__time-handle,
+.mejs__time-handle-content {
+  background: #1a1a27;
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+}
+
+.mejs__horizontal-volume-total {
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 0 50%);
+}
+
+/* Small Screens */
+@media only screen and (max-width: 700px) {
+  main {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .header-hex {
+    display: none;
+  }
+
+  h1 {
+    margin-top: 5rem;
+    margin-bottom: 0;
+    padding-top: 1.75rem;
+    text-align: center;
+  }
+}
+/* Large Screens */
+@media only screen and (min-width: 700px) {
+  p {
+    max-width: 65vw;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
 body {
-  background: green;
+  background: #1a1a27;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "juice_boldbold";
+}
+
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #23232d;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+header {
+  margin-top: 7rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #f5efe2;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h2,
+h3 {
+  color: #f5efe2;
+  display: block;
+  text-align: center;
+}
+
+main {
+  color: #f5efe2;
+}
+
+.fig-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+hr {
+  max-width: 35vw;
+  margin: 2rem auto;
+}
+
+figure {
+  z-index: 0;
+  display: inline-block;
+  max-width: 475px;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin: 10px auto;
+  padding: 25px;
+  clip-path: polygon(10% 0, 90% 0, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0 75%, 0 25%);
+}
+
+figcaption {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+figure audio {
+  display: block;
+  margin: 0 auto;
+}
+
+article,
+figure {
+  margin: 5px 1vw;
+  font-family: "abelregular";
+  font-weight: 600;
+}
+
+p {
+  margin: auto;
+  text-align: justify;
+}
+
+p,
+figcaption {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-shadow: 0 2px 3px black;
+}
+
+a {
+  color: #f5efe2;
+}
+
+a:active {
+  color: aqua;
+}
+
+address {
+  font-style: normal;
+  display: inline;
+  overflow-wrap: break-word;
+}
+
+.header-hex {
+  width: 350px;
+  height: 350px;
+  background-color: black;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+}
+
+.hex {
+  background-color: black;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
 }
 
 /*# sourceMappingURL=main.css.map */

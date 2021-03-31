@@ -1,13 +1,15 @@
+@use './abstracts/index' as *;
+
 .mejs__container {
   clip-path: polygon(4.5% 0, 95.5% 0, 100% 33%, 100% 67%, 95.5% 100%, 4.5% 100%, 0 67%, 0 33%);
 }
 
 .mejs__controls:not([style*='display: none']) {
-  background: black;
+  background: $secondary-bg;
 }
 
 .mejs__controls {
-color: $textColor;
+color: $text-color;
 }
 
 .mejs__time-total {
@@ -16,7 +18,7 @@ color: $textColor;
 
 .mejs__time-current,
 .mejs__time-handle-content {
-  background: $textColor;
+  background: $text-color;
 }
 
 .mejs__time-hovered {
@@ -26,7 +28,7 @@ color: $textColor;
 
 .mejs__time-handle,
 .mejs__time-handle-content {
-  background: $primaryBG;
+  background: $primary-bg;
   width: 10px;
   height: 10px;
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);

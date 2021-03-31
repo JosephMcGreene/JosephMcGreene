@@ -1,0 +1,31 @@
+/* https://www.fontsquirrel.com/fonts/Juice?filter%5Bclassifications%5D%5B0%5D=display&filter%5Bdownload%5D=local&filter%5Blicense%5D%5B0%5D=web&filter%5Btags%5D%5B0%5D=contemporary */
+// @font-face {
+//   font-family: 'juice_regularregular';
+//   src: url('./fonts/JUICE_Regular-webfont.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+$header-font: 'juice_boldbold';
+@font-face {
+  font-family: 'juice_boldbold';
+  src: url('../../src/fonts/JUICE_Bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+// @font-face {
+//   font-family: 'juice_bold_italicregular';
+//   src: url('./fonts/JUICE_Bold_Italic-webfont.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
+/* https://www.fontsquirrel.com/fonts/abel?q%5Bterm%5D=abel&q%5Bsearch_check%5D=Y */
+$main-font: 'abelregular';
+@font-face {
+  font-family: 'abelregular';
+  src: url('../../src/fonts/abel-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
