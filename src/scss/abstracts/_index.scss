@@ -1,2 +1,14 @@
 @forward 'variables';
 @forward 'fonts';
+
+
+// ========== MIXINS ==========
+
+@mixin center-text {
+  text-align: center;
+}
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}

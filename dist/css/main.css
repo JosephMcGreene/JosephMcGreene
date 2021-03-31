@@ -27,13 +27,12 @@
 .navbar:hover .link-text {
   display: block;
 }
-
-.navbar-nav {
+.navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: row;
 }
 
 .nav-item {
@@ -113,11 +112,10 @@ svg {
   clip-path: polygon(10% 0, 90% 0, 100% 50%, 100% 50%, 90% 100%, 10% 100%, 0 50%, 0 50%);
 }
 
-/* Small Screens */
 @media only screen and (max-width: 700px) {
   main {
-    margin-top: 5rem;
     text-align: center;
+    margin-top: 5rem;
   }
 
   .header-hex {
@@ -128,10 +126,8 @@ svg {
     margin-top: 5rem;
     margin-bottom: 0;
     padding-top: 1.75rem;
-    text-align: center;
   }
 }
-/* Large Screens */
 @media only screen and (min-width: 700px) {
   p {
     max-width: 65vw;
@@ -165,14 +161,11 @@ body::-webkit-scrollbar-thumb {
   background: black;
 }
 
-header {
-  margin-top: 7rem;
-}
-
 h1 {
+  text-align: center;
   font-size: 3rem;
   color: #f5efe2;
-  text-align: center;
+  margin-top: 7rem;
 }
 
 h2 {
@@ -185,9 +178,9 @@ h3 {
 
 h2,
 h3 {
+  text-align: center;
   color: #f5efe2;
   display: block;
-  text-align: center;
 }
 
 main {
@@ -196,16 +189,11 @@ main {
 
 .fig-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-hr {
-  max-width: 35vw;
-  margin: 2rem auto;
-}
-
-figure {
+.fig-container figure {
   z-index: 0;
   display: inline-block;
   max-width: 475px;
@@ -214,18 +202,21 @@ figure {
   padding: 25px;
   clip-path: polygon(10% 0, 90% 0, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0 75%, 0 25%);
 }
-
-figcaption {
+.fig-container figure figcaption {
+  text-align: center;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 10px;
   display: block;
-  text-align: center;
 }
-
-figure audio {
+.fig-container figure audio {
   display: block;
   margin: 0 auto;
+}
+
+hr {
+  max-width: 35vw;
+  margin: 2rem auto;
 }
 
 article,

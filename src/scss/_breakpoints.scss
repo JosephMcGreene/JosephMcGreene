@@ -1,11 +1,11 @@
 @use './abstracts/index' as *;
 
-/* Small Screens */
+// Small Screens 
 @media only screen and (max-width: 700px) {
 
   main {
+    @include center-text;
     margin-top: 5rem;
-    text-align: center;
   }
   .header-hex {
     display: none;
@@ -14,13 +14,14 @@
     margin-top: 5rem;
     margin-bottom: 0;
     padding-top: 1.75rem;
-    text-align: center;
   }
 
 }
 
-/* Large Screens */
+// Large Screens
 @media only screen and (min-width: 700px) {
+
+  
 
   p {
     max-width: 65vw;

@@ -22,16 +22,17 @@
       display: block;
     }
   }
+
+  .navbar-nav {
+    @include flex(row);
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.navbar-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 
-  display: flex;
-  flex-direction: row;
-}
 
 .nav-item {
   width: 100%;
@@ -49,8 +50,7 @@
   text-decoration: none;
   transition: height $transition-speed ease; /* See "Hover Pseudo Classes" Section */
 
-  display: flex;
-  flex-direction: column;
+  @include flex(column);
   align-items: center;
 
   svg {
