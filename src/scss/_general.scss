@@ -9,7 +9,7 @@
 }
 
 body {
-  background: $primary-bg;
+  background: $light-bg;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -30,6 +30,8 @@ h1 {
   font-size: 3rem;
   color: $text-color;
   margin-top: 7rem;
+  margin-bottom: 5rem;
+  overflow-wrap: break-word;
 }
 
 h2 {
@@ -49,6 +51,22 @@ h3 {
 
 main {
   color: $text-color;
+}
+
+.quote {
+  @include font($main-font, 1.6rem, 400);
+  color: $text-color;
+  @include center-text;
+
+  display: block;
+  margin-bottom: 20px;
+
+  blockquote {
+    @include font($italic-header, 1.7rem, 600);
+    color: $text-color;
+
+    margin: 0 15px;
+  }
 }
 
 .fig-container {
@@ -87,13 +105,15 @@ hr {
 
 article,
 figure {
-  margin: 5px 1vw;
-  font-family: $main-font;
-  font-weight: 600;
+  @include font($main-font, 1rem, 600);
+  margin: 35px 1vw;
 }
 
 p {
-  margin: auto;
+  @include font($main-font, 1.5rem, 600);
+  color: $text-color;
+
+  margin: 0 auto;
   text-align: justify;
 }
 
@@ -101,15 +121,16 @@ p,
 figcaption {
   font-size: 1.5rem;
   line-height: 2rem;
-  text-shadow: 0 2px 3px $secondary-bg;
 }
 
 a {
   color: $text-color;
-}
-  a:active {
+
+  &:hover {
+    transition: color $transition-speed;
     color: $text-hover;
   }
+}
 
 address {
   font-style: normal;

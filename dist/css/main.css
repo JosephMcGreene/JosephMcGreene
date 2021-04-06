@@ -5,6 +5,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "juice_italicregular";
+  src: url("../../src/fonts/JUICE_Italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* https://www.fontsquirrel.com/fonts/abel?q%5Bterm%5D=abel&q%5Bsearch_check%5D=Y */
 @font-face {
   font-family: "abelregular";
@@ -14,7 +20,7 @@
 }
 .navbar {
   position: fixed;
-  background-color: #23232d;
+  background-color: #1a1a27;
   top: 0;
   width: 100vw;
   height: 5rem;
@@ -46,7 +52,7 @@
   padding: 1.5rem 0;
   color: #f5efe2;
   text-decoration: none;
-  transition: height 400ms ease;
+  transition: height 300ms ease;
   /* See "Hover Pseudo Classes" Section */
   display: flex;
   flex-direction: column;
@@ -71,7 +77,7 @@
 }
 
 svg {
-  transition-duration: 400ms;
+  transition-duration: 300ms;
 }
 
 .mejs__container {
@@ -130,7 +136,13 @@ svg {
 }
 @media only screen and (min-width: 700px) {
   p {
-    max-width: 65vw;
+    max-width: 60vw;
+  }
+
+  span {
+    max-width: 50vw;
+    display: block;
+    margin: 0 auto;
   }
 }
 * {
@@ -142,7 +154,7 @@ svg {
 }
 
 body {
-  background: #1a1a27;
+  background: #232332;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -154,7 +166,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #23232d;
+  background: #232332;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -166,6 +178,8 @@ h1 {
   font-size: 3rem;
   color: #f5efe2;
   margin-top: 7rem;
+  margin-bottom: 5rem;
+  overflow-wrap: break-word;
 }
 
 h2 {
@@ -185,6 +199,23 @@ h3 {
 
 main {
   color: #f5efe2;
+}
+
+.quote {
+  font-family: "abelregular";
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #f5efe2;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+.quote blockquote {
+  font-family: "juice_italicregular";
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #f5efe2;
+  margin: 0 15px;
 }
 
 .fig-container {
@@ -221,13 +252,18 @@ hr {
 
 article,
 figure {
-  margin: 5px 1vw;
   font-family: "abelregular";
+  font-size: 1rem;
   font-weight: 600;
+  margin: 35px 1vw;
 }
 
 p {
-  margin: auto;
+  font-family: "abelregular";
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f5efe2;
+  margin: 0 auto;
   text-align: justify;
 }
 
@@ -235,14 +271,13 @@ p,
 figcaption {
   font-size: 1.5rem;
   line-height: 2rem;
-  text-shadow: 0 2px 3px black;
 }
 
 a {
   color: #f5efe2;
 }
-
-a:active {
+a:hover {
+  transition: color 300ms;
   color: aqua;
 }
 

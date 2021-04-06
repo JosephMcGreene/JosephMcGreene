@@ -7,11 +7,14 @@
 
 .navbar {
   position: fixed;
-  background-color: $light-bg;
+  background-color: $primary-bg;
   top: 0;
   width: 100vw;
   height: 5rem;
   z-index: 1000;
+  // ========================
+  // opacity: 0;
+  // ========================
 
   transition: height 200ms ease;
 

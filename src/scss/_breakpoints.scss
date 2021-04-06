@@ -21,9 +21,13 @@
 // Large Screens
 @media only screen and (min-width: 700px) {
 
-  
-
   p {
-    max-width: 65vw;
+    max-width: 60vw;
   }
+  span {
+    max-width: 50vw;
+    display: block;
+    margin: 0 auto;
+  }
+
 }

@@ -13,12 +13,14 @@ $header-font: 'juice_boldbold';
   font-weight: normal;
   font-style: normal;
 }
-// @font-face {
-//   font-family: 'juice_bold_italicregular';
-//   src: url('./fonts/JUICE_Bold_Italic-webfont.woff') format('woff');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+
+$italic-header: 'juice_italicregular';
+@font-face {
+  font-family: 'juice_italicregular';
+  src: url('../../src/fonts/JUICE_Italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 /* https://www.fontsquirrel.com/fonts/abel?q%5Bterm%5D=abel&q%5Bsearch_check%5D=Y */
