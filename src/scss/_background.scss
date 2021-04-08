@@ -1,0 +1,82 @@
+@use './abstracts/index' as *;
+
+.hexagons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -100;
+  opacity: .3;
+
+  li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    animation: animate 25s linear infinite;
+    top: -80px;
+
+    &:nth-child(1) {
+      @include standard-hex();
+      left: 1%;
+      animation-delay: 0s;
+      animation-duration: 24s;
+    }
+    &:nth-child(2) {
+      @include standard-hex();
+      left: 28%;
+      animation-delay: 1s;
+      animation-duration: 15s;
+    }
+    &:nth-child(3) {
+      @include standard-hex();
+      left: 55%;
+      animation-delay: 3s;
+      animation-duration: 22s;
+    }
+    &:nth-child(4) {
+      @include standard-hex();
+      left: 80%;
+      animation-delay: 2s;
+      animation-duration: 16s;
+    }
+    &:nth-child(5) {
+      display: none;
+      // @include standard-hex();
+      // left: 76%;
+      // animation-delay: 3s;
+      // animation-duration: 18s;
+    }
+    &:nth-child(6) {
+      display: none;
+      // @include standard-hex();
+      // left: 82.5%;
+      // animation-delay: 3s;
+      // animation-duration: 20s;
+    }
+    &:nth-child(7) {
+      display: none;
+      // @include standard-hex();
+      // left: 88%;
+      // animation-delay: 0s;
+      // animation-duration: 15s;
+    }
+    &:nth-child(8) {
+      display: none;
+      // @include standard-hex();
+      // left: 94%;
+      // animation-delay: 0s;
+      // animation-duration: 30s;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(1000px) rotate(720deg);
+  }
+}

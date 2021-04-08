@@ -12,7 +12,8 @@ body {
   background: $light-bg;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
   font-family: $header-font;
 }
   body::-webkit-scrollbar {
@@ -27,19 +28,18 @@ body {
 
 h1 {
   @include center-text;
-  font-size: 3rem;
+  font-size: 2.75rem;
   color: $text-color;
   margin-top: 7rem;
-  margin-bottom: 5rem;
   overflow-wrap: break-word;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h2,
@@ -59,7 +59,8 @@ main {
   @include center-text;
 
   display: block;
-  margin-bottom: 20px;
+  margin: 7rem auto 6rem auto;
+  line-height: 2.5rem; 
 
   blockquote {
     @include font($italic-header, 1.7rem, 600);
@@ -119,14 +120,15 @@ p {
 
 p,
 figcaption {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 2rem;
 }
 
 a {
   color: $text-color;
 
-  &:hover {
+  &:hover,
+  &:active {
     transition: color $transition-speed;
     color: $text-hover;
   }
@@ -138,13 +140,6 @@ address {
   overflow-wrap: break-word;
 }
 
-
-.header-hex {
-  width: 350px;
-  height: 350px;
-  background-color: $secondary-bg;
-  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-}
 
 .hex {
   background-color: $secondary-bg;

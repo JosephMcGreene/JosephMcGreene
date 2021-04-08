@@ -1,0 +1,43 @@
+@use 'variables' as var;
+
+@mixin center-text {
+  text-align: center;
+}
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin font($family, $size, $weight) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+// FLOATING HEXAGONS
+@mixin standard-hex() {
+  width: 75px;
+  height: calc(75px * 0.5773722628);
+  background-color: var.$secondary-bg;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: calc(75px / 2) solid transparent;
+    border-right: calc(75px / 2) solid transparent;
+  }
+
+  &::before {
+    bottom: 100%;
+    border-bottom: calc(75px * 0.2886792453) solid var.$secondary-bg;
+  }
+  
+  &::after {
+    top: 100%;
+    width: 0;
+    border-top: calc(75px * 0.2886792453) solid var.$secondary-bg;
+  }
+}

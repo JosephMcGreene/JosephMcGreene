@@ -1,20 +1,3 @@
 @forward 'variables';
 @forward 'fonts';
-
-
-// ========== MIXINS ==========
-
-@mixin center-text {
-  text-align: center;
-}
-
-@mixin flex($direction) {
-  display: flex;
-  flex-direction: $direction;
-}
-
-@mixin font($family, $size, $weight) {
-  font-family: $family;
-  font-size: $size;
-  font-weight: $weight;
-}
+@forward 'mixins';

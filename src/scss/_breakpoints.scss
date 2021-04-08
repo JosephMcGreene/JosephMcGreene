@@ -7,9 +7,6 @@
     @include center-text;
     margin-top: 5rem;
   }
-  .header-hex {
-    display: none;
-  }
   h1 {
     margin-top: 5rem;
     margin-bottom: 0;
@@ -19,15 +16,71 @@
 }
 
 // Large Screens
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
 
   p {
-    max-width: 60vw;
+    max-width: 50vw;
   }
   span {
-    max-width: 50vw;
+    max-width: 40vw;
     display: block;
     margin: 0 auto;
+  }
+
+  .hexagons {
+    opacity: 1;
+
+    li {
+
+      &:nth-child(1) {
+        @include standard-hex();
+        left: 1%;
+        animation-delay: 0s;
+        animation-duration: 24s;
+      }
+      &:nth-child(2) {
+        @include standard-hex();
+        left: 8%;
+        animation-delay: 2s;
+        animation-duration: 15s;
+      }
+      &:nth-child(3) {
+        @include standard-hex();
+        left: 13%;
+        animation-delay: 5s;
+        animation-duration: 23s;
+      }
+      &:nth-child(4) {
+        @include standard-hex();
+        left: 18.5%;
+        animation-delay: 3s;
+        animation-duration: 16s;
+      }
+      &:nth-child(5) {
+        @include standard-hex();
+        left: 76%;
+        animation-delay: 3s;
+        animation-duration: 18s;
+      }
+      &:nth-child(6) {
+        @include standard-hex();
+        left: 82.5%;
+        animation-delay: 3s;
+        animation-duration: 20s;
+      }
+      &:nth-child(7) {
+        @include standard-hex();
+        left: 88%;
+        animation-delay: 0s;
+        animation-duration: 15s;
+      }
+      &:nth-child(8) {
+        @include standard-hex();
+        left: 94%;
+        animation-delay: 0s;
+        animation-duration: 30s;
+      }
+    }
   }
 
 }
