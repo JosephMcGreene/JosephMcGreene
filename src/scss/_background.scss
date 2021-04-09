@@ -8,7 +8,7 @@
   height: 100%;
   overflow: hidden;
   z-index: -100;
-  opacity: .3;
+  opacity: .35;
 
   li {
     position: absolute;
@@ -42,32 +42,36 @@
       animation-duration: 16s;
     }
     &:nth-child(5) {
-      display: none;
-      // @include standard-hex();
-      // left: 76%;
-      // animation-delay: 3s;
-      // animation-duration: 18s;
+      @include standard-hex();
+      display: hidden;
     }
     &:nth-child(6) {
-      display: none;
-      // @include standard-hex();
-      // left: 82.5%;
-      // animation-delay: 3s;
-      // animation-duration: 20s;
+      @include standard-hex();
+      display: hidden;
     }
     &:nth-child(7) {
-      display: none;
-      // @include standard-hex();
-      // left: 88%;
-      // animation-delay: 0s;
-      // animation-duration: 15s;
+      @include standard-hex();
+      display: hidden;
     }
     &:nth-child(8) {
-      display: none;
-      // @include standard-hex();
-      // left: 94%;
-      // animation-delay: 0s;
-      // animation-duration: 30s;
+      @include standard-hex();
+      display: hidden;
+    }
+    &:nth-child(9) {
+      @include standard-hex();
+      display: hidden;
+    }
+    &:nth-child(10) {
+      @include standard-hex();
+      display: hidden;
+    }
+    &:nth-child(11) {
+      @include standard-hex();
+      display: hidden;
+    }
+    &:nth-child(12) {
+      @include standard-hex();
+      display: hidden;
     }
   }
 }
