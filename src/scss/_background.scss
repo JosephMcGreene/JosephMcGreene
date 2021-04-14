@@ -8,14 +8,14 @@
   height: 100%;
   overflow: hidden;
   z-index: -100;
-  opacity: .35;
 
   li {
     position: absolute;
     display: block;
     list-style: none;
     animation: animate 25s linear infinite;
-    top: -80px;
+    top: -15px;
+    opacity: .4;
 
     &:nth-child(1) {
       @include standard-hex();
@@ -25,53 +25,29 @@
     }
     &:nth-child(2) {
       @include standard-hex();
-      left: 28%;
-      animation-delay: 1s;
+      left: 35%;
+      animation-delay: 1.5s;
       animation-duration: 15s;
     }
     &:nth-child(3) {
       @include standard-hex();
       left: 55%;
-      animation-delay: 3s;
+      animation-delay: 4.5s;
       animation-duration: 22s;
     }
     &:nth-child(4) {
       @include standard-hex();
       left: 80%;
-      animation-delay: 2s;
-      animation-duration: 16s;
+      animation-delay: 3s;
+      animation-duration: 18s;
     }
-    &:nth-child(5) {
+
+    // Hexes that come in later, for a "second wave" of rain.
+    &:nth-child(13) {
       @include standard-hex();
-      display: hidden;
-    }
-    &:nth-child(6) {
-      @include standard-hex();
-      display: hidden;
-    }
-    &:nth-child(7) {
-      @include standard-hex();
-      display: hidden;
-    }
-    &:nth-child(8) {
-      @include standard-hex();
-      display: hidden;
-    }
-    &:nth-child(9) {
-      @include standard-hex();
-      display: hidden;
-    }
-    &:nth-child(10) {
-      @include standard-hex();
-      display: hidden;
-    }
-    &:nth-child(11) {
-      @include standard-hex();
-      display: hidden;
-    }
-    &:nth-child(12) {
-      @include standard-hex();
-      display: hidden;
+      left: 30%;
+      animation-delay: 8s;
+      animation-duration: 25s;
     }
   }
 }
