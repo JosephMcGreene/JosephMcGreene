@@ -101,6 +101,13 @@ svg {
   background: #f5efe2;
 }
 
+.mejs__currenttime,
+.mejs__duration {
+  font-family: "juice_boldbold";
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
 .mejs__time-hovered {
   background: rgba(245, 239, 226, 0.5);
   z-index: 10;
@@ -130,13 +137,14 @@ svg {
     padding-top: 1.75rem;
   }
 }
-@media (min-width: 800px) {
-  p {
+@media only screen and (min-width: 800px) {
+  main {
+    margin: 0 auto;
     max-width: 50vw;
   }
 
   span {
-    max-width: 40vw;
+    max-width: 35vw;
     display: block;
     margin: 0 auto;
   }
@@ -448,6 +456,10 @@ svg {
 * {
   box-sizing: border-box;
 }
+*:focus {
+  border: aqua 3px solid;
+  border-radius: 7px;
+}
 
 :root {
   font-size: 16px;
@@ -458,7 +470,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "juice_boldbold";
 }
 
@@ -479,15 +491,17 @@ h1 {
   font-size: 2.75rem;
   color: #f5efe2;
   margin-top: 7rem;
+  margin-bottom: 7rem;
   overflow-wrap: break-word;
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  margin-top: 5rem;
 }
 
 h2,
@@ -508,7 +522,7 @@ main {
   color: #f5efe2;
   text-align: center;
   display: block;
-  margin: 7rem auto 6rem auto;
+  margin: 0 auto 6rem auto;
   line-height: 2.5rem;
 }
 .quote blockquote {
@@ -535,6 +549,9 @@ main {
   clip-path: polygon(10% 0, 90% 0, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0 75%, 0 25%);
 }
 .fig-container figure figcaption {
+  font-family: "juice_boldbold";
+  font-size: 1.3rem;
+  font-weight: 400;
   text-align: center;
   padding-left: 40px;
   padding-right: 40px;
@@ -547,8 +564,12 @@ main {
 }
 
 hr {
-  max-width: 35vw;
+  max-width: 30vw;
   margin: 2rem auto;
+}
+
+article span {
+  font-size: 1.3rem;
 }
 
 article,
@@ -556,7 +577,13 @@ figure {
   font-family: "abelregular";
   font-size: 1rem;
   font-weight: 600;
-  margin: 35px 1vw;
+  margin: 35px 2%;
+}
+
+p,
+figcaption {
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 
 p {
@@ -566,12 +593,6 @@ p {
   color: #f5efe2;
   margin: 0 auto;
   text-align: justify;
-}
-
-p,
-figcaption {
-  font-size: 1.4rem;
-  line-height: 2rem;
 }
 
 a {

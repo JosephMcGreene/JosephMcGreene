@@ -21,6 +21,11 @@ color: $text-color;
   background: $text-color;
 }
 
+.mejs__currenttime,
+.mejs__duration {
+  @include font($header-font, .85rem, 400);
+}
+
 .mejs__time-hovered {
   background: rgba(245, 239, 226, 0.5);
   z-index: 10;

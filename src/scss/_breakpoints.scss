@@ -16,13 +16,15 @@
 }
 
 // Large Screens
-@media /* only screen and */ (min-width: 800px) {
+@media only screen and (min-width: 800px) {
 
-  p {
+  main {
+    margin: 0 auto;
     max-width: 50vw;
   }
+
   span {
-    max-width: 40vw;
+    max-width: 35vw;
     display: block;
     margin: 0 auto;
   }
