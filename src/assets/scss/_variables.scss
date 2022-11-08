@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "cadmanregular";
+  src: url("../fonts/Cadman_Roman-webfont.woff") format("woff");
+}
+$main-font: "cadmanregular";
+
+$primary-color: hsl(240, 20%, 13%);
+$primary-color-light: hsl(240, 18%, 17%);
+$secondary-color: hsl(0, 0%, 4%);
+$tertiary-color: aqua;
+$text-color: white;
+
+//z-index
+$top: 1000;
