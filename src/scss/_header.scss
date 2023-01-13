@@ -1,0 +1,65 @@
+@use "./index" as *;
+
+.header {
+  z-index: $top;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $primary-color;
+  box-shadow: 0 3px 2.5px rgb(0, 0, 0, 0.6);
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+
+    font-family: $main-font;
+    font-weight: 600;
+    font-size: 1.7rem;
+
+    color: $text-color;
+    list-style: none;
+
+    .nav-item {
+      position: relative;
+      flex-grow: 1;
+      max-width: 100px;
+      padding: 22px 20px;
+
+      transition-property: background-color;
+      transition-duration: 300ms;
+
+      .nav-text {
+        position: absolute;
+        text-align: center;
+        left: 4px;
+        top: 0;
+        text-shadow: 0 0 5px $tertiary-color;
+
+        transition-property: all;
+        transition-duration: 300ms;
+        // transition-timing-function: ease-out;
+
+        opacity: 0;
+      }
+
+      &:hover {
+        background-color: $tertiary-color;
+
+        .nav-text {
+          display: block;
+          top: 110%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

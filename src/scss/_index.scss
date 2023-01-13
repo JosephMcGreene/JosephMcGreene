@@ -1,5 +1,5 @@
 @forward "variables";
-@use "variables" as var;
+@use "variables" as *;
 // @forward "mixins";
 
 * {
@@ -9,8 +9,8 @@
 }
 
 *::selection {
-  color: var.$primary-color;
-  background-color: var.$tertiary-color;
+  color: $primary-color;
+  background-color: $tertiary-color;
 }
 
 :root {
@@ -20,7 +20,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: var.$primary-color-light;
+  background-color: $primary-color-light;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,24 +28,37 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+.App {
   position: absolute;
-  top: 0;
+}
+
+body {
+  // position: absolute;
   min-width: 320px;
   width: 100%;
   min-height: 100vh;
-  background-image: url("../img/pexels-blaque-x-932638.jpg");
+  background-color: $primary-color-light;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-h1 {
-  position: sticky;
-  display: block;
-  margin: min(123px, 22vw) auto;
+.page-title {
+  width: min-content;
+  margin: 160px auto 80px;
   text-align: center;
-  font-family: var.$main-font;
-  font-size: 3.25rem;
+  font-family: $title-font;
+  font-size: 4rem;
+  cursor: default;
+  text-shadow: 0 4px 8px black;
+
+  .title-letter {
+    transition-property: all;
+    transition-duration: 200ms;
+
+    &:hover {
+      text-shadow: 0 0 15px $tertiary-color;
+    }
+  }
 }
 
 @media (prefers-color-scheme: light) {
