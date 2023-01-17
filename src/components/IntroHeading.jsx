@@ -6,7 +6,7 @@ export default function IntroHeading({ text }) {
           return <span className="title-letter">{letter}</span>;
         })}
       </h1>
-      <span className="intro-span">Front-End Developer</span>
+      <h2 className="intro-span">Front-End Developer</h2>
     </>
   );
 }

@@ -1,6 +1,7 @@
 @forward "variables";
+@forward "mixins";
+@use "mixins" as *;
 @use "variables" as *;
-// @forward "mixins";
 
 * {
   box-sizing: border-box;
@@ -43,6 +44,7 @@ body {
 }
 
 .page-title {
+  @include textShadow();
   width: min-content;
   margin: 160px auto 0;
   text-align: center;
@@ -51,11 +53,9 @@ body {
   font-weight: 300;
   letter-spacing: -2px;
   cursor: default;
-  text-shadow: 0 1px 3px $tertiary-color;
 
   .title-letter {
-    transition-property: all;
-    transition-duration: 200ms;
+    @include transition(text-shadow);
 
     &:hover {
       text-shadow: 0 0 17px $tertiary-color;
@@ -64,12 +64,13 @@ body {
 }
 
 .intro-span {
+  @include textShadow();
   display: block;
   font-family: $title-font;
   font-weight: 500;
   text-align: center;
   font-size: 1.75rem;
-  text-shadow: 0 1px 3px $tertiary-color;
+  letter-spacing: -0.5px;
   margin: 60px auto;
 }
 

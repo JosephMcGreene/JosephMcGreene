@@ -15,10 +15,10 @@
     align-items: center;
 
     .logo {
+      @include textShadow();
       font-family: $title-font;
       font-size: 2rem;
       margin: 0 0.5ch;
-      text-shadow: 0 1px 3px $tertiary-color;
     }
 
     .nav-list {
@@ -35,23 +35,20 @@
       list-style: none;
 
       .nav-item {
+        @include transition(background-color);
         position: relative;
         flex-grow: 1;
         max-width: 100px;
         padding: 22px 20px;
-
-        transition-property: background-color;
-        transition-duration: 300ms;
+        border-radius: 5px;
 
         .nav-text {
+          @include transition(opacity top);
           position: absolute;
           text-align: center;
           left: 4px;
           top: 0;
           text-shadow: 0 0 5px $tertiary-color;
-
-          transition-property: all;
-          transition-duration: 300ms;
 
           opacity: 0;
         }
@@ -60,7 +57,6 @@
           background-color: $tertiary-color;
 
           .nav-text {
-            display: block;
             top: 110%;
             opacity: 1;
           }

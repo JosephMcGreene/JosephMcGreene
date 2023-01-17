@@ -30,6 +30,7 @@ export default function Project({
               className="project-link-icon"
             />
           </a>
+          <label className="link-label">GitHub</label>
         </li>
 
         <li className="projects-li">
@@ -45,6 +46,7 @@ export default function Project({
               className="project-link-icon"
             />
           </a>
+          <label className="link-label">Live</label>
         </li>
       </ul>
     </article>
