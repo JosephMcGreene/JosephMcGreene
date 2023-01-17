@@ -1,20 +1,21 @@
 @font-face {
-  font-family: "cadmanregular";
-  src: url("../assets/fonts/Cadman_Roman-webfont.woff") format("woff");
+  font-family: "samba";
+  src: url("../assets/fonts/Samba-webfont.woff") format("woff");
 }
-$main-font: "cadmanregular";
+$main-font: "samba";
 
 @font-face {
-  font-family: "juicebold";
-  src: url("../assets/fonts/JUICE_Bold-webfont.woff") format("woff");
+  font-family: "juiceregular";
+  src: url("../assets/fonts/JUICE_Regular-webfont.woff") format("woff");
 }
-$title-font: "juicebold";
+$title-font: "juiceregular";
 
 $primary-color: hsl(240, 20%, 17%);
 $primary-color-light: hsl(240, 17%, 21%);
 $secondary-color: hsl(0, 0%, 6%);
-$tertiary-color: aqua;
-$text-color: white;
+$tertiary-color: hsl(180, 100%, 50%);
+$tertiary-color-a7: rgba(0, 255, 255, 0.7);
+$text-color: hsl(0, 0%, 100%);
 
 //z-index
 $top: 10000;

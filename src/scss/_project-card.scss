@@ -1,0 +1,74 @@
+@use "./index" as *;
+
+.project-card {
+  background-color: $primary-color;
+  padding: 1.5ch;
+  margin: 3ch 1ch;
+  border-radius: 5px;
+
+  .project-title {
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-shadow: 0 1px 3px $tertiary-color;
+  }
+
+  .about-project {
+    font-size: 1.15rem;
+    line-height: 2.5ch;
+  }
+
+  .project-title,
+  .about-project {
+    color: $text-color;
+    font-family: $main-font;
+    font-weight: 600;
+    margin-bottom: 1ch;
+  }
+
+  .screenshot {
+    max-width: 100%;
+  }
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  list-style: none;
+
+  margin: 1ch 0;
+
+  .projects-li {
+    flex-grow: 1;
+
+    padding: 12px;
+    max-width: 65px;
+    border-radius: 5px;
+
+    transition-property: background-color;
+    transition-duration: 300ms;
+
+    &:hover {
+      background-color: $tertiary-color;
+
+      .project-link {
+        .project-link-icon {
+          filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)
+            brightness(96%) contrast(87%);
+        }
+      }
+    }
+
+    .project-link {
+      .project-link-icon {
+        filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(95deg)
+          brightness(111%) contrast(101%);
+
+        transition-property: filter;
+        transition-duration: 300ms;
+      }
+    }
+  }
+}
