@@ -1,0 +1,76 @@
+@use "./index" as *;
+
+.links-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style: none;
+  margin: 1.5ch auto;
+
+  .links-item {
+    @include transition(background-color);
+    position: relative;
+
+    padding: 12px;
+    margin-right: auto;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $tertiary-color;
+
+      .link {
+        .link-icon {
+          filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)
+            brightness(96%) contrast(87%);
+        }
+      }
+
+      .link-label {
+        opacity: 1;
+        left: 102%;
+      }
+    }
+
+    .link {
+      .link-icon {
+        width: 35px;
+        @include transition(filter);
+        filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(95deg)
+          brightness(111%) contrast(101%);
+      }
+
+      .linkedin-logo {
+        filter: invert(97%) sepia(77%) saturate(0%) hue-rotate(123deg)
+          brightness(121%) contrast(100%);
+      }
+    }
+
+    .link-label {
+      @include textShadow();
+      @include transition(opacity left);
+
+      position: absolute;
+      left: 0;
+      top: 33%;
+
+      opacity: 0;
+
+      color: $text-color;
+      font-family: $main-font;
+      font-weight: 600;
+      font-size: 1.25rem;
+      font-style: italic;
+      letter-spacing: 0.15ch;
+      margin-left: 0.5ch;
+    }
+  }
+}
+
+.contact-list {
+  flex-direction: column;
+
+  .links-item {
+    margin-bottom: 1.5ch;
+  }
+}

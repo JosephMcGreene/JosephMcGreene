@@ -1,12 +1,12 @@
 export default function IntroHeading({ text }) {
   return (
-    <>
+    <hgroup>
       <h1 className="page-title">
         {text.map((letter) => {
           return <span className="title-letter">{letter}</span>;
         })}
       </h1>
-      <h2 className="intro-span">Front-End Developer</h2>
-    </>
+      <p className="intro-span">Front-End Developer</p>
+    </hgroup>
   );
 }

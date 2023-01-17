@@ -10,43 +10,47 @@ export default function Project({
 }) {
   return (
     <article className="project-card">
-      <h3 className="project-title">{title}</h3>
+      <hgroup>
+        <h3 className="project-title">{title}</h3>
 
-      <img src={projectPhoto} alt="project screenshot" className="screenshot" />
+        <img
+          src={projectPhoto}
+          alt="project screenshot"
+          className="screenshot"
+        />
 
-      <p className="about-project">{projectExplanation}</p>
+        <p className="about-project">{projectExplanation}</p>
+      </hgroup>
 
-      <ul className="project-list">
-        <li className="projects-li">
+      <ul className="links-list">
+        <li className="links-item">
           <a
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="project-link"
+            className="link"
+            name="githubLink"
           >
-            <img
-              src={GitHubLogo}
-              alt="GitHub Logo"
-              className="project-link-icon"
-            />
+            <img src={GitHubLogo} alt="GitHub Logo" className="link-icon" />
           </a>
-          <label className="link-label">GitHub</label>
+          <label for="githubLink" className="link-label">
+            GitHub
+          </label>
         </li>
 
-        <li className="projects-li">
+        <li className="links-item">
           <a
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="project-link"
+            className="link"
+            name="liveLink"
           >
-            <img
-              src={LinkIcon}
-              alt="Link to App"
-              className="project-link-icon"
-            />
+            <img src={LinkIcon} alt="Link to App" className="link-icon" />
           </a>
-          <label className="link-label">Live</label>
+          <label for="liveLink" className="link-label">
+            Live
+          </label>
         </li>
       </ul>
     </article>
