@@ -8,3 +8,9 @@
 @mixin textShadow() {
   text-shadow: 0 1px 3px var.$tertiary-color;
 }
+
+@mixin cardLayout() {
+  padding: 1.5ch;
+  margin: 2ch 1ch;
+  border-radius: 5px;
+}

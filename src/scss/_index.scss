@@ -74,6 +74,16 @@ body {
   margin: 60px auto;
 }
 
+.section-heading {
+  @include textShadow();
+  font-family: $title-font;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 2ch;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

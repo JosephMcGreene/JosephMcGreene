@@ -5,6 +5,7 @@ export default function Project({
   title,
   projectPhoto,
   projectExplanation,
+  techStack,
   githubLink,
   liveLink,
 }) {
@@ -21,6 +22,10 @@ export default function Project({
 
         <p className="about-project">{projectExplanation}</p>
       </hgroup>
+
+      <p className="about-project">
+        <em>Tech Stack: {techStack}</em>
+      </p>
 
       <ul className="links-list">
         <li className="links-item">

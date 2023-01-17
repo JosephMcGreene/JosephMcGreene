@@ -1,10 +1,8 @@
 @use "./index" as *;
 
 .project-card {
+  @include cardLayout();
   background-color: $primary-color;
-  padding: 1.5ch;
-  margin: 3ch 1ch;
-  border-radius: 5px;
 
   .project-title {
     @include textShadow();
@@ -12,7 +10,6 @@
     text-align: center;
     font-size: 1.75rem;
     margin-bottom: 0;
-    text-decoration: underline;
   }
 
   .about-project {
@@ -32,5 +29,6 @@
     display: inline;
     max-width: 100%;
     margin-bottom: 1.5ch;
+    border-radius: 5px;
   }
 }

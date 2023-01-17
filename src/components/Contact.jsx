@@ -6,16 +6,14 @@ import GitHubLogo from "../assets/img/github.svg";
 export default function Contact() {
   return (
     <section>
+      <h3 className="section-heading">Contact Me</h3>
       <article className="contact-card">
         <address className="contact-information">
           <p className="about-contact">
-            This is paragraph about how to best get into contact with me,
-            repeated many times. This is paragraph about how to best get into
-            contact with me, repeated many times. This is paragraph about how to
-            best get into contact with me, repeated many times. This is
-            paragraph about how to best get into contact with me, repeated many
-            times. This is paragraph about how to best get into contact with me,
-            repeated many times.
+            If there is something amazing to be made, then let's do it! You can
+            email or call me, which are the best ways to get into contact with
+            me. Here are also links to what I'm up to around the internet. I'd
+            love to chat, set up a project, and see where it can take us!
           </p>
           <ul className="links-list contact-list">
             <li className="links-item">
