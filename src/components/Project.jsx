@@ -29,33 +29,33 @@ export default function Project({
 
       <ul className="links-list">
         <li className="links-item">
+          <label htmlFor="githubLink" className="link-label">
+            GitHub
+          </label>
           <a
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="link"
+            className="link anchor"
             name="githubLink"
           >
             <img src={GitHubLogo} alt="GitHub Logo" className="link-icon" />
           </a>
-          <label htmlFor="githubLink" className="link-label">
-            GitHub
-          </label>
         </li>
 
         <li className="links-item">
+          <label htmlFor="liveLink" className="link-label">
+            Live
+          </label>
           <a
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="link"
+            className="link anchor"
             name="liveLink"
           >
             <img src={LinkIcon} alt="Link to App" className="link-icon" />
           </a>
-          <label htmlFor="liveLink" className="link-label">
-            Live
-          </label>
         </li>
       </ul>
     </article>

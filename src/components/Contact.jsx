@@ -22,7 +22,7 @@ export default function Contact() {
               </label>
               <a
                 href="mailto:josephorianmcgreene@gmail.com"
-                className="link"
+                className="link anchor"
                 name="emailLink"
               >
                 <img src={EmailIcon} alt="Email Icon" className="link-icon" />
@@ -33,7 +33,11 @@ export default function Contact() {
               <label htmlFor="phoneLink" className="link-label">
                 Phone
               </label>
-              <a href="tel:+34650069914" className="link" name="phoneLink">
+              <a
+                href="tel:+34650069914"
+                className="link anchor"
+                name="phoneLink"
+              >
                 <img src={PhoneIcon} alt="Phone Icon" className="link-icon" />
               </a>
             </li>
@@ -46,7 +50,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/joseph-mcgreene/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link"
+                className="link anchor"
                 name="linkedinLink"
               >
                 <img
@@ -65,7 +69,7 @@ export default function Contact() {
                 href="https://github.com/josephmcgreene"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link"
+                className="link anchor"
                 name="githubLink"
               >
                 <img src={GitHubLogo} alt="GitHub Logo" className="link-icon" />

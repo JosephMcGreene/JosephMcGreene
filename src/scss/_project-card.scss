@@ -9,12 +9,13 @@
     display: block;
     text-align: center;
     font-size: 1.75rem;
-    margin-bottom: 0;
+    margin: 1ch auto 2ch;
   }
 
   .about-project {
     font-size: 1.15rem;
     line-height: 2.5ch;
+    margin: 2.5ch auto;
   }
 
   .project-title,
@@ -22,13 +23,11 @@
     color: $text-color;
     font-family: $main-font;
     font-weight: 600;
-    margin-bottom: 1.5ch;
   }
 
   .screenshot {
     display: inline;
     max-width: 100%;
-    margin-bottom: 1.5ch;
     border-radius: 5px;
   }
 }

@@ -6,7 +6,7 @@
   align-items: center;
 
   list-style: none;
-  margin: 1.5ch auto;
+  margin: 2.5ch auto 0.5ch;
 
   .links-item {
     @include transition(background-color);
@@ -52,7 +52,8 @@
 
       position: absolute;
       left: 0;
-      top: 33%;
+      top: 50%;
+      margin-top: calc(1.25rem * -0.5);
 
       opacity: 0;
 

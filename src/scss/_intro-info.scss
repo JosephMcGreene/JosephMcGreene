@@ -1,0 +1,80 @@
+@use "./index" as *;
+
+.page-title {
+  @include textShadow();
+  width: min-content;
+  margin: 22vh auto 0;
+  text-align: center;
+  font-family: $title-font;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: -2px;
+  cursor: default;
+
+  .title-letter {
+    @include transition(text-shadow);
+
+    &:hover {
+      text-shadow: 0 0 17px $tertiary-color;
+    }
+  }
+}
+
+.intro-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .intro-span {
+    @include textShadow();
+    display: block;
+    font-family: $title-font;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.75rem;
+    letter-spacing: -0.5px;
+    margin: 40px auto;
+  }
+
+  .anchor {
+    text-decoration: none;
+    color: $text-color;
+  }
+
+  .download-button {
+    @include textShadow();
+    @include transition(background-color color box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 5px;
+    padding: 1.5ch 3ch;
+    cursor: pointer;
+
+    font-family: $main-font;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 8vh;
+
+    .download-icon {
+      @include transition(filter);
+      max-width: 25px;
+      margin-right: 5px;
+      filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(95deg)
+        brightness(111%) contrast(101%);
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px $tertiary-color;
+      background-color: $tertiary-color;
+      color: $primary-color;
+
+      .download-icon {
+        filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)
+          brightness(96%) contrast(87%);
+      }
+    }
+  }
+}
