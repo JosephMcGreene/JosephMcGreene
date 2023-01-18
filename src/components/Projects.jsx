@@ -5,7 +5,7 @@ import Project from "./Project";
 
 export default function Projects() {
   return (
-    <section>
+    <section id="projectsSection">
       <h3 className="section-heading">Projects</h3>
       <Project
         title="Advizot Meetings"

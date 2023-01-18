@@ -5,7 +5,7 @@ import GitHubLogo from "../assets/img/github.svg";
 
 export default function Contact() {
   return (
-    <section>
+    <section id="contactSection">
       <h3 className="section-heading">Contact Me</h3>
       <article className="contact-card">
         <address className="contact-information">

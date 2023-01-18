@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section>
+    <section id="aboutSection">
       <h3 className="section-heading">About Me</h3>
     </section>
   );

@@ -11,16 +11,30 @@ export default function Header() {
         <h2 className="logo">JM</h2>
         <ul className="nav-list">
           <li className="nav-item">
-            <img src={ProjectsIcon} alt="projects" />
-            <h5 className="nav-text">Projects</h5>
+            <a href="#projectsSection" name="projects">
+              <img src={ProjectsIcon} alt="projects" />
+            </a>
+            <label htmlFor="projects" className="nav-text">
+              Projects
+            </label>
           </li>
+
           <li className="nav-item">
-            <img src={AboutIcon} alt="About Me" />
-            <h5 className="nav-text">About Me</h5>
+            <a href="#aboutSection" name="about">
+              <img src={ContactIcon} alt="Contact" />
+            </a>
+            <label htmlFor="about" className="nav-text">
+              Contact
+            </label>
           </li>
+
           <li className="nav-item">
-            <img src={ContactIcon} alt="Contact" />
-            <h5 className="nav-text">Contact</h5>
+            <a href="#contactSection" name="contact">
+              <img src={AboutIcon} alt="About Me" />
+            </a>
+            <label htmlFor="contact" className="nav-text">
+              About Me
+            </label>
           </li>
         </ul>
       </nav>

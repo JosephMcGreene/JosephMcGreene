@@ -1,0 +1,55 @@
+@use "./index" as *;
+
+.footer {
+  background-color: $primary-color;
+  width: 100%;
+  box-shadow: 0 -3px 2.5px rgb(0, 0, 0, 0.6);
+
+  .footer-nav {
+    .footer-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      list-style: none;
+      font-family: $main-font;
+      font-weight: 600;
+      font-size: 1.25rem;
+      padding: 1.5ch;
+
+      .footer-li {
+        @include textShadow();
+        @include transition(background-color);
+        margin: 0.5ch;
+        padding: 0.75ch 2ch;
+        border-radius: 5px;
+
+        &:last-child {
+          text-shadow: none;
+          background-color: $primary-color;
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background-color: $tertiary-color;
+          color: $primary-color;
+
+          a {
+            &:visited {
+              color: $primary-color;
+            }
+          }
+        }
+
+        a {
+          @include transition(color);
+          text-decoration: none;
+
+          &:visited {
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}
