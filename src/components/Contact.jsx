@@ -17,25 +17,37 @@ export default function Contact() {
           </p>
           <ul className="links-list contact-list">
             <li className="links-item">
-              <a href="mailto:josephorianmcgreene@gmail.com" className="link">
+              <label htmlFor="emailLink" className="link-label">
+                Email
+              </label>
+              <a
+                href="mailto:josephorianmcgreene@gmail.com"
+                className="link"
+                name="emailLink"
+              >
                 <img src={EmailIcon} alt="Email Icon" className="link-icon" />
               </a>
-              <label className="link-label">Email</label>
             </li>
 
             <li className="links-item">
-              <a href="tel:+34650069914" className="link">
+              <label htmlFor="phoneLink" className="link-label">
+                Phone
+              </label>
+              <a href="tel:+34650069914" className="link" name="phoneLink">
                 <img src={PhoneIcon} alt="Phone Icon" className="link-icon" />
               </a>
-              <label className="link-label">Phone</label>
             </li>
 
             <li className="links-item">
+              <label htmlFor="linkedinLink" className="link-label">
+                LinkedIn
+              </label>
               <a
                 href="https://www.linkedin.com/in/joseph-mcgreene/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link"
+                name="linkedinLink"
               >
                 <img
                   src={LinkedInLogo}
@@ -43,19 +55,21 @@ export default function Contact() {
                   className="link-icon linkedin-logo"
                 />
               </a>
-              <label className="link-label">LinkedIn</label>
             </li>
 
             <li className="links-item">
+              <label htmlFor="githubLink" className="link-label">
+                GitHub
+              </label>
               <a
                 href="https://github.com/josephmcgreene"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link"
+                name="githubLink"
               >
                 <img src={GitHubLogo} alt="GitHub Logo" className="link-icon" />
               </a>
-              <label className="link-label">GitHub</label>
             </li>
           </ul>
         </address>

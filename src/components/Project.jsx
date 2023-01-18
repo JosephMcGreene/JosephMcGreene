@@ -38,7 +38,7 @@ export default function Project({
           >
             <img src={GitHubLogo} alt="GitHub Logo" className="link-icon" />
           </a>
-          <label for="githubLink" className="link-label">
+          <label htmlFor="githubLink" className="link-label">
             GitHub
           </label>
         </li>
@@ -53,7 +53,7 @@ export default function Project({
           >
             <img src={LinkIcon} alt="Link to App" className="link-icon" />
           </a>
-          <label for="liveLink" className="link-label">
+          <label htmlFor="liveLink" className="link-label">
             Live
           </label>
         </li>
