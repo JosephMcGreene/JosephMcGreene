@@ -53,6 +53,43 @@ body {
   margin-top: 2ch;
 }
 
+.footer-li {
+  &:last-child {
+    &:hover {
+      .tooltip {
+        display: block;
+      }
+    }
+  }
+}
+.tooltip {
+  @include transition(display);
+  position: absolute;
+  bottom: 105%;
+  left: calc(50% - 110px);
+  background-color: $tertiary-color;
+  border-radius: 5px;
+  width: 220px;
+  margin-bottom: 10px;
+
+  display: none;
+
+  .tooltip-arrow {
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 7.5px);
+    border-top: 10px solid $tertiary-color;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+
+  .tooltip-content {
+    font-size: 1rem;
+    color: $primary-color;
+    padding: 1ch;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

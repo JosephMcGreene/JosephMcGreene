@@ -1,3 +1,5 @@
+import Tooltip from "./Tooltip";
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -15,7 +17,10 @@ export default function Footer() {
           <li className="footer-li">
             <a href="#aboutSection">About Me</a>
           </li>
-          <li className="footer-li">McGreene &copy;2023</li>
+          <li className="footer-li">
+            <Tooltip />
+            McGreene &copy;2023
+          </li>
         </ul>
       </nav>
     </footer>

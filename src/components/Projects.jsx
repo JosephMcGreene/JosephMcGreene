@@ -20,7 +20,7 @@ export default function Projects() {
         title="D&D Monster Guide"
         projectPhoto={MonsterGuidePhoto}
         projectExplanation="Gone are the long hours of discerning what monsters your party will face next Sunday afternoon. Why spend an entire evening when you can now spend 30 minutes? This D&D Monster Guide allows you to spend your time doing more important things, like practicing your NPC voices."
-        techStack="React, SCSS, fetch API"
+        techStack="React, SCSS, D&D 5e REST API"
         githubLink="https://github.com/JosephMcGreene/react-and-dragons"
         liveLink="https://josephmcgreene.github.io/react-and-dragons/"
       />

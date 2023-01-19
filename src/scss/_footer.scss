@@ -25,9 +25,11 @@
         border-radius: 5px;
 
         &:last-child {
+          position: relative;
           text-shadow: none;
           background-color: $primary-color;
           font-size: 1rem;
+          cursor: default;
         }
 
         &:hover {
@@ -38,6 +40,11 @@
             &:visited {
               color: $primary-color;
             }
+          }
+
+          &:last-child {
+            background-color: $primary-color;
+            color: $text-color;
           }
         }
 
