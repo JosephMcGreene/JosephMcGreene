@@ -2,18 +2,21 @@
 
 .project-card {
   @include cardLayout();
-  background-color: $primary-color;
 
   .project-title {
     @include textShadow();
+    @include formattedText(1.75rem);
+
     display: block;
+
     text-align: center;
     font-size: 1.75rem;
     margin: 1ch auto 2ch;
   }
 
   .about-project {
-    font-size: 1.15rem;
+    @include formattedText(1.15rem);
+
     line-height: 2.5ch;
     margin: 2.5ch auto;
   }
@@ -21,12 +24,11 @@
   .project-title,
   .about-project {
     color: $text-color;
-    font-family: $main-font;
-    font-weight: 600;
   }
 
   .screenshot {
     display: inline;
+
     max-width: 100%;
     border-radius: 5px;
   }

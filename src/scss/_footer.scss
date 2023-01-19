@@ -7,25 +7,25 @@
 
   .footer-nav {
     .footer-list {
+      @include formattedText(1.25rem);
+
       display: flex;
       flex-direction: column;
       align-items: center;
 
       list-style: none;
-      font-family: $main-font;
-      font-weight: 600;
-      font-size: 1.25rem;
       padding: 1.5ch;
 
       .footer-li {
         @include textShadow();
         @include transition(background-color);
-        margin: 0.5ch;
+
         padding: 0.75ch 2ch;
         border-radius: 5px;
 
         &:last-child {
           position: relative;
+
           text-shadow: none;
           background-color: $primary-color;
           font-size: 1rem;
@@ -50,6 +50,7 @@
 
         a {
           @include transition(color);
+
           text-decoration: none;
 
           &:visited {

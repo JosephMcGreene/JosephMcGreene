@@ -2,22 +2,18 @@
 
 .contact-card {
   @include cardLayout();
-  display: flex;
 
-  background-color: $primary-color;
+  display: flex;
 
   .contact-information {
     display: flex;
-    font-style: none;
 
-    .about-contact {
+    .contact-content {
+      @include formattedText(1.15rem);
+
       align-self: center;
-
       flex-basis: 55%;
       flex-grow: 1;
-      font-family: $main-font;
-      font-size: 1rem;
-      font-weight: 600;
     }
 
     .links-list {

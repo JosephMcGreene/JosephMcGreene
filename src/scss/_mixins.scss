@@ -13,4 +13,11 @@
   padding: 1.5ch;
   margin: 2ch 1ch;
   border-radius: 5px;
+  background-color: var.$primary-color;
+}
+
+@mixin formattedText($size) {
+  font-family: var.$main-font;
+  font-weight: 600;
+  font-size: $size;
 }

@@ -1,0 +1,9 @@
+@use "./index" as *;
+
+.about-card {
+  @include cardLayout();
+
+  .about-content {
+    @include formattedText(1.15rem);
+  }
+}
