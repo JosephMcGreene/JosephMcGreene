@@ -21,3 +21,7 @@
   font-weight: 600;
   font-size: $size;
 }
+
+@mixin hoverGlow() {
+  box-shadow: 0 0 10px var.$tertiary-color;
+}

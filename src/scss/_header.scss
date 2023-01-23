@@ -35,7 +35,7 @@
       list-style: none;
 
       .nav-item {
-        @include transition(background-color);
+        @include transition(background-color box-shadow);
 
         position: relative;
 
@@ -70,6 +70,8 @@
         }
 
         &:hover {
+          @include hoverGlow();
+
           background-color: $tertiary-color;
 
           a .nav-icon {
