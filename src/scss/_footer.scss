@@ -18,19 +18,20 @@
 
       .footer-li {
         @include textShadow();
-        @include transition(background-color);
+        @include transition(background-color box-shadow);
 
         padding: 0.75ch 2ch;
         border-radius: 5px;
 
         &:last-child {
           text-shadow: none;
-          background-color: $primary-color;
+          background-color: transparent;
           font-size: 1rem;
           cursor: default;
         }
 
         &:hover {
+          @include hoverGlow();
           background-color: $tertiary-color;
           color: $primary-color;
 
@@ -41,7 +42,10 @@
           }
 
           &:last-child {
-            background-color: $primary-color;
+            @include textShadow();
+
+            box-shadow: none;
+            background-color: transparent;
             color: $text-color;
           }
         }

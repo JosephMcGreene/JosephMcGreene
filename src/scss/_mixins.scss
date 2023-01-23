@@ -23,5 +23,6 @@
 }
 
 @mixin hoverGlow() {
+  @include transition(background-color box-shadow);
   box-shadow: 0 0 10px var.$tertiary-color;
 }
