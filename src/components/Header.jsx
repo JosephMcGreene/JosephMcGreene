@@ -8,8 +8,10 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="nav-bar">
-        <h2 className="logo">JM</h2>
         <ul className="nav-list">
+          <li className="nav-item">
+            <h2 className="logo">JM</h2>
+          </li>
           <li className="nav-item">
             <label htmlFor="projects" className="nav-label">
               Projects

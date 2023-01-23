@@ -9,19 +9,12 @@
   right: 0;
 
   background-color: $primary-color;
-  box-shadow: 0 3px 2.5px rgb(0, 0, 0, 0.6);
+  box-shadow: 0 3px 5px rgb(0, 0, 0, 0.7);
 
   .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .logo {
-      text-shadow: 0 0 15px $tertiary-color;
-      font-family: $title-font;
-      font-size: 2rem;
-      margin: 0 0.5ch;
-    }
 
     .nav-list {
       @include formattedText(1.7rem);
@@ -34,6 +27,12 @@
       color: $text-color;
       list-style: none;
 
+      .logo {
+        text-shadow: 0 0 15px $tertiary-color;
+        font-family: $title-font;
+        font-size: 2rem;
+      }
+
       .nav-item {
         @include transition(background-color box-shadow);
 
@@ -41,8 +40,9 @@
 
         flex-grow: 1;
 
-        max-width: 100px;
+        max-width: 90px;
         padding: 22px 20px;
+        margin: 0.5ch 2%;
         border-radius: 5px;
 
         a .nav-icon {
@@ -80,10 +80,22 @@
           }
 
           .nav-label {
-            top: 114%;
+            top: 120%;
 
             opacity: 1;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .nav-bar {
+    .nav-list {
+      .nav-item {
+        &:first-child {
+          margin-right: auto;
         }
       }
     }
