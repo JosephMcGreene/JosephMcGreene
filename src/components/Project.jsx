@@ -11,17 +11,11 @@ export default function Project({
 }) {
   return (
     <article className="project-card">
-      <hgroup>
-        <h3 className="project-title">{title}</h3>
+      <h3 className="project-title">{title}</h3>
 
-        <img
-          src={projectPhoto}
-          alt="project screenshot"
-          className="screenshot"
-        />
+      <img src={projectPhoto} alt="project screenshot" className="screenshot" />
 
-        <p className="about-project">{projectExplanation}</p>
-      </hgroup>
+      <p className="about-project">{projectExplanation}</p>
 
       <p className="about-project">
         <em>Tech Stack: {techStack}</em>
