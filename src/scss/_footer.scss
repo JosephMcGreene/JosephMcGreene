@@ -10,27 +10,23 @@
       @include formattedText(1.25rem);
 
       display: flex;
-      flex-direction: column;
+      justify-content: space-around;
       align-items: center;
 
       list-style: none;
+      text-align: center;
       padding: 1.5ch;
 
       .footer-li {
         @include textShadow();
-        @include transition(background-color);
+        @include transition(background-color box-shadow);
 
         padding: 0.75ch 2ch;
         border-radius: 5px;
 
-        &:last-child {
-          text-shadow: none;
-          background-color: $primary-color;
-          font-size: 1rem;
-          cursor: default;
-        }
-
         &:hover {
+          @include hoverGlow();
+
           background-color: $tertiary-color;
           color: $primary-color;
 
@@ -38,11 +34,6 @@
             &:visited {
               color: $primary-color;
             }
-          }
-
-          &:last-child {
-            background-color: $primary-color;
-            color: $text-color;
           }
         }
 
@@ -57,5 +48,22 @@
         }
       }
     }
+
+    .copyright {
+      @include formattedText(1rem);
+
+      display: block;
+      text-align: center;
+      background-color: $primary-color;
+      padding-bottom: 2ch;
+      cursor: default;
+    }
+  }
+}
+
+@media screen and (max-width: 402px) {
+  .footer-list {
+    display: flex;
+    flex-direction: column;
   }
 }
