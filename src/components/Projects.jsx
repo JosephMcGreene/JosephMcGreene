@@ -1,13 +1,19 @@
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 import AdvizotMeetingsPhoto from "../assets/img/advizot-meetings-screenshot.png";
 import MonsterGuidePhoto from "../assets/img/monster-guide-screenshot.png";
 import LetsRollPhoto from "../assets/img/lets-roll-screenshot.png";
 import Project from "./Project";
 
 export default function Projects() {
+  const [ref, entry] = useIntersectionObserver({ rootMargin: "15px" });
+
   return (
     <section id="projectsSection">
-      <h3 className="section-heading">Projects</h3>
+      <h3 className="section-heading" id="project1">
+        Projects
+      </h3>
       <Project
+        ref={ref}
         title="Advizot Meetings"
         projectPhoto={AdvizotMeetingsPhoto}
         projectExplanation="Advizot, LLC's monthly member meetings currently use an unwieldy paper sign-in page, so Advizot's president asked me to design and implement at an app that does the same job as the paper sign-in with advanced features and the ability to display meeting information to a central projection."

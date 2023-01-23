@@ -1,24 +1,23 @@
+import { forwardRef } from "react";
+
 import GitHubLogo from "../assets/img/github.svg";
 import LinkIcon from "../assets/img/up-right-from-square-solid.svg";
 
-export default function Project({
-  title,
-  projectPhoto,
-  projectExplanation,
-  techStack,
-  githubLink,
-  liveLink,
-}) {
+const Project = forwardRef(function Project(props, ref) {
   return (
     <article className="project-card">
-      <h3 className="project-title">{title}</h3>
+      <h3 className="project-title">{props.title}</h3>
 
-      <img src={projectPhoto} alt="project screenshot" className="screenshot" />
+      <img
+        src={props.projectPhoto}
+        alt="project screenshot"
+        className="screenshot"
+      />
 
-      <p className="about-project">{projectExplanation}</p>
+      <p className="about-project">{props.projectExplanation}</p>
 
       <p className="about-project">
-        <em>Tech Stack: {techStack}</em>
+        <em>Tech Stack: {props.techStack}</em>
       </p>
 
       <ul className="links-list">
@@ -27,7 +26,7 @@ export default function Project({
             GitHub
           </label>
           <a
-            href={githubLink}
+            href={props.githubLink}
             target="_blank"
             rel="noopener noreferrer"
             className="link anchor"
@@ -42,7 +41,7 @@ export default function Project({
             Live
           </label>
           <a
-            href={liveLink}
+            href={props.liveLink}
             target="_blank"
             rel="noopener noreferrer"
             className="link anchor"
@@ -54,4 +53,6 @@ export default function Project({
       </ul>
     </article>
   );
-}
+});
+
+export default Project;

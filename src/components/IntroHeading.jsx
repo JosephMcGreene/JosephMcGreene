@@ -1,12 +1,18 @@
+// import { useEffect } from "react";
+
 import DownloadIcon from "../assets/img/download-solid.svg";
 import Resume from "../assets/Joseph-McGreene-Resume.pdf";
 
 export default function IntroHeading({ text }) {
   return (
     <hgroup className="intro-info">
-      <h1 className="page-title">
-        {text.map((letter) => {
-          return <span className="title-letter">{letter}</span>;
+      <h1 className="page-title" id="pageTitle">
+        {text.map((letter, index) => {
+          return (
+            <span className="title-letter" key={index}>
+              {letter}
+            </span>
+          );
         })}
       </h1>
       <p className="intro-span">Front-End Developer</p>
