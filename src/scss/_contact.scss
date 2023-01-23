@@ -8,17 +8,24 @@
   .contact-information {
     display: flex;
 
-    .contact-content {
-      @include formattedText(1.15rem);
-
-      align-self: center;
-      flex-basis: 55%;
-      flex-grow: 1;
-    }
-
     .links-list {
       flex-basis: 50%;
       flex-grow: 2;
     }
+
+    .contact-content {
+      @include formattedText(1.15rem);
+
+      align-self: center;
+      flex-basis: 46%;
+      flex-grow: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .contact-information {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
