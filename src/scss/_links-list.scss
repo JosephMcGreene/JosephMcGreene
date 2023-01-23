@@ -9,7 +9,7 @@
   margin: 3ch auto 1ch;
 
   .links-item {
-    @include transition(background-color);
+    @include transition(background-color box-shadow);
 
     position: relative;
 
@@ -18,6 +18,8 @@
     border-radius: 5px;
 
     &:hover {
+      @include hoverGlow();
+
       background-color: $tertiary-color;
 
       .link {
@@ -29,7 +31,7 @@
 
       .link-label {
         opacity: 1;
-        left: 102%;
+        left: 106%;
       }
     }
 

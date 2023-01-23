@@ -17,8 +17,11 @@ export default function Footer() {
           <li className="footer-li">
             <a href="#aboutSection">About Me</a>
           </li>
-          <li className="footer-li">
-            <Tooltip />
+          <li className="footer-li tooltip-parent">
+            <Tooltip
+              text="This site was built from the ground up with React, HTML, and CSS
+        (specifically SCSS), bundled with Vite."
+            />
             McGreene &copy;2023
           </li>
         </ul>

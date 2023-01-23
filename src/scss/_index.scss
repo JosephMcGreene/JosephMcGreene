@@ -51,25 +51,31 @@ body {
   margin-top: 2ch;
 }
 
-.footer-li {
-  &:last-child {
-    &:hover {
-      .tooltip {
-        display: block;
-      }
+.tooltip-parent {
+  position: relative;
+  cursor: default;
+
+  &:hover {
+    .tooltip {
+      display: block;
     }
   }
 }
+
 .tooltip {
+  @include formattedText(1.25rem);
+  @include hoverGlow();
+
   position: absolute;
   bottom: 105%;
   left: calc(50% - 110px);
+
+  display: none;
+
   background-color: $tertiary-color;
   border-radius: 5px;
   width: 220px;
   margin-bottom: 10px;
-
-  display: none;
 
   .tooltip-arrow {
     position: absolute;
