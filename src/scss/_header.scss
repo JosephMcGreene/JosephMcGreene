@@ -27,12 +27,6 @@
       color: $text-color;
       list-style: none;
 
-      .logo {
-        text-shadow: 0 0 15px $tertiary-color;
-        font-family: $title-font;
-        font-size: 2rem;
-      }
-
       .nav-item {
         @include transition(background-color box-shadow);
 
@@ -40,10 +34,22 @@
 
         flex-grow: 1;
 
-        max-width: 90px;
-        padding: 22px 20px;
+        max-width: 80px;
+        padding: 17px 17px;
         margin: 0.5ch 2%;
         border-radius: 5px;
+
+        &:first-child {
+          padding: 1ch;
+          text-align: center;
+          cursor: default;
+        }
+
+        .logo {
+          text-shadow: 0 0 15px $tertiary-color;
+          font-family: $title-font;
+          font-size: 3rem;
+        }
 
         a .nav-icon {
           @include transition(filter);
@@ -54,16 +60,17 @@
 
         .nav-label {
           @include transition(opacity top);
+          @include formattedText(2.75rem);
 
           position: absolute;
-          left: 50%;
           top: 0;
-
-          margin-left: -50%;
-          width: 100%;
+          // center the label
+          left: 50%;
+          margin-left: -55%;
+          width: 110%;
 
           text-align: center;
-          font-size: 1.4rem;
+          letter-spacing: 1px;
           text-shadow: 0 0 5px $tertiary-color;
 
           opacity: 0;
@@ -74,13 +81,17 @@
 
           background-color: $tertiary-color;
 
+          .logo {
+            color: $primary-color;
+          }
+
           a .nav-icon {
             filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)
               brightness(96%) contrast(87%);
           }
 
           .nav-label {
-            top: 120%;
+            top: 115%;
 
             opacity: 1;
           }

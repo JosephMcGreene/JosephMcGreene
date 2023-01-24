@@ -10,16 +10,16 @@ export default function Projects() {
       <Project
         title="Advizot Meetings"
         projectPhoto={AdvizotMeetingsPhoto}
-        projectExplanation="Advizot, LLC's monthly member meetings currently use an unwieldy paper sign-in page, so Advizot's president asked me to design and implement at an app that does the same job as the paper sign-in with advanced features and the ability to display meeting information to a central projection."
+        projectExplanation="Advizot, LLC's monthly member meetings currently use an unwieldy paper sign-in page, so my job is to design and implement a React- and Express-powered meeting app that saves its users' form data to a MongoDB collection and enables a seamless user experience."
         techStack="React, SCSS, Node/Express, MongoDB"
         githubLink="https://github.com/JosephMcGreene/advizot-meetings"
         liveLink="Not Yet"
         // liveLink="https://advizot-meetings.up.railway.app/"
       />
       <Project
-        title="D&D Monster Guide"
+        title="Dungeons & Dragons Monster Guide"
         projectPhoto={MonsterGuidePhoto}
-        projectExplanation="Gone are the long hours of discerning what monsters your party will face next Sunday afternoon. Why spend an entire evening when you can now spend 30 minutes? This D&D Monster Guide allows you to spend your time doing more important things, like practicing your NPC voices."
+        projectExplanation="Why spend an entire evening deciding what monsters your party will face when you can now spend 30 minutes? This D&D Monster Guide's slick filtering logic, fully optimized fetching of monster data, and easy-to-read UI allows a DM to spend their time doing more important things, like practicing NPC voices."
         techStack="React, SCSS, D&D 5e REST API"
         githubLink="https://github.com/JosephMcGreene/react-and-dragons"
         liveLink="https://josephmcgreene.github.io/react-and-dragons/"
@@ -27,7 +27,7 @@ export default function Projects() {
       <Project
         title="Let's Roll!"
         projectPhoto={LetsRollPhoto}
-        projectExplanation="Early on in my web development journey, I had the thought that I could create a dice roller for convenience during my Dungeons & Dragons sessions. The result is Let's Roll, the most convenient dice roller I've come across, even to this day."
+        projectExplanation="Finding an unopinionated dice rolling app is surprisingly difficult. Sometimes, I just want to roll some dice and get a result. That is why I coded up a couple of JavaScript object classes, set some HTML event listeners, and started rolling dice to my heart's content. To this day, this is the only dice rolling app I know of that doesn't care what you do with your dice rolls."
         techStack="HTML, CSS, vanilla OO JavaScript"
         githubLink="https://github.com/JosephMcGreene/lets-roll"
         liveLink="https://josephmcgreene.github.io/lets-roll/"

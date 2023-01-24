@@ -11,14 +11,16 @@
 
 @mixin cardLayout() {
   padding: 1.5ch;
-  margin: 2ch 1ch;
+  margin: 2ch 1ch 4rem;
   border-radius: 5px;
   background-color: var.$primary-color;
 }
 
 @mixin formattedText($size) {
   font-family: var.$main-font;
-  font-weight: 600;
+  line-height: 2.2ch;
+  letter-spacing: 0.075ch;
+  font-weight: 400;
   font-size: $size;
 }
 

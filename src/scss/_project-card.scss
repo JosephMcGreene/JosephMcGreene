@@ -5,20 +5,19 @@
 
   .project-title {
     @include textShadow();
-    @include formattedText(1.75rem);
+    @include formattedText(3rem);
 
     display: block;
 
     text-align: center;
-    font-size: 1.75rem;
-    margin: 1ch auto 2ch;
+    margin: 0.5ch auto 1.5ch;
   }
 
   .about-project {
-    @include formattedText(1.15rem);
+    @include formattedText(2.25rem);
 
     line-height: 2.5ch;
-    margin: 2.5ch auto;
+    margin: 0 auto 1ch;
   }
 
   .project-title,

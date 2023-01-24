@@ -9,7 +9,7 @@ export default function IntroHeading({ text }) {
           return <span className="title-letter">{letter}</span>;
         })}
       </h1>
-      <p className="intro-span">Front-End Developer</p>
+      <p className="intro-span">Full-Stack Developer</p>
 
       <a href={Resume} className="anchor" download>
         <button className="download-button">

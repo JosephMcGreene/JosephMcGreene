@@ -9,9 +9,15 @@ export default function Contact() {
       <h3 className="section-heading">Contact Me</h3>
       <article className="contact-card">
         <address className="contact-information">
-          <ul className="links-list contact-list">
-            <li className="links-item">
-              <label htmlFor="emailLink" className="link-label">
+          <p className="contact-content">
+            If there is something amazing to be made, then let's do it! You can
+            email or call me, which are the best ways to get into contact with
+            me. Here are also links to what I'm up to around the internet. I'd
+            love to chat, set up a project, and see where it can take us!
+          </p>
+          <ul className="contact-list">
+            <li className="contact-item">
+              <label htmlFor="emailLink" className="contact-label">
                 Email
               </label>
               <a
@@ -19,12 +25,16 @@ export default function Contact() {
                 className="link anchor"
                 name="emailLink"
               >
-                <img src={EmailIcon} alt="Email Icon" className="link-icon" />
+                <img
+                  src={EmailIcon}
+                  alt="Email Icon"
+                  className="contact-icon"
+                />
               </a>
             </li>
 
-            <li className="links-item">
-              <label htmlFor="phoneLink" className="link-label">
+            <li className="contact-item">
+              <label htmlFor="phoneLink" className="contact-label">
                 Phone
               </label>
               <a
@@ -32,12 +42,16 @@ export default function Contact() {
                 className="link anchor"
                 name="phoneLink"
               >
-                <img src={PhoneIcon} alt="Phone Icon" className="link-icon" />
+                <img
+                  src={PhoneIcon}
+                  alt="Phone Icon"
+                  className="contact-icon"
+                />
               </a>
             </li>
 
-            <li className="links-item">
-              <label htmlFor="linkedinLink" className="link-label">
+            <li className="contact-item">
+              <label htmlFor="linkedinLink" className="contact-label">
                 LinkedIn
               </label>
               <a
@@ -50,13 +64,13 @@ export default function Contact() {
                 <img
                   src={LinkedInLogo}
                   alt="LinkedIn Logo"
-                  className="link-icon linkedin-logo"
+                  className="contact-icon linkedin-logo"
                 />
               </a>
             </li>
 
-            <li className="links-item">
-              <label htmlFor="githubLink" className="link-label">
+            <li className="contact-item">
+              <label htmlFor="githubLink" className="contact-label">
                 GitHub
               </label>
               <a
@@ -66,17 +80,14 @@ export default function Contact() {
                 className="link anchor"
                 name="githubLink"
               >
-                <img src={GitHubLogo} alt="GitHub Logo" className="link-icon" />
+                <img
+                  src={GitHubLogo}
+                  alt="GitHub Logo"
+                  className="contact-icon"
+                />
               </a>
             </li>
           </ul>
-
-          <p className="contact-content">
-            If there is something amazing to be made, then let's do it! You can
-            email or call me, which are the best ways to get into contact with
-            me. Here are also links to what I'm up to around the internet. I'd
-            love to chat, set up a project, and see where it can take us!
-          </p>
         </address>
       </article>
     </section>
