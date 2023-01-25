@@ -7,7 +7,7 @@
 
   .footer-nav {
     .footer-list {
-      @include formattedText(2rem);
+      @include formattedText(2.5rem);
 
       display: flex;
       justify-content: space-around;
@@ -50,7 +50,7 @@
     }
 
     .copyright {
-      @include formattedText(1rem);
+      @include formattedText(2rem);
 
       display: block;
       text-align: center;
