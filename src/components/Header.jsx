@@ -1,5 +1,3 @@
-// import Logo from "../assets/img/McGreene_Bee_Dark_BG.png";
-import Logo from "../assets/img/JMLogo.svg";
 import ProjectsIcon from "../assets/img/laptop-code-solid.svg";
 import AboutIcon from "../assets/img/address-card-solid.svg";
 import ContactIcon from "../assets/img/envelope-open-text-solid.svg";
