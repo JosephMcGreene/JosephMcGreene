@@ -71,7 +71,7 @@
     &:hover {
       @include hoverGlow();
       animation-name: shadow;
-      animation-duration: 1s;
+      animation-duration: 0.75s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: 1;
 
@@ -88,158 +88,66 @@
 
 @keyframes shadow {
   0% {
-    box-shadow: 0 0 4px $tertiary-color, 0 0 4px inset $primary-color;
+    box-shadow: 0 0 4px $tertiary-color;
   }
   5% {
-    box-shadow: -1.75px -1px 7px $tertiary-color,
-      -1.75px -1px 7px inset $primary-color;
+    box-shadow: -1.75px -1px 7px $tertiary-color;
   }
   10% {
-    box-shadow: -3.75px -2px 10px $tertiary-color,
-      -3.75px -2px 10px inset $primary-color;
+    box-shadow: -3.75px -2px 10px $tertiary-color;
   }
   15% {
-    box-shadow: -4.125px -2.75px 13px $tertiary-color,
-      -4.125px -2.75px 13px inset $primary-color;
+    box-shadow: -4.125px -2.75px 13px $tertiary-color;
   }
   20% {
-    box-shadow: -4.75px -3.5px 16px $tertiary-color,
-      -4.75px -3.5px 16px inset $primary-color;
+    box-shadow: -4.75px -3.5px 16px $tertiary-color;
   }
   25% {
-    box-shadow: -5px -4px 19px $tertiary-color,
-      -5px -4px 19px inset $primary-color;
+    box-shadow: -5px -4px 19px $tertiary-color;
   }
   30% {
-    box-shadow: -4.75px -4.5px 22px $tertiary-color,
-      -4.75px -4.5px 22px inset $primary-color;
+    box-shadow: -4.75px -4.5px 22px $tertiary-color;
   }
   35% {
-    box-shadow: -4.125px -4.75px 25px $tertiary-color,
-      -4.125px -4.75px 25px inset $primary-color;
+    box-shadow: -4.125px -4.75px 25px $tertiary-color;
   }
   40% {
-    box-shadow: -3.75px -5px 28px $tertiary-color,
-      -3.75px -5px 28px inset $primary-color;
+    box-shadow: -3.75px -5px 28px $tertiary-color;
   }
   45% {
-    box-shadow: -1.75px -5px 31px $tertiary-color,
-      -1.75px -5px 31px inset $primary-color;
+    box-shadow: -1.75px -5px 31px $tertiary-color;
   }
   50% {
-    box-shadow: 0 -5px 34px $tertiary-color, 0 -5px 34px inset $primary-color;
+    box-shadow: 0 -5px 34px $tertiary-color;
   }
   55% {
-    box-shadow: 1.75px -5px 31px $tertiary-color,
-      1.75px -5px 31px inset $primary-color;
+    box-shadow: 1.75px -5px 31px $tertiary-color;
   }
   60% {
-    box-shadow: 3.75px -5px 28px $tertiary-color,
-      3.75px -5px 28px inset $primary-color;
+    box-shadow: 3.75px -5px 28px $tertiary-color;
   }
   65% {
-    box-shadow: 4.125px -4.75px 25px $tertiary-color,
-      4.125px -4.75px 25px inset $primary-color;
+    box-shadow: 4.125px -4.75px 25px $tertiary-color;
   }
   70% {
-    box-shadow: 4.75px -4.5px 22px $tertiary-color,
-      4.75px -4.5px 22px inset $primary-color;
+    box-shadow: 4.75px -4.5px 22px $tertiary-color;
   }
   75% {
-    box-shadow: 5px -4px 19px $tertiary-color,
-      5px -4px 19px inset $primary-color;
+    box-shadow: 5px -4px 19px $tertiary-color;
   }
   80% {
-    box-shadow: 4.75px -3.5px 16px $tertiary-color,
-      4.75px -3.5px 16px inset $primary-color;
+    box-shadow: 4.75px -3.5px 16px $tertiary-color;
   }
   85% {
-    box-shadow: 4.125px -2.75px 13px $tertiary-color,
-      4.125px -2.75px 13px inset $primary-color;
+    box-shadow: 4.125px -2.75px 13px $tertiary-color;
   }
   90% {
-    box-shadow: 3.75px -2px 10px $tertiary-color,
-      3.75px -2px 10px inset $primary-color;
+    box-shadow: 3.75px -2px 10px $tertiary-color;
   }
   95% {
-    box-shadow: 1.75px -1px 7px $tertiary-color,
-      1.75px -1px 7px inset $primary-color;
+    box-shadow: 1.75px -1px 7px $tertiary-color;
   }
   100% {
-    box-shadow: 0 0 4px $tertiary-color, 0 0 4px inset $primary-color;
+    box-shadow: 0 0 4px $tertiary-color;
   }
 }
-
-// @keyframes shadow {
-//   0% {
-//     box-shadow: 0 0 4px $tertiary-color, 0 0 4px inset $primary-color;
-//   }
-//   5% {
-//     box-shadow: -1.75px -1px 7px $tertiary-color, 0 0 7px inset $primary-color;
-//   }
-//   10% {
-//     box-shadow: -3.75px -2px 10px $tertiary-color, 0 0 10px inset $primary-color;
-//   }
-//   15% {
-//     box-shadow: -4.125px -2.75px 13px $tertiary-color,
-//       0 0 13px inset $primary-color;
-//   }
-//   20% {
-//     box-shadow: -4.75px -3.5px 16px $tertiary-color,
-//       0 0 16px inset $primary-color;
-//   }
-//   25% {
-//     box-shadow: -5px -4px 19px $tertiary-color, 0 0 19px inset $primary-color;
-//   }
-//   30% {
-//     box-shadow: -4.75px -4.5px 22px $tertiary-color,
-//       0 0 22px inset $primary-color;
-//   }
-//   35% {
-//     box-shadow: -4.125px -4.75px 25px $tertiary-color,
-//       0 0 25px inset $primary-color;
-//   }
-//   40% {
-//     box-shadow: -3.75px -5px 28px $tertiary-color, 0 0 28px inset $primary-color;
-//   }
-//   45% {
-//     box-shadow: -1.75px -5px 31px $tertiary-color, 0 0 31px inset $primary-color;
-//   }
-//   50% {
-//     box-shadow: 0 -5px 34px $tertiary-color, 0 0 34px inset $primary-color;
-//   }
-//   55% {
-//     box-shadow: 1.75px -5px 31px $tertiary-color, 0 0 31px inset $primary-color;
-//   }
-//   60% {
-//     box-shadow: 3.75px -5px 28px $tertiary-color, 0 0 28px inset $primary-color;
-//   }
-//   65% {
-//     box-shadow: 4.125px -4.75px 25px $tertiary-color,
-//       0 0 25px inset $primary-color;
-//   }
-//   70% {
-//     box-shadow: 4.75px -4.5px 22px $tertiary-color,
-//       0 0 22px inset $primary-color;
-//   }
-//   75% {
-//     box-shadow: 5px -4px 19px $tertiary-color, 0 0 19px inset $primary-color;
-//   }
-//   80% {
-//     box-shadow: 4.75px -3.5px 16px $tertiary-color,
-//       0 0 16px inset $primary-color;
-//   }
-//   85% {
-//     box-shadow: 4.125px -2.75px 13px $tertiary-color,
-//       0 0 13px inset $primary-color;
-//   }
-//   90% {
-//     box-shadow: 3.75px -2px 10px $tertiary-color, 0 0 10px inset $primary-color;
-//   }
-//   95% {
-//     box-shadow: 1.75px -1px 7px $tertiary-color, 0 0 7px inset $primary-color;
-//   }
-//   100% {
-//     box-shadow: 0 0 4px $tertiary-color, 0 0 4px inset $primary-color;
-//   }
-// }
