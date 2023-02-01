@@ -13,6 +13,7 @@
 *::selection {
   color: $primary-color;
   background-color: $tertiary-color;
+  padding: 0;
 }
 
 :root {
@@ -45,10 +46,11 @@ body {
   @include textShadow();
 
   font-family: $title-font;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
   text-align: center;
   text-decoration: underline;
-  margin-top: 2ch;
+  margin-top: 4rem;
 }
 
 .tooltip-parent {
@@ -63,7 +65,6 @@ body {
 }
 
 .tooltip {
-  @include formattedText(1.25rem);
   @include hoverGlow();
 
   position: absolute;
@@ -87,7 +88,7 @@ body {
   }
 
   .tooltip-content {
-    font-size: 1rem;
+    @include formattedText(1.75rem);
     color: $primary-color;
     padding: 1ch;
   }

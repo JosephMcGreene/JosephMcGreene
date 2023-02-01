@@ -1,15 +1,17 @@
+//fonts
 @font-face {
   font-family: "samba";
   src: url("../assets/fonts/Samba-webfont.woff") format("woff");
 }
-$main-font: "samba";
+$title-font: "samba";
 
 @font-face {
-  font-family: "juiceregular";
-  src: url("../assets/fonts/JUICE_Regular-webfont.woff") format("woff");
+  font-family: "chathura";
+  src: url("../assets/fonts/chathura-regular-webfont.woff") format("woff");
 }
-$title-font: "juiceregular";
+$main-font: "chathura";
 
+//colors
 $primary-color: hsl(240, 20%, 17%);
 $primary-color-light: hsl(240, 17%, 21%);
 $secondary-color: hsl(0, 0%, 6%);

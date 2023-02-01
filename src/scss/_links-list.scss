@@ -17,6 +17,31 @@
     margin-right: auto;
     border-radius: 5px;
 
+    .link {
+      .link-icon {
+        @include transition(filter);
+
+        width: 35px;
+        filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(95deg)
+          brightness(111%) contrast(101%);
+      }
+    }
+
+    .link-label {
+      @include textShadow();
+      @include transition(opacity left);
+      @include formattedText(2.5rem);
+
+      position: absolute;
+      left: 0;
+
+      color: $text-color;
+      font-style: italic;
+      margin-left: 0.5ch;
+
+      opacity: 0;
+    }
+
     &:hover {
       @include hoverGlow();
 
@@ -34,54 +59,5 @@
         left: 106%;
       }
     }
-
-    .link {
-      .link-icon {
-        @include transition(filter);
-
-        width: 35px;
-        filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(95deg)
-          brightness(111%) contrast(101%);
-      }
-
-      .linkedin-logo {
-        filter: invert(97%) sepia(77%) saturate(0%) hue-rotate(123deg)
-          brightness(121%) contrast(100%);
-      }
-    }
-
-    .link-label {
-      @include textShadow();
-      @include transition(opacity left);
-      @include formattedText(1.25rem);
-
-      position: absolute;
-      left: 0;
-      top: 50%;
-      margin-top: calc(1.25rem * -0.5);
-
-      color: $text-color;
-      font-style: italic;
-      letter-spacing: 0.15ch;
-      margin-left: 0.5ch;
-
-      opacity: 0;
-    }
-  }
-}
-
-.contact-list {
-  flex-direction: column;
-  margin-left: 0.5%;
-
-  .links-item {
-    margin-bottom: 1.5ch;
-  }
-}
-
-@media screen and (min-width: 650px) {
-  .contact-list {
-    flex-direction: row;
-    margin: 2ch 0 0;
   }
 }
