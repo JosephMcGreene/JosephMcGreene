@@ -1,0 +1,66 @@
+.h1-hidden,
+.span-hidden,
+.anchor-hidden,
+.heading-hidden,
+.project-hidden,
+.contact-hidden {
+  opacity: 0;
+  filter: blur(4px);
+  transition: all 0.9s ease-out;
+}
+
+.h1-shown,
+.span-shown,
+.anchor-shown,
+.heading-shown,
+.project-shown,
+.contact-shown {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.h1-hidden {
+  transition-delay: 0.2s;
+}
+.span-hidden {
+  transition-delay: 0.6s;
+}
+.anchor-hidden {
+  transition-delay: 1s;
+}
+
+.intro-info {
+  .h1-hidden {
+    transform: translateY(70%);
+  }
+  .span-hidden {
+    transform: translateY(55%);
+  }
+  .anchor-hidden {
+    transform: translateY(30%);
+  }
+
+  .h1-shown,
+  .span-shown,
+  .anchor-shown {
+    transform: translateY(0);
+  }
+}
+
+.projects {
+  .project-hidden {
+    transform: translateX(-40%);
+  }
+  .project-shown {
+    transform: translateX(0);
+  }
+}
+
+.contact-hidden,
+.about-hidden {
+  transform: translateY(40%);
+}
+.contact-shown,
+.about-shown {
+  transform: translateY(0);
+}

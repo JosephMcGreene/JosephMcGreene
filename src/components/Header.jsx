@@ -14,7 +14,7 @@ export default function Header() {
             <label htmlFor="projects" className="nav-label">
               Projects
             </label>
-            <a href="#projectsSection" name="projects">
+            <a href="#projectsSection" name="projects" tabIndex="0">
               <img src={ProjectsIcon} alt="Projects" className="nav-icon" />
             </a>
           </li>

@@ -17,6 +17,24 @@
     margin-right: auto;
     border-radius: 5px;
 
+    &:hover {
+      @include hoverGlow();
+
+      background-color: $tertiary-color;
+
+      .link {
+        .link-icon {
+          filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)
+            brightness(96%) contrast(87%);
+        }
+      }
+
+      .link-label {
+        opacity: 1;
+        left: 106%;
+      }
+    }
+
     .link {
       .link-icon {
         @include transition(filter);
@@ -40,24 +58,6 @@
       margin-left: 0.5ch;
 
       opacity: 0;
-    }
-
-    &:hover {
-      @include hoverGlow();
-
-      background-color: $tertiary-color;
-
-      .link {
-        .link-icon {
-          filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)
-            brightness(96%) contrast(87%);
-        }
-      }
-
-      .link-label {
-        opacity: 1;
-        left: 106%;
-      }
     }
   }
 }

@@ -21,7 +21,7 @@
         @include textShadow();
         @include transition(background-color box-shadow);
 
-        padding: 0.75ch 2ch;
+        padding: 0.75ch 1.4ch;
         border-radius: 5px;
 
         &:hover {
@@ -30,21 +30,13 @@
           background-color: $tertiary-color;
           color: $primary-color;
 
-          a {
-            &:visited {
-              color: $primary-color;
-            }
+          a:visited {
+            color: $primary-color;
           }
         }
 
         a {
           @include transition(color);
-
-          text-decoration: none;
-
-          &:visited {
-            color: $text-color;
-          }
         }
       }
     }

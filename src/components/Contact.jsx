@@ -1,13 +1,42 @@
+import { useRef, useCallback } from "react";
+import { useInView } from "react-intersection-observer";
 import EmailIcon from "../assets/img/envelope-solid.svg";
 import PhoneIcon from "../assets/img/mobile-screen-solid.svg";
 import LinkedInLogo from "../assets/img/LI-In-Bug.png";
 import GitHubLogo from "../assets/img/github.svg";
 
 export default function Contact() {
+  const ref = useRef();
+  const { ref: inViewRef, inView } = useInView();
+
+  const setRefs = useCallback(
+    (node) => {
+      ref.current = node;
+      inViewRef(node);
+    },
+    [inViewRef]
+  );
+
   return (
     <section id="contactSection">
-      <h3 className="section-heading">Contact Me</h3>
-      <article className="contact-card">
+      <h3
+        ref={setRefs}
+        className={
+          inView
+            ? "section-heading heading-hidden heading-shown"
+            : "section-heading heading-hidden"
+        }
+      >
+        Contact Me
+      </h3>
+      <article
+        ref={setRefs}
+        className={
+          inView
+            ? "contact-card contact-hidden contact-shown"
+            : "contact-card contact-hidden"
+        }
+      >
         <address className="contact-information">
           <p className="contact-content">
             If there is something amazing to be made, then let's do it! You can

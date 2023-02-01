@@ -1,19 +1,26 @@
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { useInView } from "react-intersection-observer";
 import AdvizotMeetingsPhoto from "../assets/img/advizot-meetings-screenshot.png";
 import MonsterGuidePhoto from "../assets/img/monster-guide-screenshot.png";
 import LetsRollPhoto from "../assets/img/lets-roll-screenshot.png";
 import Project from "./Project";
 
 export default function Projects() {
-  const [ref, entry] = useIntersectionObserver({ rootMargin: "15px" });
+  const { ref, inView } = useInView();
 
   return (
-    <section id="projectsSection">
-      <h3 className="section-heading" id="project1">
+    <section id="projectsSection" className="projects">
+      <h3
+        ref={ref}
+        className={
+          inView
+            ? "section-heading heading-hidden heading-shown"
+            : "section-heading heading-hidden"
+        }
+        id="project1"
+      >
         Projects
       </h3>
       <Project
-        ref={ref}
         title="Advizot Meetings"
         projectPhoto={AdvizotMeetingsPhoto}
         projectExplanation="Advizot, LLC's monthly member meetings currently use an unwieldy paper sign-in page, so my job is to design and implement a React- and Express-powered meeting app that saves its users' form data to a MongoDB collection and enables a seamless user experience."

@@ -1,12 +1,30 @@
-// import { useEffect } from "react";
+import { useRef, useCallback } from "react";
+import { useInView } from "react-intersection-observer";
 
 import DownloadIcon from "../assets/img/download-solid.svg";
 import Resume from "../assets/Joseph-McGreene-Resume.pdf";
 
 export default function IntroHeading({ text }) {
+  const ref = useRef();
+  const { ref: inViewRef, inView } = useInView();
+
+  const setRefs = useCallback(
+    (node) => {
+      ref.current = node;
+      inViewRef(node);
+    },
+    [inViewRef]
+  );
+
   return (
     <hgroup className="intro-info">
-      <h1 className="page-title" id="pageTitle">
+      <h1
+        ref={setRefs}
+        className={
+          inView ? "page-title h1-hidden h1-shown" : "page-title h1-hidden"
+        }
+        id="pageTitle"
+      >
         {text.map((letter, index) => {
           return (
             <span className="title-letter" key={index}>
@@ -15,9 +33,24 @@ export default function IntroHeading({ text }) {
           );
         })}
       </h1>
-      <p className="intro-span">Full-Stack Developer</p>
-
-      <a href={Resume} className="anchor" download>
+      <p
+        ref={setRefs}
+        className={
+          inView
+            ? "intro-span span-hidden span-shown"
+            : "intro-span span-hidden"
+        }
+      >
+        Full-Stack Developer
+      </p>
+      <a
+        href={Resume}
+        ref={setRefs}
+        className={
+          inView ? "anchor anchor-hidden anchor-shown" : "anchor anchor-hidden"
+        }
+        download
+      >
         <button className="download-button">
           <img
             src={DownloadIcon}

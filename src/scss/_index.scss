@@ -10,6 +10,11 @@
   scroll-behavior: smooth;
 }
 
+:focus-visible {
+  outline: 2px solid $tertiary-color;
+  box-shadow: 0 0 1 5px $tertiary-color;
+}
+
 *::selection {
   color: $primary-color;
   background-color: $tertiary-color;
@@ -40,6 +45,16 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: $primary-color-light;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $text-color;
+    text-decoration: none;
+  }
 }
 
 .section-heading {

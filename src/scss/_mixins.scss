@@ -2,7 +2,7 @@
 
 @mixin transition($properties) {
   transition-property: $properties;
-  transition-duration: 300ms;
+  transition-duration: 500ms;
 }
 
 @mixin textShadow() {

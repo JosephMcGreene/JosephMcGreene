@@ -1,11 +1,20 @@
-import { forwardRef } from "react";
+import { useInView } from "react-intersection-observer";
 
 import GitHubLogo from "../assets/img/github.svg";
 import LinkIcon from "../assets/img/up-right-from-square-solid.svg";
 
-const Project = forwardRef(function Project(props, ref) {
+export default function Project(props) {
+  const { ref, inView, entry } = useInView();
+
   return (
-    <article className="project-card">
+    <article
+      ref={ref}
+      className={
+        inView
+          ? "project-card project-hidden project-shown"
+          : "project-card project-hidden"
+      }
+    >
       <h3 className="project-title">{props.title}</h3>
 
       <img
@@ -53,6 +62,4 @@ const Project = forwardRef(function Project(props, ref) {
       </ul>
     </article>
   );
-});
-
-export default Project;
+}

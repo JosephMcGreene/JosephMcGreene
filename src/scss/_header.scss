@@ -39,6 +39,29 @@
         margin: 0.5ch 2%;
         border-radius: 5px;
 
+        &:hover {
+          @include hoverGlow();
+
+          background-color: $tertiary-color;
+
+          .logo {
+            color: $primary-color;
+          }
+
+          a {
+            .nav-icon {
+              filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)
+                brightness(96%) contrast(87%);
+            }
+          }
+
+          .nav-label {
+            top: 115%;
+
+            opacity: 1;
+          }
+        }
+
         &:first-child {
           padding: 1ch;
           text-align: center;
@@ -51,11 +74,13 @@
           font-size: 3rem;
         }
 
-        a .nav-icon {
-          @include transition(filter);
+        a {
+          .nav-icon {
+            @include transition(filter);
 
-          filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(95deg)
-            brightness(111%) contrast(101%);
+            filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(95deg)
+              brightness(111%) contrast(101%);
+          }
         }
 
         .nav-label {
@@ -74,27 +99,6 @@
           text-shadow: 0 0 5px $tertiary-color;
 
           opacity: 0;
-        }
-
-        &:hover {
-          @include hoverGlow();
-
-          background-color: $tertiary-color;
-
-          .logo {
-            color: $primary-color;
-          }
-
-          a .nav-icon {
-            filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)
-              brightness(96%) contrast(87%);
-          }
-
-          .nav-label {
-            top: 115%;
-
-            opacity: 1;
-          }
         }
       }
     }

@@ -31,6 +31,24 @@
         margin: 2ch auto 4.5ch;
         border-radius: 5px;
 
+        &:hover {
+          @include hoverGlow();
+
+          background-color: $tertiary-color;
+
+          .contact-label {
+            opacity: 1;
+            top: 110%;
+          }
+
+          .link {
+            .contact-icon {
+              filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)
+                brightness(96%) contrast(87%);
+            }
+          }
+        }
+
         .contact-label {
           @include transition(opacity top);
           @include textShadow();
@@ -59,24 +77,6 @@
           .linkedin-logo {
             filter: invert(97%) sepia(77%) saturate(0%) hue-rotate(123deg)
               brightness(121%) contrast(100%);
-          }
-        }
-
-        &:hover {
-          @include hoverGlow();
-
-          background-color: $tertiary-color;
-
-          .contact-label {
-            opacity: 1;
-            top: 110%;
-          }
-
-          .link {
-            .contact-icon {
-              filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)
-                brightness(96%) contrast(87%);
-            }
           }
         }
       }
