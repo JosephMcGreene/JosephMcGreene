@@ -10,7 +10,7 @@
     display: block;
 
     text-align: center;
-    margin: 0.5ch auto 1.5ch;
+    margin: 0.5ch auto 3ch;
   }
 
   .about-project {
@@ -30,27 +30,5 @@
 
     width: min(100%, 500px);
     border-radius: 5px;
-  }
-}
-
-@media screen and (min-width: 540px) {
-  .project-card {
-    .screenshot {
-      float: left;
-      margin-right: 1ch;
-      margin-bottom: 1ch;
-    }
-  }
-}
-
-@media screen and (min-width: 1020px) {
-  .screenshot {
-    max-width: 400px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .screenshot {
-    max-width: 375px;
   }
 }

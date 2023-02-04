@@ -4,7 +4,6 @@
   @include textShadow();
 
   width: min-content;
-  margin: 23vh auto 0;
   text-align: center;
   font-family: $title-font;
   font-size: 5rem;
@@ -24,6 +23,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin: 23vh auto 0;
 
   .intro-span {
     @include textShadow();
