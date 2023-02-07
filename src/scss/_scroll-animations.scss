@@ -1,57 +1,87 @@
 .h1-hidden,
 .span-hidden,
-.anchor-hidden,
+.download-hidden,
 .heading-hidden,
 .project-hidden,
-.contact-hidden {
+.project-title-hidden,
+.project-explain-hidden,
+.techstack-hidden,
+.github-link-hidden,
+.livelink-hidden,
+.contact-hidden,
+.about-hidden {
   opacity: 0;
-  filter: blur(4px);
-  transition: all 0.9s ease-out;
+  filter: blur(3px);
+  transition-property: opacity, filter, transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
 }
 
 .h1-shown,
 .span-shown,
-.anchor-shown,
+.download-shown,
 .heading-shown,
 .project-shown,
-.contact-shown {
+.project-title-shown,
+.project-explain-shown,
+.techstack-shown,
+.github-link-shown,
+.livelink-shown,
+.contact-shown,
+.about-shown {
   opacity: 1;
   filter: blur(0);
-}
-
-.h1-hidden {
-  transition-delay: 0.2s;
-}
-.span-hidden {
-  transition-delay: 0.6s;
-}
-.anchor-hidden {
-  transition-delay: 1s;
 }
 
 .intro-info {
   .h1-hidden {
     transform: translateY(70%);
+    transition-delay: 0.3s;
   }
   .span-hidden {
-    transform: translateY(55%);
+    transform: translateY(50%);
+    transition-delay: 0.7s;
   }
-  .anchor-hidden {
+  .download-hidden {
     transform: translateY(30%);
+    transition-delay: 1.1s;
   }
 
   .h1-shown,
   .span-shown,
-  .anchor-shown {
+  .download-shown {
     transform: translateY(0);
   }
 }
 
 .projects {
-  .project-hidden {
+  .project-hidden,
+  .project-title-hidden,
+  .project-explain-hidden,
+  .techstack-hidden,
+  .github-link-hidden,
+  .livelink-hidden {
     transform: translateX(-40%);
   }
-  .project-shown {
+
+  .project-title-hidden,
+  .techstack-hidden {
+    transition-delay: 0.5s;
+  }
+
+  .github-link-hidden {
+    transition-delay: 0.5s;
+  }
+  .livelink-hidden {
+    transition-delay: 0.7s;
+  }
+
+  .project-shown,
+  .project-title-shown,
+  .project-explain-shown,
+  .techstack-shown,
+  .github-link-shown,
+  .livelink-shown {
     transform: translateX(0);
   }
 }

@@ -33,6 +33,7 @@ export default function IntroHeading({ text }) {
           );
         })}
       </h1>
+
       <p
         ref={setRefs}
         className={
@@ -43,11 +44,14 @@ export default function IntroHeading({ text }) {
       >
         Full-Stack Developer
       </p>
+
       <a
         href={Resume}
         ref={setRefs}
         className={
-          inView ? "anchor anchor-hidden anchor-shown" : "anchor anchor-hidden"
+          inView
+            ? "anchor download-hidden download-shown"
+            : "anchor download-hidden"
         }
         download
       >

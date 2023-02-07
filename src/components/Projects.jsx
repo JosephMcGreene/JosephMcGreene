@@ -26,8 +26,8 @@ export default function Projects() {
         projectExplanation="Advizot, LLC's monthly member meetings currently use an unwieldy paper sign-in page, so my job is to design and implement a React- and Express-powered meeting app that saves its users' form data to a MongoDB collection and enables a seamless user experience."
         techStack="React, SCSS, Node/Express, MongoDB"
         githubLink="https://github.com/JosephMcGreene/advizot-meetings"
-        liveLink="Not Yet"
-        // liveLink="https://advizot-meetings.up.railway.app/"
+        isAdvizotMeetings={true}
+        liveLink={null}
       />
       <Project
         title="Dungeons & Dragons Monster Guide"
