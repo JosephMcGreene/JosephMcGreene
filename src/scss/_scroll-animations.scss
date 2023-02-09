@@ -64,16 +64,18 @@
     transform: translateX(-40%);
   }
 
-  .project-title-hidden,
+  .project-title-hidden {
+    transition-delay: 0.3s;
+  }
   .techstack-hidden {
-    transition-delay: 0.5s;
+    transition-delay: 0.7s;
   }
 
   .github-link-hidden {
     transition-delay: 0.5s;
   }
   .livelink-hidden {
-    transition-delay: 0.7s;
+    transition-delay: 0.8s;
   }
 
   .project-shown,
