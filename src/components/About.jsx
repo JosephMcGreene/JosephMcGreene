@@ -49,8 +49,8 @@ export default function About() {
             taken a back seat to the more tangible lessons about high kicks and
             breaking boards. But when I knew there were students revering my
             accomplishments, as I had revered black belts as I moved up through
-            the ranks, something switched. TaeKwon became less about kicks and
-            punches and more about values.
+            the ranks, something switched. TaeKwon Do became less about kicks
+            and punches and more about values.
           </p>
           <p className="about-content">
             Similarly, when I became a father in January 2020, I found myself
