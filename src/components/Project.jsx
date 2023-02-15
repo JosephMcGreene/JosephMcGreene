@@ -7,7 +7,7 @@ import LinkIcon from "../assets/img/up-right-from-square-solid.svg";
 
 export default function Project(props) {
   const ref = useRef();
-  const { ref: inViewRef, inView } = useInView();
+  const { ref: inViewRef, inView } = useInView({ threshold: 0.2 });
 
   const setRefs = useCallback(
     (node) => {

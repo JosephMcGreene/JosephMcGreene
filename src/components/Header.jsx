@@ -1,7 +1,7 @@
 import projectsIcon from "../assets/img/laptop-code-solid.svg";
 import aboutIcon from "../assets/img/address-card-solid.svg";
 import contactIcon from "../assets/img/envelope-open-text-solid.svg";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/JM-Logo.svg";
 
 export default function Header() {
   return (

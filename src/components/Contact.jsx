@@ -7,7 +7,7 @@ import GitHubLogo from "../assets/img/github.svg";
 
 export default function Contact() {
   const ref = useRef();
-  const { ref: inViewRef, inView } = useInView();
+  const { ref: inViewRef, inView } = useInView({ threshold: 0.2 });
 
   const setRefs = useCallback(
     (node) => {

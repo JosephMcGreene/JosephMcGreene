@@ -39,13 +39,6 @@
         margin: 0.5ch 2%;
         border-radius: 5px;
 
-        &:first-child {
-          &:hover {
-            background-color: $primary-color;
-            box-shadow: none;
-          }
-        }
-
         &:hover {
           @include hoverGlow();
 
@@ -62,6 +55,13 @@
             top: 115%;
 
             opacity: 1;
+          }
+        }
+
+        &:first-child {
+          &:hover {
+            background-color: $primary-color;
+            box-shadow: none;
           }
         }
 

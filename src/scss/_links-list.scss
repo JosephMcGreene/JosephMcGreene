@@ -31,7 +31,7 @@
 
       .link-label {
         opacity: 1;
-        left: 106%;
+        left: 105%;
       }
     }
 
@@ -52,6 +52,9 @@
 
       position: absolute;
       left: 0;
+      height: 40px;
+      top: 50%;
+      margin-top: -20px;
 
       color: $text-color;
       font-style: italic;

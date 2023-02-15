@@ -2,7 +2,7 @@
 @font-face {
   font-family: "samba";
   src: url("../assets/fonts/Samba-webfont.woff") format("woff");
-  font-weight: 800;
+  font-weight: 900;
 }
 $title-font: "samba";
 
@@ -13,7 +13,7 @@ $title-font: "samba";
 $main-font: "chathura";
 
 //colors
-$primary-color: hsl(240, 20%, 17%);
+$primary-color: hsl(240, 20%, 17%); //#232334
 $primary-color-light: hsl(240, 17%, 21%);
 $secondary-color: hsl(0, 0%, 6%);
 $tertiary-color: hsl(180, 100%, 50%);

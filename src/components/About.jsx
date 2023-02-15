@@ -4,7 +4,7 @@ import Tooltip from "./Tooltip";
 
 export default function About() {
   const ref = useRef();
-  const { ref: inViewRef, inView } = useInView();
+  const { ref: inViewRef, inView } = useInView({ threshold: 0.2 });
 
   const setRefs = useCallback(
     (node) => {

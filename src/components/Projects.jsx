@@ -5,7 +5,7 @@ import LetsRollPhoto from "../assets/img/lets-roll-screenshot.png";
 import Project from "./Project";
 
 export default function Projects() {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({ threshold: 0.2 });
 
   return (
     <section id="projectsSection" className="projects">
