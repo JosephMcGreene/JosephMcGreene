@@ -1,6 +1,7 @@
-import ProjectsIcon from "../assets/img/laptop-code-solid.svg";
-import AboutIcon from "../assets/img/address-card-solid.svg";
-import ContactIcon from "../assets/img/envelope-open-text-solid.svg";
+import projectsIcon from "../assets/img/laptop-code-solid.svg";
+import aboutIcon from "../assets/img/address-card-solid.svg";
+import contactIcon from "../assets/img/envelope-open-text-solid.svg";
+import logo from "../assets/img/logo.png";
 
 export default function Header() {
   return (
@@ -8,14 +9,14 @@ export default function Header() {
       <nav className="nav-bar">
         <ul className="nav-list">
           <li className="nav-item">
-            <h2 className="logo">JM</h2>
+            <img src={logo} alt="JM Logo" className="logo" />
           </li>
           <li className="nav-item">
             <label htmlFor="projects" className="nav-label">
               Projects
             </label>
             <a href="#projectsSection" name="projects" tabIndex="0">
-              <img src={ProjectsIcon} alt="Projects" className="nav-icon" />
+              <img src={projectsIcon} alt="Projects" className="nav-icon" />
             </a>
           </li>
 
@@ -24,7 +25,7 @@ export default function Header() {
               Contact
             </label>
             <a href="#aboutSection" name="about">
-              <img src={ContactIcon} alt="Contact" className="nav-icon" />
+              <img src={contactIcon} alt="Contact" className="nav-icon" />
             </a>
           </li>
 
@@ -33,7 +34,7 @@ export default function Header() {
               About Me
             </label>
             <a href="#contactSection" name="contact">
-              <img src={AboutIcon} alt="About Me" className="nav-icon" />
+              <img src={aboutIcon} alt="About Me" className="nav-icon" />
             </a>
           </li>
         </ul>
