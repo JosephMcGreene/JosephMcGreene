@@ -99,6 +99,34 @@
       }
     }
   }
+
+  .carbon-info {
+    @include formattedText(1.75rem);
+
+    z-index: $middle;
+
+    background-color: $primary-color;
+    box-shadow: 0 3px 5px rgb(0, 0, 0, 0.7);
+    padding: 1.5ch;
+    max-width: 40%;
+
+    .carbon-btn {
+      @include formattedText(1.5rem);
+      
+      position: absolute;
+      left: 0;
+      height: 1rem;
+      bottom: -1rem;
+
+      display: block;
+      
+      width: 100%;
+      cursor: pointer;
+      border: none;
+      padding: 0.5ch 0;
+      background-color: $primary-color-light;
+    }
+  }
 }
 
 @media screen and (min-width: 600px) {
