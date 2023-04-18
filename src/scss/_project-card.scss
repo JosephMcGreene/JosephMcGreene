@@ -10,7 +10,7 @@
 
   .project-title {
     @include textShadow();
-    @include formattedText(3rem);
+    @include formattedText(2.25rem);
 
     display: block;
 
@@ -19,7 +19,7 @@
   }
 
   .about-project {
-    @include formattedText(2.25rem);
+    @include formattedText(1.4rem);
 
     line-height: 2.5ch;
     margin: 0 auto 1ch;

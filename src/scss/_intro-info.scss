@@ -48,7 +48,7 @@
   .download-button {
     @include textShadow();
     @include transition(background-color color box-shadow);
-    @include formattedText(3rem);
+    @include formattedText(1.75rem);
 
     display: flex;
     justify-content: space-evenly;

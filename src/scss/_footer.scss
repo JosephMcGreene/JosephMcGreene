@@ -7,7 +7,7 @@
 
   .footer-nav {
     .footer-list {
-      @include formattedText(2.5rem);
+      @include formattedText(1.75rem);
 
       display: flex;
       justify-content: space-evenly;

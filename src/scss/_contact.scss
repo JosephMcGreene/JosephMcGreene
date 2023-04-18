@@ -10,7 +10,7 @@
     flex-direction: column;
 
     .contact-content {
-      @include formattedText(2.25rem);
+      @include formattedText(1.5rem);
 
       align-self: center;
       flex-grow: 1;
@@ -52,7 +52,7 @@
         .contact-label {
           @include transition(opacity top);
           @include textShadow();
-          @include formattedText(2.5rem);
+          @include formattedText(1.75rem);
 
           position: absolute;
           top: 0;

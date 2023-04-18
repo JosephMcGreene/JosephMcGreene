@@ -48,7 +48,7 @@
     .link-label {
       @include textShadow();
       @include transition(opacity left);
-      @include formattedText(2.5rem);
+      @include formattedText(1.75rem);
 
       position: absolute;
       left: 0;

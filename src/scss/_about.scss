@@ -2,7 +2,7 @@
 
 .about-expander {
   @include cardLayout();
-  @include formattedText(2.25rem);
+  @include formattedText(1.75rem);
 
   text-align: center;
   padding: 2ch 1.5ch;
@@ -14,7 +14,7 @@
   }
 
   .about-card {
-    @include formattedText(2rem);
+    @include formattedText(1.4rem);
 
     text-align: left;
     margin-top: 1ch;

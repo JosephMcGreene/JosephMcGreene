@@ -3,13 +3,13 @@ import aboutIcon from "../assets/img/address-card-solid.svg";
 import contactIcon from "../assets/img/envelope-open-text-solid.svg";
 import logo from "../assets/img/JM-Logo.svg";
 //hooks
-import useAxios from "../useAxios";
+// import useAxios from "../useAxios";
 
 export default function Header() {
-  const co2Data = useAxios().co2Data;
-  const todaysData = co2Data[co2Data.length - 1];
-  const yesterdaysData = co2Data[co2Data.length - 2];
-  
+  // const co2Data = useAxios().co2Data;
+  // const todaysData = co2Data[co2Data.length - 1];
+  // const yesterdaysData = co2Data[co2Data.length - 2];
+
   return (
     <header className="header">
       <nav className="nav-bar">
@@ -45,12 +45,12 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <aside className="carbon-info">
+      {/* <aside className="carbon-info">
         Not-so-fun-fact: the carbon content in the atmosphere as of {todaysData.month}/
         {todaysData.day}/{todaysData.year} is {todaysData.cycle} parts per
         million. On {yesterdaysData.month}/{yesterdaysData.day}, it was {yesterdaysData.cycle}.
         <button className="carbon-btn">Expand</button>
-      </aside>
+      </aside> */}
     </header>
   );
 }
