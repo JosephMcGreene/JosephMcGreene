@@ -1,15 +1,9 @@
+import logo from "../assets/img/JM-Logo.svg";
 import projectsIcon from "../assets/img/laptop-code-solid.svg";
 import aboutIcon from "../assets/img/address-card-solid.svg";
 import contactIcon from "../assets/img/envelope-open-text-solid.svg";
-import logo from "../assets/img/JM-Logo.svg";
-//hooks
-// import useAxios from "../useAxios";
 
 export default function Header() {
-  // const co2Data = useAxios().co2Data;
-  // const todaysData = co2Data[co2Data.length - 1];
-  // const yesterdaysData = co2Data[co2Data.length - 2];
-
   return (
     <header className="header">
       <nav className="nav-bar">
@@ -30,7 +24,7 @@ export default function Header() {
             <label htmlFor="about" className="nav-label">
               Contact
             </label>
-            <a href="#aboutSection" name="about">
+            <a href="#contactSection" name="about">
               <img src={contactIcon} alt="Contact" className="nav-icon" />
             </a>
           </li>
@@ -39,7 +33,7 @@ export default function Header() {
             <label htmlFor="contact" className="nav-label">
               About Me
             </label>
-            <a href="#contactSection" name="contact">
+            <a href="#aboutSection" name="about">
               <img src={aboutIcon} alt="About Me" className="nav-icon" />
             </a>
           </li>

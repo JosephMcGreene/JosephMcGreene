@@ -1,4 +1,5 @@
-@use "./index" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
 
 .footer {
   background-color: $primary-color;
@@ -43,7 +44,7 @@
     }
 
     .copyright {
-      @include formattedText(2rem);
+      @include formattedText(1.5rem);
 
       display: block;
       text-align: center;

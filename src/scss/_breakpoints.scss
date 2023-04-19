@@ -1,4 +1,5 @@
-@use "./index" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
 
 @media screen and (min-width: 540px) {
   .project-card {

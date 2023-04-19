@@ -1,15 +1,18 @@
-@forward "variables";
-@forward "mixins";
-@use "mixins" as *;
-@use "variables" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+:focus,
 :focus-visible {
   outline: 2px solid $tertiary-color;
   box-shadow: 0 0 1 5px $tertiary-color;
@@ -105,8 +108,9 @@ a {
   }
 
   .tooltip-content {
-    @include formattedText(1.75rem);
+    @include formattedText(1.25rem);
     color: $primary-color;
+    letter-spacing: -0.5px;
     padding: 1ch;
   }
 }

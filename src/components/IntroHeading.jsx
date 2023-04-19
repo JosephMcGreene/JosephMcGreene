@@ -1,8 +1,9 @@
 import { useRef, useCallback } from "react";
+//Assets
+import resume from "../assets/Joseph-McGreene-Resume.pdf";
+import downloadIcon from "../assets/img/download-solid.svg";
+//External
 import { useInView } from "react-intersection-observer";
-
-import DownloadIcon from "../assets/img/download-solid.svg";
-import Resume from "../assets/Joseph-McGreene-Resume.pdf";
 
 export default function IntroHeading({ text }) {
   const ref = useRef();
@@ -46,7 +47,7 @@ export default function IntroHeading({ text }) {
       </p>
 
       <a
-        href={Resume}
+        href={resume}
         ref={setRefs}
         className={
           inView
@@ -57,7 +58,7 @@ export default function IntroHeading({ text }) {
       >
         <button className="download-button">
           <img
-            src={DownloadIcon}
+            src={downloadIcon}
             alt="Download Icon"
             className="download-icon"
           />

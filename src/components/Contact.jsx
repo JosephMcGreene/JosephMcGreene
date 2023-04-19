@@ -1,9 +1,11 @@
 import { useRef, useCallback } from "react";
+//Assets
+import emailIcon from "../assets/img/envelope-solid.svg";
+import phoneIcon from "../assets/img/mobile-screen-solid.svg";
+import linkedInLogo from "../assets/img/LI-In-Bug.png";
+import gitHubLogo from "../assets/img/github.svg";
+//External
 import { useInView } from "react-intersection-observer";
-import EmailIcon from "../assets/img/envelope-solid.svg";
-import PhoneIcon from "../assets/img/mobile-screen-solid.svg";
-import LinkedInLogo from "../assets/img/LI-In-Bug.png";
-import GitHubLogo from "../assets/img/github.svg";
 
 export default function Contact() {
   const ref = useRef();
@@ -55,7 +57,7 @@ export default function Contact() {
                 name="emailLink"
               >
                 <img
-                  src={EmailIcon}
+                  src={emailIcon}
                   alt="Email Icon"
                   className="contact-icon"
                 />
@@ -72,7 +74,7 @@ export default function Contact() {
                 name="phoneLink"
               >
                 <img
-                  src={PhoneIcon}
+                  src={phoneIcon}
                   alt="Phone Icon"
                   className="contact-icon"
                 />
@@ -91,7 +93,7 @@ export default function Contact() {
                 name="linkedinLink"
               >
                 <img
-                  src={LinkedInLogo}
+                  src={linkedInLogo}
                   alt="LinkedIn Logo"
                   className="contact-icon linkedin-logo"
                 />
@@ -110,7 +112,7 @@ export default function Contact() {
                 name="githubLink"
               >
                 <img
-                  src={GitHubLogo}
+                  src={gitHubLogo}
                   alt="GitHub Logo"
                   className="contact-icon"
                 />

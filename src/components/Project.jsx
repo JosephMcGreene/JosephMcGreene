@@ -1,9 +1,11 @@
 import { useRef, useCallback } from "react";
+//Assets
+import gitHubLogo from "../assets/img/github.svg";
+import linkIcon from "../assets/img/up-right-from-square-solid.svg";
+//External
 import { useInView } from "react-intersection-observer";
-
+//Components
 import Tooltip from "./Tooltip";
-import GitHubLogo from "../assets/img/github.svg";
-import LinkIcon from "../assets/img/up-right-from-square-solid.svg";
 
 export default function Project(props) {
   const ref = useRef();
@@ -84,7 +86,7 @@ export default function Project(props) {
             className="link anchor"
             name="githubLink"
           >
-            <img src={GitHubLogo} alt="GitHub Logo" className="link-icon" />
+            <img src={gitHubLogo} alt="GitHub Logo" className="link-icon" />
           </a>
         </li>
 
@@ -113,7 +115,7 @@ export default function Project(props) {
             {props.isAdvizotMeetings && (
               <Tooltip text="This proprietary software is not currently available to the public." />
             )}
-            <img src={LinkIcon} alt="Link to App" className="link-icon" />
+            <img src={linkIcon} alt="Link to App" className="link-icon" />
           </a>
         </li>
       </ul>

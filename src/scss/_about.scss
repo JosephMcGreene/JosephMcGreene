@@ -1,4 +1,5 @@
-@use "./index" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
 
 .about-expander {
   @include cardLayout();

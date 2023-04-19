@@ -1,5 +1,7 @@
 import { useRef, useCallback } from "react";
+//External
 import { useInView } from "react-intersection-observer";
+//Components
 import Tooltip from "./Tooltip";
 
 export default function About() {
@@ -48,9 +50,9 @@ export default function About() {
             spirit. Before I had a need to model them for students, they had
             taken a back seat to the more tangible lessons about high kicks and
             breaking boards. But when I knew there were students revering my
-            accomplishments, as I had revered black belts as I moved up through
-            the ranks, something switched. TaeKwon Do became less about kicks
-            and punches and more about values.
+            accomplishments, as I had revered black belts as I rose up through
+            the ranks, something in me switched. TaeKwon Do became less about
+            kicks and punches and more about the importance of values.
           </p>
           <p className="about-content">
             Similarly, when I became a father in January 2020, I found myself
@@ -73,7 +75,7 @@ export default function About() {
             of Zelda.
           </p>
           <p className="about-content">
-            That said, the idea that I aspire to these virutes speaks to a fifth
+            That said, the idea that I aspire to these virtues speaks to a fifth
             virtue, one that I do believe I have learned and can model to my
             son:
           </p>
