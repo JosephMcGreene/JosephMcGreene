@@ -11,6 +11,7 @@ export default function Header() {
           <li className="nav-item">
             <img src={logo} alt="JM Logo" className="logo" />
           </li>
+
           <li className="nav-item">
             <label htmlFor="projects" className="nav-label">
               Projects

@@ -11,16 +11,16 @@
 
   .project-title {
     @include textShadow();
-    @include formattedText(2.25rem);
+    @include formattedText(2rem);
 
     display: block;
 
     text-align: center;
-    margin: 0.5ch auto 3ch;
+    margin: 0.5ch auto 2ch;
   }
 
   .about-project {
-    @include formattedText(1.4rem);
+    @include formattedText(1.3rem);
 
     line-height: 2.5ch;
     margin: 0 auto 1ch;
@@ -34,7 +34,7 @@
   .screenshot {
     display: inline;
 
-    width: min(100%, 500px);
+    width: min(100%, 310px);
     border-radius: 5px;
   }
 }

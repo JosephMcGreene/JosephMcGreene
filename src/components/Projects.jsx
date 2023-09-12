@@ -23,6 +23,7 @@ export default function Projects() {
       >
         Projects
       </h3>
+
       <Project
         title="Advizot Meetings"
         projectPhoto={advizotMeetingsPhoto}
@@ -39,6 +40,14 @@ export default function Projects() {
         techStack="React, SCSS, D&D 5e REST API"
         githubLink="https://github.com/JosephMcGreene/react-and-dragons"
         liveLink="https://josephmcgreene.github.io/react-and-dragons/"
+      />
+      <Project
+        title="Dungeons & Randos"
+        projectPhoto="null"
+        projectExplanation="Sometimes you don't want to spend 4 hours dreaming pu the perfect character for your next Dungeons & Dragons adventure. That's why I created an app that will generate almost all aspects of a character for you."
+        techStack="React, SCSS, D&D 5e REST API"
+        githubLink="https://github.com/JosephMcGreene/dungeons-and-randos"
+        liveLink="https://josephmcgreene.github.io/dungeons-and-randos/"
       />
       <Project
         title="Let's Roll!"

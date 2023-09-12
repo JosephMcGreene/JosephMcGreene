@@ -3,7 +3,7 @@
 
 .links-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 
   list-style: none;
@@ -15,7 +15,7 @@
     position: relative;
 
     padding: 12px;
-    margin-right: auto;
+    margin-right: min(35%, 100px);
     border-radius: 5px;
 
     &:hover {

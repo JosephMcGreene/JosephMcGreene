@@ -31,6 +31,7 @@ export default function Contact() {
       >
         Contact Me
       </h3>
+
       <article
         ref={setRefs}
         className={
@@ -46,6 +47,7 @@ export default function Contact() {
             me. Here are also links to what I'm up to around the internet. I'd
             love to chat, set up a project, and see where it can take us!
           </p>
+
           <ul className="contact-list">
             <li className="contact-item">
               <label htmlFor="emailLink" className="contact-label">
@@ -69,7 +71,7 @@ export default function Contact() {
                 Phone
               </label>
               <a
-                href="tel:+34650069914"
+                href="tel:+12086066137"
                 className="link anchor"
                 name="phoneLink"
               >
