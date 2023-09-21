@@ -5,17 +5,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin: 3ch auto 1ch;
 
   list-style: none;
-  margin: 3ch auto 1ch;
 
   .links-item {
     @include transition(background-color box-shadow);
 
     position: relative;
-
     padding: 12px;
     margin-right: min(35%, 100px);
+
     border-radius: 5px;
 
     &:hover {
@@ -31,8 +31,9 @@
       }
 
       .link-label {
-        opacity: 1;
         left: 105%;
+
+        opacity: 1;
       }
     }
 
@@ -41,6 +42,7 @@
         @include transition(filter);
 
         width: 35px;
+
         filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(95deg)
           brightness(111%) contrast(101%);
       }
@@ -56,11 +58,10 @@
       height: 40px;
       top: 50%;
       margin-top: -20px;
+      margin-left: 0.5ch;
 
       color: $text-color;
       font-style: italic;
-      margin-left: 0.5ch;
-
       opacity: 0;
     }
   }

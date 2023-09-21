@@ -5,11 +5,12 @@
   @include textShadow();
 
   width: min-content;
-  text-align: center;
+
   font-family: $title-font;
   font-size: 5rem;
   font-weight: 600;
   cursor: default;
+  text-align: center;
 
   .title-letter {
     @include transition(text-shadow);
@@ -24,26 +25,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 23vh auto 2vh;
 
   .intro-span {
     @include textShadow();
 
     display: block;
+    margin: 40px auto;
 
     font-family: $title-font;
     font-weight: 400;
     font-size: 2.5rem;
     text-align: center;
     letter-spacing: -0.5px;
-    margin: 40px auto;
   }
 
   .anchor {
+    margin-bottom: 8vh;
+
     text-decoration: none;
     color: $text-color;
-    margin-bottom: 8vh;
   }
 
   .download-button {
@@ -54,15 +55,16 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 1.25ch 3ch;
 
     background-color: $primary-color;
     border: none;
     border-radius: 5px;
-    padding: 1.25ch 3ch;
     cursor: pointer;
 
     &:hover {
       @include hoverGlow();
+
       animation-name: shadow;
       animation-duration: 0.75s;
       animation-timing-function: ease-in-out;
@@ -82,6 +84,7 @@
 
       width: 25px;
       margin-right: 15px;
+
       filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(95deg)
         brightness(111%) contrast(101%);
     }

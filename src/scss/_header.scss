@@ -2,13 +2,12 @@
 @use "./mixins" as *;
 
 .header {
-  z-index: $top;
-
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
 
+  z-index: $header-z;
   background-color: $primary-color;
   box-shadow: 0 3px 5px rgb(0, 0, 0, 0.7);
 
@@ -32,12 +31,11 @@
         @include transition(background-color box-shadow);
 
         position: relative;
-
         flex-grow: 1;
-
         max-width: 80px;
         padding: 17px 17px;
         margin: 0.5ch 2%;
+
         border-radius: 5px;
 
         &:hover {
@@ -93,7 +91,6 @@
 
           text-align: center;
           text-shadow: 0 0 5px $tertiary-color;
-
           opacity: 0;
         }
       }

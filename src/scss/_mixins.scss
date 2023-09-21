@@ -12,13 +12,15 @@
 @mixin cardLayout() {
   padding: 3ch;
   margin: 4ch 3vw 6rem;
+
   border-radius: 5px;
   background-color: var.$primary-color;
 }
 
 @mixin formattedText($size) {
-  font-family: var.$main-font;
   line-height: 2.2ch;
+
+  font-family: var.$main-font;
   letter-spacing: 0.075ch;
   font-weight: 400;
   font-size: $size;
@@ -26,5 +28,6 @@
 
 @mixin hoverGlow() {
   @include transition(background-color box-shadow);
+
   box-shadow: 0 0 10px var.$tertiary-color;
 }

@@ -49,7 +49,7 @@ export default function Project(props) {
       >
         <img
           src={props.projectPhoto}
-          alt="project screenshot"
+          alt={props.altText}
           className="screenshot"
         />
 

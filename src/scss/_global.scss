@@ -19,9 +19,10 @@ html {
 }
 
 *::selection {
+  padding: 0;
+
   color: $primary-color;
   background-color: $tertiary-color;
-  padding: 0;
 }
 
 :root {
@@ -47,6 +48,7 @@ body {
   min-width: 320px;
   width: 100%;
   min-height: 100vh;
+
   background-color: $primary-color-light;
   color: $text-color;
 }
@@ -64,17 +66,19 @@ a {
 .section-heading {
   @include textShadow();
 
+  margin-top: 4rem;
+
   font-family: $title-font;
   color: $text-color;
   font-size: 2.5rem;
   letter-spacing: 1px;
   text-align: center;
   text-decoration: underline;
-  margin-top: 4rem;
 }
 
 .tooltip-parent {
   position: relative;
+
   cursor: default;
 
   &:hover {
@@ -90,18 +94,19 @@ a {
   position: absolute;
   bottom: 105%;
   left: calc(50% - 110px);
+  width: 220px;
+  margin-bottom: 10px;
 
   display: none;
 
   background-color: $tertiary-color;
   border-radius: 5px;
-  width: 220px;
-  margin-bottom: 10px;
 
   .tooltip-arrow {
     position: absolute;
     top: 100%;
     left: calc(50% - 7.5px);
+
     border-top: 10px solid $tertiary-color;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
@@ -109,9 +114,11 @@ a {
 
   .tooltip-content {
     @include formattedText(1.25rem);
+
+    padding: 1ch;
+
     color: $primary-color;
     letter-spacing: -0.5px;
-    padding: 1ch;
   }
 }
 

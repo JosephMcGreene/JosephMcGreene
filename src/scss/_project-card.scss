@@ -14,9 +14,9 @@
     @include formattedText(2rem);
 
     display: block;
+    margin: 0.5ch auto 2ch;
 
     text-align: center;
-    margin: 0.5ch auto 2ch;
   }
 
   .about-project {
@@ -32,9 +32,10 @@
   }
 
   .screenshot {
+    float: left;
     display: inline;
-
     width: min(100%, 310px);
+
     border-radius: 5px;
   }
 }
