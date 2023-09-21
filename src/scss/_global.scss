@@ -66,7 +66,8 @@ a {
 .section-heading {
   @include textShadow();
 
-  margin-top: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 
   font-family: $title-font;
   color: $text-color;

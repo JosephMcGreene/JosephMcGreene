@@ -10,11 +10,12 @@
 }
 
 @mixin cardLayout() {
-  padding: 3ch;
-  margin: 4ch 3vw 6rem;
+  padding: 2ch;
+  margin: 0 3vw;
 
-  border-radius: 5px;
+  border-radius: 2ch;
   background-color: var.$primary-color;
+  background-color: gray;
 }
 
 @mixin formattedText($size) {

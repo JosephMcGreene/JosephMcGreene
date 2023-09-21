@@ -1,41 +1,38 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.project-card {
-  @include cardLayout();
+.projects {
+  margin: 0 auto;
 
-  &:hover {
-    @include transition(box-shadow);
-    @include hoverGlow();
-  }
+  .project-card {
+    @include cardLayout();
 
-  .project-title {
-    @include textShadow();
-    @include formattedText(2rem);
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 400ms;
 
-    display: block;
-    margin: 0.5ch auto 2ch;
+    &:hover {
+      grid-template-rows: 1fr;
+    }
 
-    text-align: center;
-  }
+    .project-content {
+      overflow: hidden;
 
-  .about-project {
-    @include formattedText(1.3rem);
+      .project-title {
+        @include textShadow();
+        @include formattedText(2rem);
 
-    line-height: 2.5ch;
-    margin: 0 auto 1ch;
-  }
+        display: block;
+        margin-bottom: 0.5ch;
 
-  .project-title,
-  .about-project {
-    color: $text-color;
-  }
+        text-align: center;
+      }
 
-  .screenshot {
-    float: left;
-    display: inline;
-    width: min(100%, 310px);
-
-    border-radius: 5px;
+      .screenshot {
+        max-width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }

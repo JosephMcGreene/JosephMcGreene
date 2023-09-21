@@ -32,13 +32,15 @@ export default function App() {
   return (
     <>
       <Header />
+
       <main>
         <IntroHeading text={pageHeading} /> {/* "I'm Joseph McGreene" */}
         <Projects />
         <Contact />
         <About />
-        <Footer />
       </main>
+
+      <Footer />
     </>
   );
 }
