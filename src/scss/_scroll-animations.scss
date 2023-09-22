@@ -2,12 +2,6 @@
 .span-hidden,
 .download-hidden,
 .heading-hidden,
-.project-hidden,
-.project-title-hidden,
-.project-explain-hidden,
-.techstack-hidden,
-.github-link-hidden,
-.livelink-hidden,
 .contact-hidden,
 .about-hidden {
   opacity: 0;
@@ -21,12 +15,6 @@
 .span-shown,
 .download-shown,
 .heading-shown,
-.project-shown,
-.project-title-shown,
-.project-explain-shown,
-.techstack-shown,
-.github-link-shown,
-.livelink-shown,
 .contact-shown,
 .about-shown {
   opacity: 1;
@@ -51,40 +39,6 @@
   .span-shown,
   .download-shown {
     transform: translateY(0);
-  }
-}
-
-.projects {
-  .project-hidden,
-  .project-title-hidden,
-  .project-explain-hidden,
-  .techstack-hidden,
-  .github-link-hidden,
-  .livelink-hidden {
-    transform: translateX(-40%);
-  }
-
-  .project-title-hidden {
-    transition-delay: 0.3s;
-  }
-  .techstack-hidden {
-    transition-delay: 0.7s;
-  }
-
-  .github-link-hidden {
-    transition-delay: 0.5s;
-  }
-  .livelink-hidden {
-    transition-delay: 0.8s;
-  }
-
-  .project-shown,
-  .project-title-shown,
-  .project-explain-shown,
-  .techstack-shown,
-  .github-link-shown,
-  .livelink-shown {
-    transform: translateX(0);
   }
 }
 

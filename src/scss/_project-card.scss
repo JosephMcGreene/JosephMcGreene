@@ -1,38 +1,62 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.projects {
-  margin: 0 auto;
+.project-card {
+  @include cardLayout();
+  margin-bottom: 1rem;
 
-  .project-card {
-    @include cardLayout();
+  .project-header {
+    display: flex;
+    justify-content: space-between;
 
+    .project-title {
+      @include textShadow();
+      @include formattedText(2rem);
+
+      display: block;
+      margin-left: 0.5ch;
+
+      text-align: center;
+    }
+
+    .project-arrow {
+      width: 22px;
+      height: 22px;
+      margin-right: 1ch;
+
+      border: 5px solid aqua;
+      border-top: none;
+      border-left: none;
+      rotate: 45deg;
+      transition: rotate 400ms;
+    }
+    .arrow-inverted {
+      rotate: -135deg;
+    }
+  }
+
+  .content-container {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 400ms;
-
-    &:hover {
-      grid-template-rows: 1fr;
-    }
+    padding-top: 1rem;
 
     .project-content {
       overflow: hidden;
 
-      .project-title {
-        @include textShadow();
-        @include formattedText(2rem);
-
-        display: block;
-        margin-bottom: 0.5ch;
-
-        text-align: center;
+      .screenshot {
+        float: left;
+        max-width: 300px;
+        margin-bottom: 0.5rem;
+        margin-right: 0.75rem;
       }
 
-      .screenshot {
-        max-width: 100%;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+      .about-project {
+        @include formattedText(1.25rem);
       }
     }
+  }
+  .project-shown {
+    grid-template-rows: 1fr;
   }
 }
