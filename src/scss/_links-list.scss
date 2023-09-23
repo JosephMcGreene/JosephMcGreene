@@ -10,7 +10,7 @@
   list-style: none;
 
   .links-item {
-    @include transition(background-color box-shadow);
+    @include transition(background-color box-shadow, 500ms);
 
     position: relative;
     padding: 12px;
@@ -39,7 +39,7 @@
 
     .link {
       .link-icon {
-        @include transition(filter);
+        @include transition(filter, 500ms);
 
         width: 35px;
 
@@ -50,7 +50,7 @@
 
     .link-label {
       @include textShadow();
-      @include transition(opacity left);
+      @include transition(opacity left, 500ms);
       @include formattedText(1.75rem);
 
       position: absolute;

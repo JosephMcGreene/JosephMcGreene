@@ -5,7 +5,6 @@
   width: 100%;
 
   background-color: $primary-color;
-  box-shadow: 0 -3px 2.5px rgb(0, 0, 0, 0.6);
 
   .footer-nav {
     .footer-list {
@@ -21,7 +20,7 @@
 
       .footer-li {
         @include textShadow();
-        @include transition(background-color box-shadow);
+        @include transition(background-color box-shadow, 500ms);
 
         padding: 0.75ch 1.4ch;
         border-radius: 5px;
@@ -39,7 +38,7 @@
         }
 
         a {
-          @include transition(color);
+          @include transition(color, 500ms);
         }
       }
     }

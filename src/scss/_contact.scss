@@ -25,7 +25,7 @@
       list-style: none;
 
       .contact-item {
-        @include transition(background-color box-shadow);
+        @include transition(background-color box-shadow, 500ms);
 
         position: relative;
         padding: 15px;
@@ -53,7 +53,7 @@
         }
 
         .contact-label {
-          @include transition(opacity top);
+          @include transition(opacity top, 500ms);
           @include textShadow();
           @include formattedText(1.75rem);
 
@@ -70,7 +70,7 @@
 
         .link {
           .contact-icon {
-            @include transition(filter);
+            @include transition(filter, 500ms);
 
             width: 35px;
 

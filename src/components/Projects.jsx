@@ -1,6 +1,7 @@
 //Assets
 import advizotMeetingsPhoto from "../assets/img/advizot-meetings-screenshot.png";
 import monsterGuidePhoto from "../assets/img/monster-guide-screenshot.png";
+import dungeonsAndRandosPhoto from "../assets/img/dungeons-and-randos-screenshot.png";
 import letsRollPhoto from "../assets/img/lets-roll-screenshot.png";
 //External
 import { useInView } from "react-intersection-observer";
@@ -35,7 +36,7 @@ export default function Projects() {
         liveLink={null}
       />
       <Project
-        title="Dungeons & Dragons Monster Guide"
+        title="D&D Monster Guide"
         projectPhoto={monsterGuidePhoto}
         altText="Monster Guide Screenshot"
         projectExplanation="Why spend an entire evening deciding what monsters your party will face when you can now spend 30 minutes? This D&D Monster Guide's slick filtering logic, fully optimized fetching of monster data, and easy-to-read UI allows a DM to spend their time doing more important things, like practicing NPC voices."
@@ -45,7 +46,7 @@ export default function Projects() {
       />
       <Project
         title="Dungeons & Randos"
-        projectPhoto="null"
+        projectPhoto={dungeonsAndRandosPhoto}
         altText="Dungeons & Randos Screenshot"
         projectExplanation="Sometimes you don't want to spend 4 hours dreaming up the perfect character for your next Dungeons & Dragons adventure. That's why I created an app that will generate almost every part of a character for you."
         techStack="React, TypeScript, SCSS, D&D 5e REST API"

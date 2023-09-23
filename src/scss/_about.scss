@@ -6,10 +6,10 @@
   @include formattedText(1.75rem);
 
   padding: 2ch 1.5ch;
+  margin-bottom: 2rem;
 
   text-align: center;
   background-color: $primary-color;
-  border-radius: 5px;
 
   .expander-label {
     cursor: pointer;

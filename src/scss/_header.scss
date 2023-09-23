@@ -28,7 +28,7 @@
       list-style: none;
 
       .nav-item {
-        @include transition(background-color box-shadow);
+        @include transition(background-color box-shadow, 500ms);
 
         position: relative;
         flex-grow: 1;
@@ -71,7 +71,7 @@
 
         a {
           .nav-icon {
-            @include transition(filter);
+            @include transition(filter, 500ms);
 
             filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(95deg)
               brightness(111%) contrast(101%);
@@ -79,7 +79,7 @@
         }
 
         .nav-label {
-          @include transition(opacity top);
+          @include transition(opacity top, 500ms);
           @include formattedText(1.75rem);
 
           position: absolute;

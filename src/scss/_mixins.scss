@@ -1,8 +1,8 @@
 @use "variables" as var;
 
-@mixin transition($properties) {
+@mixin transition($properties, $duration) {
   transition-property: $properties;
-  transition-duration: 500ms;
+  transition-duration: $duration;
 }
 
 @mixin textShadow() {
@@ -13,8 +13,9 @@
   padding: 1rem;
   padding-bottom: 0;
   margin: 0 auto;
+  margin-inline: 0.75rem;
 
-  border-radius: 2ch;
+  border-radius: var.$box-radius;
   background-color: var.$primary-color;
 }
 
@@ -28,7 +29,5 @@
 }
 
 @mixin hoverGlow() {
-  @include transition(background-color box-shadow);
-
   box-shadow: 0 0 10px var.$tertiary-color;
 }
