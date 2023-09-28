@@ -21,6 +21,8 @@
     display: flex;
     justify-content: space-between;
 
+    cursor: pointer;
+
     .project-title {
       @include textShadow();
       @include formattedText(2rem);
@@ -41,20 +43,6 @@
       border: 5px solid aqua;
       border-top: none;
       border-left: none;
-      // Clip-Path for arrow tail:
-      // clip-path: polygon(
-      //   18.18% 0,
-      //   72.72% 54.54%,
-      //   81.81% 0,
-      //   100% 18.18%,
-      //   100% 100%,
-      //   18.18% 100%,
-      //   0 81.81%,
-      //   54.54% 72.72%,
-      //   0 18.18%
-      // );
-
-      //Regular Clip-Path
       clip-path: polygon(
         18.18% 0,
         81.81% 0,
@@ -79,7 +67,7 @@
     padding-top: 1rem;
 
     .project-content {
-      overflow: hidden;
+      overflow-y: hidden;
 
       .screenshot {
         float: left;
@@ -93,6 +81,7 @@
       }
     }
   }
+
   .project-shown {
     grid-template-rows: 1fr;
   }

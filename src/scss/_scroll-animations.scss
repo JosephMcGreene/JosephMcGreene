@@ -2,6 +2,7 @@
 .span-hidden,
 .download-hidden,
 .heading-hidden,
+.project-card-hidden,
 .contact-hidden,
 .about-hidden {
   opacity: 0;
@@ -15,6 +16,7 @@
 .span-shown,
 .download-shown,
 .heading-shown,
+.project-card-shown,
 .contact-shown,
 .about-shown {
   opacity: 1;
@@ -40,6 +42,13 @@
   .download-shown {
     transform: translateY(0);
   }
+}
+
+.project-card-hidden {
+  transform: translateX(-40%);
+}
+.project-card-shown {
+  transform: translateX(0);
 }
 
 .contact-hidden,

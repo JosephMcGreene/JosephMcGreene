@@ -1,16 +1,34 @@
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 //Assets
 import gitHubLogo from "../assets/img/github.svg";
 import linkIcon from "../assets/img/up-right-from-square-solid.svg";
 //External
+import { useInView } from "react-intersection-observer";
 //Components
 import Tooltip from "./Tooltip";
 
 export default function Project(props) {
   const [projectShown, setprojectShown] = useState(false);
+  const ref = useRef();
+  const { ref: inViewRef, inView } = useInView({ threshold: 0.2 });
+
+  const setRefs = useCallback(
+    (node) => {
+      ref.current = node;
+      inViewRef(node);
+    },
+    [inViewRef]
+  );
 
   return (
-    <article className="project-card">
+    <article
+      ref={setRefs}
+      className={
+        inView
+          ? "project-card project-card-hidden project-card-shown"
+          : "project-card project-card-hidden"
+      }
+    >
       <header
         className="project-header"
         onClick={() => setprojectShown(!projectShown)}

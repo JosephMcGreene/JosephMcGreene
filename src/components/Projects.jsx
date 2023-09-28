@@ -1,3 +1,4 @@
+import { useRef, useCallback } from "react";
 //Assets
 import advizotMeetingsPhoto from "../assets/img/advizot-meetings-screenshot.png";
 import monsterGuidePhoto from "../assets/img/monster-guide-screenshot.png";
@@ -9,12 +10,21 @@ import { useInView } from "react-intersection-observer";
 import Project from "./Project";
 
 export default function Projects() {
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const ref = useRef();
+  const { ref: inViewRef, inView } = useInView({ threshold: 0.2 });
+
+  const setRefs = useCallback(
+    (node) => {
+      ref.current = node;
+      inViewRef(node);
+    },
+    [inViewRef]
+  );
 
   return (
     <section id="projectsSection" className="projects">
       <h3
-        ref={ref}
+        ref={setRefs}
         className={
           inView
             ? "section-heading heading-hidden heading-shown"
