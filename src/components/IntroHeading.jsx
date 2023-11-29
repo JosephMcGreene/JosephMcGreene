@@ -1,7 +1,7 @@
 import { useRef, useCallback } from "react";
 //Assets
 import resume from "../assets/Joseph-McGreene-Resume.pdf";
-import downloadIcon from "../assets/img/download-solid.svg";
+import newTabIcon from "../assets/img/up-right-from-square-solid.svg";
 //External
 import { useInView } from "react-intersection-observer";
 
@@ -48,14 +48,11 @@ export default function IntroHeading({ text }) {
             ? "anchor download-hidden download-shown"
             : "anchor download-hidden"
         }
-        download
+        target="_blank"
+        rel="noreferrer"
       >
         <button className="download-button">
-          <img
-            src={downloadIcon}
-            alt="Download Icon"
-            className="download-icon"
-          />
+          <img src={newTabIcon} alt="link" className="download-icon" />
           <span className="btn-text">My Resume</span>
         </button>
       </a>
