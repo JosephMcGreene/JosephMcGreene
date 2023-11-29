@@ -1,11 +1,11 @@
 import { useRef, useCallback } from "react";
 //Assets
-import resume from "../assets/Joseph-McGreene-Resume.pdf";
+import resume from "../assets/Joseph-McGreene_Resume.pdf";
 import newTabIcon from "../assets/img/up-right-from-square-solid.svg";
 //External
 import { useInView } from "react-intersection-observer";
 
-export default function IntroHeading({ text }) {
+export default function IntroHeading() {
   const ref = useRef();
   const { ref: inViewRef, inView } = useInView();
 
