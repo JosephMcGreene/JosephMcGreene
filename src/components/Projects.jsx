@@ -40,7 +40,7 @@ export default function Projects() {
         projectPhoto={advizotMeetingsPhoto}
         altText="Advizot Meetings Screenshot"
         projectExplanation="Advizot, LLC's monthly member meetings currently use an unwieldy paper sign-in page, so my job is to design and implement a React- and Express-powered meeting app that saves its users' form data to a MongoDB collection and enables a seamless user experience."
-        techStack="React, SCSS, Node/Express, MongoDB"
+        techStack="React, Sass, Node/Express, MongoDB"
         githubLink="https://github.com/JosephMcGreene/advizot-meetings"
         isAdvizotMeetings={true}
         liveLink={null}
@@ -50,7 +50,7 @@ export default function Projects() {
         projectPhoto={monsterGuidePhoto}
         altText="Monster Guide Screenshot"
         projectExplanation="Why spend an entire evening deciding what monsters your party will face when you can now spend 30 minutes? This D&D Monster Guide's slick filtering logic, fully optimized fetching of monster data, and easy-to-read UI allows a DM to spend their time doing more important things, like practicing NPC voices."
-        techStack="React, SCSS, D&D 5e REST API"
+        techStack="React, Sass, D&D 5e REST API"
         githubLink="https://github.com/JosephMcGreene/react-and-dragons"
         liveLink="https://josephmcgreene.github.io/react-and-dragons/"
       />
@@ -59,7 +59,7 @@ export default function Projects() {
         projectPhoto={dungeonsAndRandosPhoto}
         altText="Dungeons & Randos Screenshot"
         projectExplanation="Sometimes you don't want to spend 4 hours dreaming up the perfect character for your next Dungeons & Dragons adventure. That's why I created an app that will generate almost every part of a character for you."
-        techStack="React, TypeScript, SCSS, D&D 5e REST API"
+        techStack="React, TypeScript, Sass, D&D 5e REST API"
         githubLink="https://github.com/JosephMcGreene/dungeons-and-randos"
         liveLink="https://josephmcgreene.github.io/dungeons-and-randos/"
       />
@@ -68,7 +68,7 @@ export default function Projects() {
         projectPhoto={letsRollPhoto}
         altText="Let's Roll Screenshot"
         projectExplanation="Finding an unopinionated dice rolling app is surprisingly difficult. Sometimes, I just want to roll some dice and get a result. That is why I coded up a couple of JavaScript object classes, set some HTML event listeners, and started rolling dice to my heart's content. To this day, this is the only dice rolling app I know of that doesn't care what you do with your dice rolls."
-        techStack="HTML, CSS, vanilla OO JavaScript"
+        techStack="HTML, CSS, Objected Oriented JavaScript"
         githubLink="https://github.com/JosephMcGreene/lets-roll"
         liveLink="https://josephmcgreene.github.io/lets-roll/"
       />

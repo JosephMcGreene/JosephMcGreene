@@ -26,13 +26,7 @@ export default function IntroHeading({ text }) {
         }
         id="pageTitle"
       >
-        {text.map((letter, index) => {
-          return (
-            <span className="title-letter" key={index}>
-              {letter}
-            </span>
-          );
-        })}
+        I'm Joseph McGreene
       </h1>
 
       <p
@@ -43,7 +37,7 @@ export default function IntroHeading({ text }) {
             : "intro-span span-hidden"
         }
       >
-        Full-Stack Developer
+        Full Stack Developer
       </p>
 
       <a

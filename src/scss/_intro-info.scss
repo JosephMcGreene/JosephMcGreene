@@ -2,8 +2,6 @@
 @use "./mixins" as *;
 
 .page-title {
-  @include textShadow();
-
   width: min-content;
 
   font-family: $title-font;
@@ -11,10 +9,7 @@
   font-weight: 600;
   cursor: default;
   text-align: center;
-
-  .title-letter {
-    filter: drop-shadow(0 0 10px $tertiary-color);
-  }
+  text-shadow: 0 0 17px $tertiary-color;
 }
 
 .intro-info {

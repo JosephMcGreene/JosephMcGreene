@@ -5,7 +5,7 @@
   $speed: 250ms;
 
   @include cardLayout();
-  @include transition(box-shadow, 500ms);
+  @include transition(filter, 500ms);
 
   margin-bottom: 0.5rem;
 
@@ -40,7 +40,7 @@
       height: 22px;
       margin-right: 1ch;
 
-      border: 5px solid aqua;
+      border: 5px solid $tertiary-color;
       border-top: none;
       border-left: none;
       clip-path: polygon(

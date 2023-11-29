@@ -30,4 +30,5 @@
 
 @mixin hoverGlow() {
   box-shadow: 0 0 10px var.$tertiary-color;
+  // filter: drop-shadow(0 0 10px var.$tertiary-color);
 }
