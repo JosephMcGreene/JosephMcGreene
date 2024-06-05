@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "aldrich";
+  src: url("../assets/fonts/aldrich-regular-webfont.woff2") format("woff");
+  font-weight: 900;
+}
+$title-font: "aldrich";
+
+@font-face {
+  font-family: "abel";
+  src: url("../assets/fonts/abel-regular-webfont.woff2") format("woff2");
+}
+$main-font: "abel";

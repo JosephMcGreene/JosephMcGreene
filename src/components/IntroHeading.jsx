@@ -22,12 +22,35 @@ export default function IntroHeading() {
       <h1
         ref={setRefs}
         className={
-          inView ? "page-title h1-hidden h1-shown" : "page-title h1-hidden"
+          inView
+            ? "page-title h1-hidden visually-hidden h1-shown"
+            : "page-title h1-hidden visually-hidden"
         }
         id="pageTitle"
       >
-        I'm Joseph McGreene
+        Joseph McGreene
       </h1>
+
+      <div class="main-heading">
+        <div class="name-container">
+          <div class="letter spacer spacer-left"></div>
+          <div class="letter j"></div>
+          <div class="letter o"></div>
+          <div class="letter s"></div>
+          <div class="letter e"></div>
+          <div class="letter p"></div>
+          <div class="letter h"></div>
+          <div class="letter spacer spacer-right"></div>
+          <div class="letter m"></div>
+          <div class="letter c"></div>
+          <div class="letter g"></div>
+          <div class="letter r"></div>
+          <div class="letter e2"></div>
+          <div class="letter e3"></div>
+          <div class="letter n"></div>
+          <div class="letter e4"></div>
+        </div>
+      </div>
 
       <p
         ref={setRefs}

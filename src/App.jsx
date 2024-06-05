@@ -7,34 +7,12 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const pageHeading = [
-    "I",
-    "'",
-    "m",
-    " ",
-    "J",
-    "o",
-    "s",
-    "e",
-    "p",
-    "h",
-    " ",
-    "M",
-    "c",
-    "G",
-    "r",
-    "e",
-    "e",
-    "n",
-    "e",
-  ];
-
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
       <main>
-        <IntroHeading text={pageHeading} /> {/* "I'm Joseph McGreene" */}
+        <IntroHeading />
         <Projects />
         <Contact />
         <About />

@@ -32,7 +32,7 @@ html {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: $primary-color-light;
+  background-color: $bg-color;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -49,7 +49,7 @@ body {
   width: 100%;
   min-height: 100vh;
 
-  background-color: $primary-color-light;
+  background-color: $bg-color;
   color: $text-color;
 }
 
@@ -74,7 +74,18 @@ a {
   font-size: 2.5rem;
   letter-spacing: 1px;
   text-align: center;
-  text-decoration: underline;
+  // text-decoration: underline;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .tooltip-parent {
@@ -118,7 +129,7 @@ a {
 
     padding: 1ch;
 
-    color: $primary-color;
+    color: $bg-color;
     letter-spacing: -0.5px;
   }
 }
