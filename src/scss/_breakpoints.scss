@@ -16,7 +16,13 @@
   }
 
   .intro-info .main-heading .name-container {
-    height: 175px;
+    $new-height: 25vh;
+
+    height: $new-height;
+
+    .letter {
+      height: calc($new-height / 2);
+    }
   }
 }
 
@@ -30,6 +36,45 @@
   }
 
   .intro-info .main-heading .name-container {
-    height: 250px;
+    $new-height: 250px;
+    $new-width: 900px;
+    $new-letter-width: calc($new-width / 8);
+
+    height: $new-height;
+    width: $new-width;
+
+    .letter {
+      height: calc($new-height / 2);
+      width: $new-letter-width;
+    }
+
+    .j,
+    .c {
+      left: $new-letter-width;
+    }
+    .o,
+    .g {
+      left: calc($new-letter-width * 2);
+    }
+    .s,
+    .r {
+      left: calc($new-letter-width * 3);
+    }
+    .e,
+    .e2 {
+      left: calc($new-letter-width * 4);
+    }
+    .p,
+    .e3 {
+      left: calc($new-letter-width * 5);
+    }
+
+    .h,
+    .n {
+      left: calc($new-letter-width * 6);
+    }
+    .e4 {
+      left: calc($new-letter-width * 7);
+    }
   }
 }

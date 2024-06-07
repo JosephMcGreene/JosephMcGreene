@@ -1,12 +1,13 @@
 @font-face {
-  font-family: "aldrich";
-  src: url("../assets/fonts/aldrich-regular-webfont.woff2") format("woff");
+  font-family: "technasans";
+  src: url("../assets/fonts/TechnaSans-Regular-webfont.woff") format("woff");
   font-weight: 900;
 }
-$title-font: "aldrich";
+$title-font: "technasans";
 
 @font-face {
   font-family: "abel";
-  src: url("../assets/fonts/abel-regular-webfont.woff2") format("woff2");
+  src: url("../assets/fonts/Sarpanch-Medium-webfont.woff") format("woff2");
+  src: url("../assets/fonts/k2d-thin-webfont.woff") format("woff");
 }
 $main-font: "abel";

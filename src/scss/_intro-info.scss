@@ -1,293 +1,278 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.page-title {
-  width: min-content;
-
-  font-family: $title-font;
-  font-size: 4.25rem;
-  font-weight: 600;
-  cursor: default;
-  text-align: center;
-  text-shadow: 0 0 17px $tertiary-color;
-}
-
 .intro-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  // background-image: url("../assets//img/aqua-background-2.jpg");
+  // object-fit: cover;
+  // background-position: bottom;
+  // background-attachment: fixed;
 
-  .main-heading {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  // .name-container {
+  //   position: relative;
+  //   width: $heading-width;
+  //   height: $heading-height;
+  //   border: 1px solid transparent;
+  //   background: transparent;
+  //   box-shadow: 0 0 25px 5px aqua;
 
-    .name-container {
-      position: relative;
-      width: $heading-width;
-      height: $heading-height;
-      border: 1px solid transparent;
-      box-shadow: 0 0 25px 5px aqua;
-      background-image: url("../assets//img/aqua-background-2.jpg");
-      object-fit: cover;
-      background-position: bottom;
-      background-attachment: fixed;
+  //   .letter {
+  //     background-color: $bg-color;
+  //     position: absolute;
+  //     width: $letter-width;
+  //     height: calc($heading-height / 2);
+  //   }
 
-      .letter {
-        background-color: $bg-color;
-        position: absolute;
-        width: $letter-width;
-        height: calc($heading-height / 2);
-        text-align: center;
-      }
+  //   .spacer {
+  //     clip-path: polygon(1% 1%, 99% 1%, 99% 99%, 1% 99%);
+  //   }
 
-      .spacer {
-        clip-path: polygon(1% 1%, 99% 1%, 99% 99%, 1% 99%);
-      }
+  //   .j {
+  //     left: $letter-width;
+  //     clip-path: polygon(
+  //       20% 1%,
+  //       20% 20%,
+  //       80% 20%,
+  //       80% 80%,
+  //       20% 80%,
+  //       20% 50%,
+  //       1% 50%,
+  //       1% 1%
+  //     );
+  //   }
+  //   .o {
+  //     left: calc($letter-width * 2);
+  //     clip-path: polygon(
+  //       1% 1%,
+  //       99% 1%,
+  //       99% 99%,
+  //       1% 99%,
+  //       1% 20%,
+  //       20% 20%,
+  //       20% 80%,
+  //       80% 80%,
+  //       80% 20%,
+  //       1% 20%
+  //     );
+  //   }
+  //   .s {
+  //     left: calc($letter-width * 3);
+  //     clip-path: polygon(
+  //       20% 20%,
+  //       99% 20%,
+  //       99% 40%,
+  //       20% 40%,
+  //       1% 60%,
+  //       80% 60%,
+  //       80% 80%,
+  //       1% 80%,
+  //       1% 60%,
+  //       20% 40%
+  //     );
+  //   }
+  //   .e {
+  //     left: calc($letter-width * 4);
+  //     clip-path: polygon(
+  //       1% 1%,
+  //       99% 1%,
+  //       99% 20%,
+  //       20% 20%,
+  //       20% 40%,
+  //       80% 40%,
+  //       80% 60%,
+  //       20% 60%,
+  //       20% 80%,
+  //       99% 80%,
+  //       99% 99%,
+  //       1% 99%
+  //     );
+  //   }
+  //   .p {
+  //     left: calc($letter-width * 5);
+  //     clip-path: polygon(
+  //       20% 20%,
+  //       80% 20%,
+  //       80% 40%,
+  //       20% 40%,
+  //       20% 60%,
+  //       99% 60%,
+  //       99% 99%,
+  //       20% 99%
+  //     );
+  //   }
+  //   .h {
+  //     left: calc($letter-width * 6);
+  //     clip-path: polygon(
+  //       1% 1%,
+  //       20% 1%,
+  //       20% 40%,
+  //       80% 40%,
+  //       80% 1%,
+  //       99% 1%,
+  //       99% 99%,
+  //       80% 99%,
+  //       80% 60%,
+  //       20% 60%,
+  //       20% 99%,
+  //       1% 99%
+  //     );
+  //   }
 
-      .j {
-        left: $letter-width;
-        clip-path: polygon(
-          20% 1%,
-          20% 20%,
-          80% 20%,
-          80% 80%,
-          20% 80%,
-          20% 50%,
-          1% 50%,
-          1% 1%
-        );
-      }
-      .o {
-        left: calc($letter-width * 2);
-        clip-path: polygon(
-          1% 1%,
-          99% 1%,
-          99% 99%,
-          1% 99%,
-          1% 20%,
-          20% 20%,
-          20% 80%,
-          80% 80%,
-          80% 20%,
-          1% 20%
-        );
-      }
-      .s {
-        left: calc($letter-width * 3);
-        clip-path: polygon(
-          20% 20%,
-          99% 20%,
-          99% 40%,
-          20% 40%,
-          1% 60%,
-          80% 60%,
-          80% 80%,
-          1% 80%,
-          1% 60%,
-          20% 40%
-        );
-      }
-      .e {
-        left: calc($letter-width * 4);
-        clip-path: polygon(
-          1% 1%,
-          99% 1%,
-          99% 20%,
-          20% 20%,
-          20% 40%,
-          80% 40%,
-          80% 60%,
-          20% 60%,
-          20% 80%,
-          99% 80%,
-          99% 99%,
-          1% 99%
-        );
-      }
-      .p {
-        left: calc($letter-width * 5);
-        clip-path: polygon(
-          20% 20%,
-          80% 20%,
-          80% 40%,
-          20% 40%,
-          20% 60%,
-          99% 60%,
-          99% 99%,
-          20% 99%
-        );
-      }
-      .h {
-        left: calc($letter-width * 6);
-        clip-path: polygon(
-          1% 1%,
-          20% 1%,
-          20% 40%,
-          80% 40%,
-          80% 1%,
-          99% 1%,
-          99% 99%,
-          80% 99%,
-          80% 60%,
-          20% 60%,
-          20% 99%,
-          1% 99%
-        );
-      }
+  //   .spacer-right {
+  //     right: 0;
+  //   }
 
-      .spacer-right {
-        right: 0;
-      }
+  //   .m {
+  //     bottom: 0;
+  //     clip-path: polygon(
+  //       20% 1%,
+  //       80% 1%,
+  //       50% 40%,
+  //       20% 1%,
+  //       20% 35%,
+  //       50% 75%,
+  //       80% 35%,
+  //       80% 99%,
+  //       20% 99%
+  //     );
+  //   }
 
-      .m {
-        bottom: 0;
-        clip-path: polygon(
-          20% 1%,
-          80% 1%,
-          50% 40%,
-          20% 1%,
-          20% 35%,
-          50% 75%,
-          80% 35%,
-          80% 99%,
-          20% 99%
-        );
-      }
+  //   .c {
+  //     bottom: 0;
+  //     left: $letter-width;
+  //     clip-path: polygon(
+  //       1% 1%,
+  //       99% 1%,
+  //       99% 20%,
+  //       20% 20%,
+  //       20% 80%,
+  //       99% 80%,
+  //       99% 99%,
+  //       1% 99%
+  //     );
+  //   }
 
-      .c {
-        bottom: 0;
-        left: $letter-width;
-        clip-path: polygon(
-          1% 1%,
-          99% 1%,
-          99% 20%,
-          20% 20%,
-          20% 80%,
-          99% 80%,
-          99% 99%,
-          1% 99%
-        );
-      }
+  //   .g {
+  //     bottom: 0;
+  //     left: calc($letter-width * 2);
+  //     clip-path: polygon(
+  //       20% 20%,
+  //       99% 20%,
+  //       99% 40%,
+  //       40% 40%,
+  //       40% 60%,
+  //       80% 60%,
+  //       80% 80%,
+  //       20% 80%
+  //     );
+  //   }
 
-      .g {
-        bottom: 0;
-        left: calc($letter-width * 2);
-        clip-path: polygon(
-          20% 20%,
-          99% 20%,
-          99% 40%,
-          40% 40%,
-          40% 60%,
-          80% 60%,
-          80% 80%,
-          20% 80%
-        );
-      }
+  //   .r {
+  //     bottom: 0;
+  //     left: calc($letter-width * 3);
+  //     clip-path: polygon(
+  //       20% 20%,
+  //       80% 20%,
+  //       80% 40%,
+  //       20% 40%,
+  //       20% 1%,
+  //       1% 1%,
+  //       1% 99%,
+  //       20% 99%,
+  //       20% 60%,
+  //       70% 99%,
+  //       99% 99%,
+  //       50% 60%,
+  //       99% 60%,
+  //       99% 1%,
+  //       20% 1%
+  //     );
+  //   }
 
-      .r {
-        bottom: 0;
-        left: calc($letter-width * 3);
-        clip-path: polygon(
-          20% 20%,
-          80% 20%,
-          80% 40%,
-          20% 40%,
-          20% 1%,
-          1% 1%,
-          1% 99%,
-          20% 99%,
-          20% 60%,
-          70% 99%,
-          99% 99%,
-          50% 60%,
-          99% 60%,
-          99% 1%,
-          20% 1%
-        );
-      }
+  //   .e2 {
+  //     bottom: 0;
+  //     left: calc($letter-width * 4);
+  //     clip-path: polygon(
+  //       20% 20%,
+  //       99% 20%,
+  //       99% 80%,
+  //       20% 80%,
+  //       20% 60%,
+  //       80% 60%,
+  //       80% 40%,
+  //       20% 40%
+  //     );
+  //   }
 
-      .e2 {
-        bottom: 0;
-        left: calc($letter-width * 4);
-        clip-path: polygon(
-          20% 20%,
-          99% 20%,
-          99% 80%,
-          20% 80%,
-          20% 60%,
-          80% 60%,
-          80% 40%,
-          20% 40%
-        );
-      }
+  //   .e3 {
+  //     bottom: 0;
+  //     left: calc($letter-width * 5);
+  //     clip-path: polygon(
+  //       1% 1%,
+  //       99% 1%,
+  //       99% 20%,
+  //       20% 20%,
+  //       20% 40%,
+  //       80% 40%,
+  //       80% 60%,
+  //       20% 60%,
+  //       20% 80%,
+  //       99% 80%,
+  //       99% 99%,
+  //       1% 99%
+  //     );
+  //   }
 
-      .e3 {
-        bottom: 0;
-        left: calc($letter-width * 5);
-        clip-path: polygon(
-          1% 1%,
-          99% 1%,
-          99% 20%,
-          20% 20%,
-          20% 40%,
-          80% 40%,
-          80% 60%,
-          20% 60%,
-          20% 80%,
-          99% 80%,
-          99% 99%,
-          1% 99%
-        );
-      }
+  //   .n {
+  //     bottom: 0;
+  //     left: calc($letter-width * 6);
+  //     clip-path: polygon(
+  //       20% 1%,
+  //       80% 1%,
+  //       80% 60%,
+  //       20% 1%,
+  //       20% 40%,
+  //       80% 99%,
+  //       20% 99%
+  //     );
+  //   }
 
-      .n {
-        bottom: 0;
-        left: calc($letter-width * 6);
-        clip-path: polygon(
-          20% 1%,
-          80% 1%,
-          80% 60%,
-          20% 1%,
-          20% 40%,
-          80% 99%,
-          20% 99%
-        );
-      }
-
-      .e4 {
-        bottom: 0;
-        right: 0;
-        clip-path: polygon(
-          1% 1%,
-          99% 1%,
-          99% 20%,
-          20% 20%,
-          20% 40%,
-          80% 40%,
-          80% 60%,
-          20% 60%,
-          20% 80%,
-          99% 80%,
-          99% 99%,
-          1% 99%
-        );
-      }
-    }
-  }
+  //   .e4 {
+  //     bottom: 0;
+  //     right: 0;
+  //     clip-path: polygon(
+  //       1% 1%,
+  //       99% 1%,
+  //       99% 20%,
+  //       20% 20%,
+  //       20% 40%,
+  //       80% 40%,
+  //       80% 60%,
+  //       20% 60%,
+  //       20% 80%,
+  //       99% 80%,
+  //       99% 99%,
+  //       1% 99%
+  //     );
+  //   }
+  //}
 
   .intro-span {
-    @include textShadow();
-
     display: block;
     margin: 40px auto;
 
     font-family: $title-font;
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 5rem;
     text-align: center;
-    letter-spacing: -0.5px;
+    background-image: url("../assets/img/aqua-background-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
   .anchor {
@@ -298,7 +283,6 @@
   }
 
   .download-button {
-    @include textShadow();
     @include transition(background-color color box-shadow, 500ms);
     @include formattedText(1.75rem);
 
@@ -307,9 +291,13 @@
     align-items: center;
     padding: 1.25ch 3ch;
 
-    background-color: $primary-color;
     border: none;
     border-radius: 5px;
+    background-image: url("../assets/img/aqua-background-2.jpg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+
     cursor: pointer;
 
     &:hover {
@@ -319,9 +307,6 @@
       animation-duration: 0.75s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: 1;
-
-      background-color: $tertiary-color;
-      color: $primary-color;
 
       .download-icon {
         filter: invert(9%) sepia(9%) saturate(2885%) hue-rotate(201deg)

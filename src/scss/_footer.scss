@@ -19,11 +19,11 @@
       text-align: center;
 
       .footer-li {
-        @include textShadow();
         @include transition(background-color box-shadow, 500ms);
 
         padding: 0.75ch 1.4ch;
         border-radius: 5px;
+        text-shadow: $text-shadow;
 
         &:hover {
           @include hoverGlow();

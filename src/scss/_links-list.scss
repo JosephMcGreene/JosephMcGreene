@@ -49,7 +49,6 @@
     }
 
     .link-label {
-      @include textShadow();
       @include transition(opacity left, 500ms);
       @include formattedText(1.75rem);
 
@@ -61,6 +60,7 @@
       margin-left: 0.5ch;
 
       color: $text-color;
+      text-shadow: $text-shadow;
       font-style: italic;
       opacity: 0;
     }

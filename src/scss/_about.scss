@@ -27,13 +27,12 @@
     }
 
     .values-list {
-      @include textShadow();
-
       margin-left: 1ch;
       margin-bottom: 1.5ch;
 
       list-style: none;
       line-height: 2.5ch;
+      text-shadow: $text-shadow;
     }
   }
 }

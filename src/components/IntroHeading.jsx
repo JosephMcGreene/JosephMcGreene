@@ -19,38 +19,38 @@ export default function IntroHeading() {
 
   return (
     <hgroup className="intro-info">
-      <h1
-        ref={setRefs}
-        className={
-          inView
-            ? "page-title h1-hidden visually-hidden h1-shown"
-            : "page-title h1-hidden visually-hidden"
-        }
-        id="pageTitle"
-      >
+      <h1 ref={setRefs} className="visually-hidden" id="pageTitle">
         Joseph McGreene
       </h1>
 
-      <div class="main-heading">
-        <div class="name-container">
-          <div class="letter spacer spacer-left"></div>
-          <div class="letter j"></div>
-          <div class="letter o"></div>
-          <div class="letter s"></div>
-          <div class="letter e"></div>
-          <div class="letter p"></div>
-          <div class="letter h"></div>
-          <div class="letter spacer spacer-right"></div>
-          <div class="letter m"></div>
-          <div class="letter c"></div>
-          <div class="letter g"></div>
-          <div class="letter r"></div>
-          <div class="letter e2"></div>
-          <div class="letter e3"></div>
-          <div class="letter n"></div>
-          <div class="letter e4"></div>
+      {/* <div className="main-heading">
+        <div
+          id="pageTitle"
+          ref={setRefs}
+          className={
+            inView
+              ? "name-container h1-hidden h1-shown"
+              : "name-container h1-hideen"
+          }
+        >
+          <div className="letter spacer spacer-left"></div>
+          <div className="letter j"></div>
+          <div className="letter o"></div>
+          <div className="letter s"></div>
+          <div className="letter e"></div>
+          <div className="letter p"></div>
+          <div className="letter h"></div>
+          <div className="letter spacer spacer-right"></div>
+          <div className="letter m"></div>
+          <div className="letter c"></div>
+          <div className="letter g"></div>
+          <div className="letter r"></div>
+          <div className="letter e2"></div>
+          <div className="letter e3"></div>
+          <div className="letter n"></div>
+          <div className="letter e4"></div>
         </div>
-      </div>
+      </div> */}
 
       <p
         ref={setRefs}
@@ -60,7 +60,7 @@ export default function IntroHeading() {
             : "intro-span span-hidden"
         }
       >
-        Full Stack Developer
+        JOSEPH M<sup>c</sup>GREENE
       </p>
 
       <a
