@@ -7,15 +7,14 @@
   margin: 0;
 }
 
-html {
+:root {
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
 }
 
 :focus,
 :focus-visible {
-  outline: 2px solid $tertiary-color;
-  box-shadow: 0 0 1 5px $tertiary-color;
+  outline: 3px solid $tertiary-color;
 }
 
 *::selection {

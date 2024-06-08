@@ -15,6 +15,17 @@
   background-color: var.$primary-color;
 }
 
+@mixin backgroundText($size) {
+  font-family: var.$title-font;
+  font-size: $size;
+  background-image: url("../assets/img/aqua-background-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 @mixin formattedText($size) {
   line-height: 2.2ch;
 
