@@ -38,9 +38,7 @@ export default function About() {
             : " about-expander about-hidden"
         }
       >
-        <summary className="expander-label">
-          TLDR: I'm a Virtue Ethicist
-        </summary>
+        <summary className="expander-label">I'm a Virtue Ethicist</summary>
         <article className="about-card">
           <p className="about-content">
             When I received my first black belt in TaeKwon Do, I began teaching

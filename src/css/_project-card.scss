@@ -24,13 +24,12 @@
     cursor: pointer;
 
     .project-title {
-      @include formattedText(2rem);
+      @include backgroundText(2rem, bottom);
+      font-family: $main-font;
+      text-align: left;
 
       display: block;
       margin-left: 0.5ch;
-
-      text-align: center;
-      text-shadow: $text-shadow;
     }
 
     .project-arrow {

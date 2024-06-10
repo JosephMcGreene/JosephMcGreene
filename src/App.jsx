@@ -1,4 +1,4 @@
-import "./scss/App.scss";
+import "./css/App.scss";
 import Header from "./components/Header";
 import IntroHeading from "./components/IntroHeading";
 import Projects from "./components/Projects";

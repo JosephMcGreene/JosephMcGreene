@@ -27,6 +27,8 @@ export default function IntroHeading() {
         JOSEPH M<sup>c</sup>GREENE
       </h1>
 
+      <p className="subheading">Full Stack Developer</p>
+
       <a
         href={resume}
         ref={setRefs}
