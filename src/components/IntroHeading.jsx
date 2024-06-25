@@ -21,13 +21,22 @@ export default function IntroHeading() {
     <hgroup className="intro-info">
       <h1
         ref={setRefs}
-        className={inView ? "h1 span-hidden span-shown" : "h1 span-hidden"}
+        className={inView ? "h1 h1-hidden h1-shown" : "h1 h1-hidden"}
         id="pageTitle"
       >
         JOSEPH M<sup>c</sup>GREENE
       </h1>
 
-      <p className="subheading">Full Stack Developer</p>
+      <p
+        ref={setRefs}
+        className={
+          inView
+            ? "subheading span-hidden span-shown"
+            : "subheading span-hidden"
+        }
+      >
+        Full Stack Developer
+      </p>
 
       <a
         href={resume}
