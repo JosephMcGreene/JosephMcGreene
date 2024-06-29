@@ -36,7 +36,7 @@
         &:hover {
           @include hoverGlow();
 
-          background-color: $tertiary-color;
+          background-color: $accent-color;
 
           .contact-label {
             top: 110%;

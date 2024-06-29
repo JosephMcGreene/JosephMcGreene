@@ -8,11 +8,9 @@
 @mixin cardLayout() {
   padding: 1rem;
   padding-bottom: 0;
-  margin: 1.5rem auto;
-  margin-inline: 0.75rem;
 
   background-color: var.$bg-color;
-  border: 2px solid var.$tertiary-color;
+  border: 2px solid var.$accent-color;
 }
 
 @mixin backgroundText($size, $bg-position) {
@@ -31,10 +29,9 @@
   font-family: var.$main-font;
   font-weight: 400;
   font-size: $size;
-  color: var.$tertiary-color;
+  color: var.$accent-color;
 }
 
 @mixin hoverGlow() {
-  box-shadow: 0 0 10px var.$tertiary-color;
-  // filter: drop-shadow(0 0 10px var.$tertiary-color);
+  box-shadow: 0 0 10px var.$accent-color;
 }

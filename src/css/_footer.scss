@@ -4,7 +4,7 @@
 .footer {
   width: 100%;
 
-  background-color: $primary-color;
+  background-color: $bg-color;
 
   .footer-nav {
     .footer-list {
@@ -28,12 +28,12 @@
         &:hover {
           @include hoverGlow();
 
-          background-color: $tertiary-color;
-          color: $primary-color;
+          background-color: $accent-color;
+          color: $bg-color;
 
           a,
           a:visited {
-            color: $primary-color;
+            color: $bg-color;
           }
         }
 
@@ -44,13 +44,13 @@
     }
 
     .copyright {
-      @include formattedText(1.5rem);
+      @include backgroundText(1.5rem, bottom);
 
       display: block;
       padding-bottom: 2ch;
 
       text-align: center;
-      background-color: $primary-color;
+      background-color: $bg-color;
       cursor: default;
     }
   }

@@ -42,7 +42,7 @@ export default function Projects() {
         projectExplanation="Advizot, LLC's monthly member meetings currently use an unwieldy paper sign-in page, so my job is to design and implement a React- and Express-powered meeting app that saves its users' form data to a MongoDB collection and enables a seamless user experience."
         techStack="React, Sass, Node/Express, MongoDB"
         githubLink="https://github.com/JosephMcGreene/advizot-meetings"
-        isAdvizotMeetings={true}
+        isProprietary={true}
         liveLink={null}
       />
       <Project
@@ -64,14 +64,23 @@ export default function Projects() {
         liveLink="https://josephmcgreene.github.io/dungeons-and-randos/"
       />
       <Project
-        title="Let's Roll!"
-        projectPhoto={letsRollPhoto}
-        altText="Let's Roll Screenshot"
-        projectExplanation="Finding an unopinionated dice rolling app is surprisingly difficult. Sometimes, I just want to roll some dice and get a result. That is why I coded up a couple of JavaScript object classes, set some HTML event listeners, and started rolling dice to my heart's content. To this day, this is the only dice rolling app I know of that doesn't care what you do with your dice rolls."
-        techStack="HTML, CSS, Objected Oriented JavaScript"
-        githubLink="https://github.com/JosephMcGreene/lets-roll"
-        liveLink="https://josephmcgreene.github.io/lets-roll/"
+        title="Ufarms"
+        projectPhoto={null}
+        projectExplanation="A project to match landowners who don't have time to garden with gardeners who don't have land to garden, enabling like-minded Earth-lovers to come together and share the most fundamental things we all have in common. I lead front-end development on this inspiring project."
+        techStack="React Native+Expo, Flask, MongoDB"
+        githubLink={null}
+        isProprietary={true}
+        liveLink={null}
       />
+      {/* <Project
+          title="Let's Roll!"
+          projectPhoto={letsRollPhoto}
+          altText="Let's Roll Screenshot"
+          projectExplanation="Finding an unopinionated dice rolling app is surprisingly difficult. Sometimes, I just want to roll some dice and get a result. That is why I coded up a couple of JavaScript object classes, set some HTML event listeners, and started rolling dice to my heart's content. To this day, this is the only dice rolling app I know of that doesn't care what you do with your dice rolls."
+          techStack="HTML, CSS, Objected Oriented JavaScript"
+          githubLink="https://github.com/JosephMcGreene/lets-roll"
+          liveLink="https://josephmcgreene.github.io/lets-roll/"
+        /> */}
     </section>
   );
 }

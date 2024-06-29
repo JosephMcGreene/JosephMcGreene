@@ -69,9 +69,16 @@ export default function Project(props) {
                 href={props.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link anchor"
+                className={
+                  props.isProprietary
+                    ? "link anchor tooltip-parent"
+                    : "link anchor"
+                }
                 id="githubLink"
               >
+                {props.isProprietary && (
+                  <Tooltip text="This software is not currently available to the public." />
+                )}
                 <img src={gitHubLogo} alt="GitHub Logo" className="link-icon" />
               </a>
             </li>
@@ -85,14 +92,14 @@ export default function Project(props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={
-                  props.isAdvizotMeetings
+                  props.isProprietary
                     ? "link anchor tooltip-parent"
                     : "link anchor"
                 }
                 id="liveLink"
               >
-                {props.isAdvizotMeetings && (
-                  <Tooltip text="This proprietary software is not currently available to the public." />
+                {props.isProprietary && (
+                  <Tooltip text="This software is not currently available to the public." />
                 )}
                 <img src={linkIcon} alt="Link to App" className="link-icon" />
               </a>

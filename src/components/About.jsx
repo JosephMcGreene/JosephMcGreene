@@ -29,7 +29,6 @@ export default function About() {
         <Tooltip text='"I think that inside every adult is the heart of a child. We just gradually convince ourselves that we have to act more like adults." -Shigeru Miyamoto' />
         About Me
       </h3>
-
       <details
         ref={setRefs}
         className={

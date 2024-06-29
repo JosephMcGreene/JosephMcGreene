@@ -24,7 +24,7 @@ export default function Footer() {
             text="This site was built from the ground up with React, HTML, and CSS
         (specifically SCSS), bundled with Vite."
           />
-          McGreene &copy;2023
+          McGreene &copy;2024
         </span>
       </nav>
     </footer>

@@ -1,0 +1,46 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.tooltip-parent {
+  position: relative;
+
+  cursor: default;
+
+  &:hover .tooltip {
+    display: block;
+  }
+}
+
+.tooltip {
+  @include hoverGlow();
+
+  position: absolute;
+  bottom: 105%;
+  left: calc(50% - 110px);
+  width: 220px;
+  margin-bottom: 10px;
+
+  display: none;
+
+  background-color: $accent-color;
+  border-radius: 5px;
+
+  .tooltip-arrow {
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 7.5px);
+
+    border-top: 10px solid $accent-color;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+
+  .tooltip-content {
+    @include formattedText(1.25rem);
+
+    padding: 1ch;
+
+    color: $bg-color;
+    letter-spacing: -0.5px;
+  }
+}

@@ -9,14 +9,14 @@
 
 :focus,
 :focus-visible {
-  outline: 3px solid $tertiary-color;
+  outline: 3px solid $accent-color;
 }
 
 *::selection {
   padding: 0;
 
-  color: $primary-color;
-  background-color: $tertiary-color;
+  color: $bg-color;
+  background-color: $accent-color;
 }
 
 :root {
@@ -42,19 +42,20 @@
 
 body {
   min-width: 320px;
+  padding-inline: 0.75rem;
   width: 100%;
   min-height: 100vh;
 
   background-color: $bg-color;
-  color: $text-color;
+  color: $accent-color;
 }
 
 a {
-  color: $text-color;
+  color: $accent-color;
   text-decoration: none;
 
   &:visited {
-    color: $text-color;
+    color: $accent-color;
     text-decoration: none;
   }
 }
@@ -75,50 +76,6 @@ a {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-}
-
-.tooltip-parent {
-  position: relative;
-
-  cursor: default;
-
-  &:hover .tooltip {
-    display: block;
-  }
-}
-
-.tooltip {
-  @include hoverGlow();
-
-  position: absolute;
-  bottom: 105%;
-  left: calc(50% - 110px);
-  width: 220px;
-  margin-bottom: 10px;
-
-  display: none;
-
-  background-color: $tertiary-color;
-  border-radius: 5px;
-
-  .tooltip-arrow {
-    position: absolute;
-    top: 100%;
-    left: calc(50% - 7.5px);
-
-    border-top: 10px solid $tertiary-color;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-  }
-
-  .tooltip-content {
-    @include formattedText(1.25rem);
-
-    padding: 1ch;
-
-    color: $bg-color;
-    letter-spacing: -0.5px;
-  }
 }
 
 @media (prefers-color-scheme: light) {
