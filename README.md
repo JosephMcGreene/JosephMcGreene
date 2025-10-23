@@ -1,4 +1,4 @@
-### Hi there 👋 My name's Joseph (he/him), full stack dev whose favorite techs are React, Scss, Node, and MongoDB. Hit me up and let's build something together!
+### Hi there 👋 My name's Joseph (he/him), full stack dev on the TypeScript and Next.js train, but snakes 🐍 and coffee ☕ are cool too. Hit me up and let's build something together!
 
 #### I'm currently working on a conference meeting application that should be up and running soon. If you have ideas for how to make it better, don't hesitate to reach out!
 
